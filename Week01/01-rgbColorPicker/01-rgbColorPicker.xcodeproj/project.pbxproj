@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BACBF7962481951000F9974A /* 01-rgbColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-rgbColorPicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACBF7962481951000F9974A /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBF7992481951000F9974A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACBF79B2481951000F9974A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BACBF79D2481951000F9974A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		BACBF7972481951000F9974A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACBF7962481951000F9974A /* 01-rgbColorPicker.app */,
+				BACBF7962481951000F9974A /* ColorPicker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "01-rgbColorPicker";
 			productName = "01-rgbColorPicker";
-			productReference = BACBF7962481951000F9974A /* 01-rgbColorPicker.app */;
+			productReference = BACBF7962481951000F9974A /* ColorPicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.albertotalavan.-1-rgbColorPicker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ColorPicker;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.albertotalavan.-1-rgbColorPicker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ColorPicker;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
