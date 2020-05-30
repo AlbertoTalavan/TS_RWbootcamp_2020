@@ -55,6 +55,10 @@ class ViewController: UIViewController {
    
    
    //MARK: - Buttons
+   
+   @IBAction func infoPressed(_ sender: UIButton) {
+   }
+   
    @IBAction func setColor(_ sender: UIButton) {
       
    }
