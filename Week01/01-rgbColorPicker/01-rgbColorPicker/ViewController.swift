@@ -54,16 +54,16 @@ class ViewController: UIViewController {
       super.viewDidLoad()
       //initial settings
       cleaningContainerViews()
-      settings(model: .rgb)
+      settingUI(model: .rgb)
   
    }
    
    //MARK: - Segmented Control
    @IBAction func modeChanged(_ sender: UISegmentedControl){
       if sender.selectedSegmentIndex == 0 { //rgb
-         settings(model: .rgb)
+         settingUI(model: .rgb)
       }else if sender.selectedSegmentIndex == 1 { //hsb
-         settings(model: .hsb)
+         settingUI(model: .hsb)
       }
    }
    
@@ -102,18 +102,29 @@ class ViewController: UIViewController {
    
    @IBAction func setColor(_ sender: UIButton) {
       //show alert view with text view to add a name to our color
+      showAlertView()
+      
    }
    
    @IBAction func reset(_ sender: UIButton) {
       let segment: UISegmentedControl = segmentedColorType
-      if segment.selectedSegmentIndex == 0 { settings(model: .rgb) }
-      else if segment.selectedSegmentIndex == 1 { settings(model: .hsb)}
+      if segment.selectedSegmentIndex == 0 { settingUI(model: .rgb) }
+      else if segment.selectedSegmentIndex == 1 { settingUI(model: .hsb)}
       else { /*other future case or cases with else if */}
 
    }
    
    
    //MARK: - Changing Background Color
+   #warning("this func shouls return a random color in range")
+   func initialColor() -> UIColor {
+      let v1 = rhSlider.value
+      let v2 = gsSlider.value
+      let v3 = bbSlider.value
+      
+      return .systemBackground
+   }
+   
    func setBGcolor() {
       if segmentedColorType.selectedSegmentIndex == 0 {
          view.backgroundColor = calculateColor(model: .rgb)
@@ -154,14 +165,15 @@ class ViewController: UIViewController {
          //code here for other future value or else if if more than one
       }
 
-      printColor(model: model, color: [v1,v2,v3])
       return color
    }
    
+   
+   
    //MARK: - Setting values after reset or first run
-   func settings(model: Model){
-      //setting  backgroundColor to default color
-      view.backgroundColor = .systemBackground
+   func settingUI(model: Model){
+      //Setting colour global values to zero
+      resetColourGlobalValues()
       
       //Adding appropiate text to color name label
       #warning("Change this with a ranfom function for the first running of the app")
@@ -197,6 +209,9 @@ class ViewController: UIViewController {
       
       //setting tint of the sliders
       stylingSliders(model: model)
+      
+      //setting  backgroundColor to default color
+      view.backgroundColor = initialColor()
    }
    
    
@@ -231,7 +246,7 @@ class ViewController: UIViewController {
       }else if model == .hsb{
          rhSlider.tintColor = .systemOrange; rhSlider.thumbTintColor = .systemOrange
          gsSlider.tintColor = .systemPink;   gsSlider.thumbTintColor = .systemPink
-         bbSlider.tintColor = .label;        bbSlider.thumbTintColor = .label
+         bbSlider.tintColor = .label;        bbSlider.thumbTintColor = .systemGray3
          
 
       }
@@ -278,6 +293,60 @@ class ViewController: UIViewController {
       ButtonsView.backgroundColor      = .clear
    }
    
+   func resetColourGlobalValues() {
+      rhVal = 0
+      gsVal = 0
+      bbVal = 0
+   }
+
+   
+   //MARK: - Show Alert
+   func showAlertView() {
+      var alertText = UITextField() //storage for the alertTextField of addAlertTextfield()
+      
+      let alert = UIAlertController(title: "Give this colour a name", message: "Type the most original name for your new colour creation", preferredStyle: .alert)
+      
+      let actionOK = UIAlertAction(title: "🔥like it", style: .default) { action in
+         let segment = self.segmentedColorType.selectedSegmentIndex
+         let model: Model
+         
+         switch segment {
+            case 0:
+               model = .rgb
+            case 1:
+               model = .hsb
+            default:
+               model = .rgb
+         }
+         
+
+         self.ColorNAmeView.backgroundColor = self.calculateColor(model: model)
+         self.myColorName = {
+            if alertText.text == "" { return "My Fav Colour"}
+            return alertText.text ?? "Unknown"
+         }()
+
+         self.settingUI(model: model) //resetting after press the actionOK button of the alert
+         
+      }
+      
+      
+      let actionCancel = UIAlertAction(title: "meh! 😓", style: .destructive, handler: nil)
+      
+      
+      alert.addAction(actionOK)
+      alert.addAction(actionCancel)
+      
+      alert.addTextField { textField in
+         textField.placeholder = "Type the best name for your creation..."
+         alertText = alert.textFields![0]
+      }
+      
+      present(alert, animated: true)  //completion not needed
+   }
+   
+   
+   //MARK: - auxiliary print functions
    func printColor(model: Model?, color: [Float]) {
       print()
       print("## model : \(model)")
