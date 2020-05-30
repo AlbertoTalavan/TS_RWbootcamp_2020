@@ -28,9 +28,9 @@ class ViewController: UIViewController {
    @IBOutlet weak var bbSlider: UISlider!
    
    
-   var rhVal = 0 //Int value of the red/hue slider
-   var gsVal = 0 //Int value of the green/sat slider
-   var bbVal = 0 //Int value of the blue/bright slider
+   var rhVal: Float = 0.0 //Int value of the red/hue slider
+   var gsVal: Float = 0.0 //Int value of the green/sat slider
+   var bbVal: Float = 0.0 //Int value of the blue/bright slider
    
    let alpha = 1.0
    
@@ -71,23 +71,26 @@ class ViewController: UIViewController {
    //MARK: - Sliders
    @IBAction func rhSliderMoved(_ sender: UISlider) {
       let roundedValue = rhSlider.value.rounded()
-      rhVal = Int(roundedValue)
-      rhValueLabel.text = String(rhVal)
-      //todo -> change the background color in real time // func changeBGcolor
+      rhVal = roundedValue
+      rhValueLabel.text = String(Int(rhVal))
+      
+      setBGcolor() //changing bgcolor in real time
    }
    
    @IBAction func gsSliderMoved(_ sender: UISlider) {
       let roundedValue = gsSlider.value.rounded()
-      gsVal = Int(roundedValue)
-      gsValueLabel.text = String(gsVal)
-      //todo -> change the background color in real time // func changeBGcolor
+      gsVal = roundedValue
+      gsValueLabel.text = String(Int(gsVal))
+      
+      setBGcolor() //changing bgcolor in real time
    }
    
    @IBAction func bbSliderMoved(_ sender: UISlider) {
       let roundedValue = bbSlider.value.rounded()
-      bbVal = Int(roundedValue)
-      bbValueLabel.text = String(bbVal)
-      //todo -> change the background color in real time // func changeBGcolor
+      bbVal = roundedValue
+      bbValueLabel.text = String(Int(bbVal))
+      
+      setBGcolor() //changing bgcolor in real time
    }
    
    
@@ -112,24 +115,47 @@ class ViewController: UIViewController {
    
    //MARK: - Changing Background Color
    func setBGcolor() {
-      //let color: UIColor = .systemGreen
-      
-      
-      
-      //view.backgroundColor = color
-   }
-   
-   func calculateColor(model: Model, values: [Int]) -> UIColor {
-      
-      if model == .rgb {
-         
-      }else if model == .hsb {
-         
+      if segmentedColorType.selectedSegmentIndex == 0 {
+         view.backgroundColor = calculateColor(model: .rgb)
+      } else if segmentedColorType.selectedSegmentIndex == 1 {
+         view.backgroundColor = calculateColor(model: .hsb)
       } else {
-         //code here for other future value or else if if more than one
+         view.backgroundColor = .systemBackground
       }
       
-      return .systemPurple
+   }
+   
+   func calculateColor(model: Model) -> UIColor {
+      //slider values are stored en rhVal, gsVal and bbVal
+      var v1 = rhVal
+      var v2 = gsVal
+      var v3 = bbVal
+      
+      let rgbMax     = Float(255)
+      let hueMax     = Float(360)
+      let satMax     = Float(100)
+      let brightMax  = Float(100)
+      
+      var color = UIColor() //Need to create it here bc I´m not using the -else- case in the if-else
+      
+      if model == .rgb {
+         v1 = v1/rgbMax
+         v2 = v2/rgbMax
+         v3 = v3/rgbMax
+         color = UIColor(red: CGFloat(v1), green: CGFloat(v2), blue: CGFloat(v3), alpha: CGFloat(alpha))
+      }
+      else if model == .hsb {
+         v1 = v1/hueMax
+         v2 = v2/satMax
+         v3 = v3/brightMax
+         color = UIColor(hue: CGFloat(v1), saturation: CGFloat(v2), brightness: CGFloat(v3), alpha: CGFloat(alpha))
+      }
+      else {
+         //code here for other future value or else if if more than one
+      }
+
+      printColor(model: model, color: [v1,v2,v3])
+      return color
    }
    
    //MARK: - Setting values after reset or first run
@@ -172,6 +198,7 @@ class ViewController: UIViewController {
       //setting tint of the sliders
       stylingSliders(model: model)
    }
+   
    
    //MARK: - Setting Sliders
    func assignSliderMinMax (slider: UISlider, model: Model) {
@@ -249,6 +276,15 @@ class ViewController: UIViewController {
       ColorModelView.backgroundColor   = .clear
       SlidersView.backgroundColor      = .clear
       ButtonsView.backgroundColor      = .clear
+   }
+   
+   func printColor(model: Model?, color: [Float]) {
+      print()
+      print("## model : \(model)")
+      print("## original values ===> rh: \(rhVal), gs: \(gsVal), bb: \(bbVal), alpha: \(alpha)")
+      print("## formatted values ==> rh: \(color[0]), gs: \(color[1]), bb: \(color[2]), alpha: \(alpha)")
+      print()
+      
    }
 }
 
