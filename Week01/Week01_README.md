@@ -6,24 +6,34 @@
 ---
 ---
 
-## 01-rgbColorPicker app
-I have made some changes to the original assignment:  
-- The sliders default position is the one that make the white colour in each color model (rgb:255,255,255 or hsb:0,0,100).
-  That is because iOS devices can be in light or dark mode and **I am using UIColor.Label for the app texts**. That means
-  if the **device is in light mode** and the **sliders default** to the leftmost position...(that **means black color** in 
-  both rgb and hsb) we will not be able to read any text of any label at this momment because the "Label" color for
+## 01-rgbColorPicker app  
+
+**Previous considerations**  
+I used the AutoLayout and the StoryBoard as required for this assignment. It is optimized for and iPhone SE screen size but 
+it can be run on any iPhone supporting iOS13.  
+
+I could do adjust the screen for any screen resolution doing it programatically but I choose do it with StoryBoard just to 
+practice the *AutoLayout* there and the *vary for traits*
+
+I have made some changes to the original assignment (and here is why):  
+- The sliders default position **now is** the one that make the **white colour** in each colour model (rgb:255,255,255 or 
+  hsb:0,0,100).  
+  That is because iOS devices can be in both light or dark mode and **I am using UIColor.Label for the texts**. That means
+  if the **device is in light mode** and the **sliders default** to the leftmost position...(that **means black colour** in 
+  both rgb and hsb) **we will not be able to read any text of any label** because the ".Label" colour for
   "light mode" is black
-- The background of the app is changing color in real time as we move any slider. I think it is a better way of see what is
-  happening as you move any one of the sliders
-- When int the AlertView we hit the ok action (called "like it") we do not assign the colour to the background, instead **we**
-  **assign the colour to a view containing the Color Name Label** where we are showing the name we just gave to that colour. 
-  This is because as we are changing constantly the background color the only way to maintain our last "setted color" in 
-  the UI is keeping it in some place... and I think this view is almost the best one!  
+- The background of the app is changing colour in real time as we move any slider. I think it is a better way of see what is
+  happening as you move any one of the sliders so,
+- When, in the AlertView, we hit the ok action (called "like it") we do not assign the colour to the background, instead  
+  **we assign the colour to a view containing the Color Name Label** where we are showing the name we just gave to that  
+  colour. 
+  This is because as we are changing constantly the background colour, the only way to maintain our last "setted colour" in 
+  sight is keeping it in some place... and I think this kind of container view is almost the best one!  
   
   
   
-#### The original assignment:
-The task is to create an app that allows users to color the background of the app. To do that we will choose between RGB or HSB (both are different color model representations) and using the 3 different components of the model of our election we will create this background color.
+#### The original assignment requirements:
+The task is to create an app that allows users to colour the background of the app. To do that we will choose between RGB or HSB (both are different colour model representations) and using the 3 different components of the model of our election we will create this background colour.
 
 The UI should consist of the following:
 - A label near the top of the view (for displaying a color name)
