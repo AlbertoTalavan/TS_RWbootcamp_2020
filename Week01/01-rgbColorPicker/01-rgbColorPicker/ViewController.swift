@@ -28,6 +28,10 @@ class ViewController: UIViewController {
    @IBOutlet weak var bbSlider: UISlider!
    
    
+   @IBOutlet weak var setColorButton: UIButton!
+   @IBOutlet weak var resetButton: UIButton!
+   
+   
    var rhVal: Float = 0.0 //Int value of the red/hue slider
    var gsVal: Float = 0.0 //Int value of the green/sat slider
    var bbVal: Float = 0.0 //Int value of the blue/bright slider
@@ -35,7 +39,9 @@ class ViewController: UIViewController {
    let alpha = 1.0
    
    var firstRun = true
+   
    var myColorName = ""
+   var myColor = UIColor()
 
    enum Model {
       case rgb
@@ -53,24 +59,23 @@ class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       //initial settings
+      let model = segmentedColorTypeSelected() //by default is the index[0] -> .rgb
       cleaningContainerViews()
-      settingUI(model: .rgb)
+      settingUI(model: model)                  //settingUI(model: .rgb)
   
    }
    
    //MARK: - Segmented Control
    @IBAction func modeChanged(_ sender: UISegmentedControl){
-      if sender.selectedSegmentIndex == 0 { //rgb
-         settingUI(model: .rgb)
-      }else if sender.selectedSegmentIndex == 1 { //hsb
-         settingUI(model: .hsb)
-      }
+      //setting UI depending of the position of the segmented control
+      settingUI(model: segmentedColorTypeSelected())
    }
    
    
    //MARK: - Sliders
    @IBAction func rhSliderMoved(_ sender: UISlider) {
       let roundedValue = rhSlider.value.rounded()
+      
       rhVal = roundedValue
       rhValueLabel.text = String(Int(rhVal))
       
@@ -79,6 +84,7 @@ class ViewController: UIViewController {
    
    @IBAction func gsSliderMoved(_ sender: UISlider) {
       let roundedValue = gsSlider.value.rounded()
+      
       gsVal = roundedValue
       gsValueLabel.text = String(Int(gsVal))
       
@@ -87,6 +93,7 @@ class ViewController: UIViewController {
    
    @IBAction func bbSliderMoved(_ sender: UISlider) {
       let roundedValue = bbSlider.value.rounded()
+      
       bbVal = roundedValue
       bbValueLabel.text = String(Int(bbVal))
       
@@ -97,43 +104,24 @@ class ViewController: UIViewController {
    //MARK: - Buttons
    @IBAction func infoPressed(_ sender: UIButton) {
       //segue to the next view
+      #warning("TODO this functionality")
       
    }
    
    @IBAction func setColor(_ sender: UIButton) {
-      //show alert view with text view to add a name to our color
+      //show alert view with text view to name our color
       showAlertView()
-      
    }
    
    @IBAction func reset(_ sender: UIButton) {
-      let segment: UISegmentedControl = segmentedColorType
-      if segment.selectedSegmentIndex == 0 { settingUI(model: .rgb) }
-      else if segment.selectedSegmentIndex == 1 { settingUI(model: .hsb)}
-      else { /*other future case or cases with else if */}
-
+      //resetting values depending of the position of the segmented control
+      settingUI(model: segmentedColorTypeSelected())
    }
    
    
    //MARK: - Changing Background Color
-   #warning("this func shouls return a random color in range")
-   func initialColor() -> UIColor {
-      let v1 = rhSlider.value
-      let v2 = gsSlider.value
-      let v3 = bbSlider.value
-      
-      return .systemBackground
-   }
-   
    func setBGcolor() {
-      if segmentedColorType.selectedSegmentIndex == 0 {
-         view.backgroundColor = calculateColor(model: .rgb)
-      } else if segmentedColorType.selectedSegmentIndex == 1 {
-         view.backgroundColor = calculateColor(model: .hsb)
-      } else {
-         view.backgroundColor = .systemBackground
-      }
-      
+      view.backgroundColor = calculateColor(model: segmentedColorTypeSelected())
    }
    
    func calculateColor(model: Model) -> UIColor {
@@ -172,13 +160,17 @@ class ViewController: UIViewController {
    
    //MARK: - Setting values after reset or first run
    func settingUI(model: Model){
-      //Setting colour global values to zero
-      resetColourGlobalValues()
-      
+      var colour = UIColor.white  //initial colour in case we can make the proper one
+      let zero       = Float(0)
+      let rgbMax     = Float(255)
+      let brightMax  = Float(100)
+
       //Adding appropiate text to color name label
-      #warning("Change this with a ranfom function for the first running of the app")
-      if firstRun { colorNameLabel.text = "FIRST RUN"; firstRun = false}  //Add a function to randomly pick a color and a name
+      if firstRun { colorNameLabel.text = "RW Bootcamp 2020 🖥"}  //Add a function to randomly pick a color and a name
       else { colorNameLabel.text = myColorName }
+      
+      //configuring Buttons
+      configureButtons()
       
       //setting sliders labels
       settingSlidersLabels()
@@ -199,10 +191,39 @@ class ViewController: UIViewController {
 
       
       //initial value of the sliders
-      rhSlider.value = rhSlider.minimumValue  //´cos we like to start in the value = 0 (the minimum one)
-      gsSlider.value = gsSlider.minimumValue
-      bbSlider.value = bbSlider.minimumValue
+      if model == .rgb {
+         rhSlider.value = rgbMax    //because we like to start in white
+         gsSlider.value = rgbMax
+         bbSlider.value = rgbMax
+
+      }else if model == .hsb{
+         rhSlider.value = zero
+         gsSlider.value = zero
+         bbSlider.value = brightMax //because we like to start in white
+                 
+      } else {
+                 //some code here if we add another model
+      }
       
+      ////if we start the app in dark mode we need different default values
+      if firstRun {
+         if traitCollection.userInterfaceStyle == .dark {
+            print("DarkMode")
+            rhSlider.value = zero
+            gsSlider.value = zero
+            bbSlider.value = zero
+
+         }
+      }
+
+      
+      //Setting colour global values to zero
+      rhVal = rhSlider.value
+      gsVal = gsSlider.value
+      bbVal = bbSlider.value
+      
+      
+      //sliders value labels
       rhValueLabel.text = String(Int(rhSlider.value))
       gsValueLabel.text = String(Int(gsSlider.value))
       bbValueLabel.text = String(Int(bbSlider.value))
@@ -210,8 +231,19 @@ class ViewController: UIViewController {
       //setting tint of the sliders
       stylingSliders(model: model)
       
+      
+      
       //setting  backgroundColor to default color
-      view.backgroundColor = initialColor()
+      if segmentedColorTypeSelected() == .rgb {
+         colour = UIColor(red: CGFloat(rhSlider.value), green: CGFloat(gsSlider.value), blue: CGFloat(bbSlider.value), alpha: CGFloat(alpha))
+      } else if segmentedColorTypeSelected() == .hsb {
+         colour = UIColor(hue: CGFloat(rhSlider.value), saturation: CGFloat(gsSlider.value), brightness: CGFloat(bbSlider.value), alpha: CGFloat(alpha))
+      } else {
+         //future code here for other different color representation (or if-else if more than one)
+      }
+   
+      
+      view.backgroundColor = colour
    }
    
    
@@ -247,8 +279,6 @@ class ViewController: UIViewController {
          rhSlider.tintColor = .systemOrange; rhSlider.thumbTintColor = .systemOrange
          gsSlider.tintColor = .systemPink;   gsSlider.thumbTintColor = .systemPink
          bbSlider.tintColor = .label;        bbSlider.thumbTintColor = .systemGray3
-         
-
       }
       else {
          //some code here if we add other model (or -else if- if we add more than one
@@ -257,17 +287,7 @@ class ViewController: UIViewController {
    }
    
    func settingSlidersLabels() {
-      let segment = segmentedColorType.selectedSegmentIndex
-      let model: Model
-      
-      switch segment {
-         case 0:
-            model = .rgb
-         case 1:
-            model = .hsb
-         default:
-            model = .rgb
-      }
+      let model: Model = segmentedColorTypeSelected()
       
       if model == .rgb {
          redHueLabel.text           = "Red"
@@ -285,6 +305,36 @@ class ViewController: UIViewController {
    }
    
    
+   //Setting Buttons
+   func configureButtons(){
+      setColorButton.layer.cornerRadius = 5
+      setColorButton.layer.borderWidth  = 1
+      
+      resetButton.layer.cornerRadius    = 5
+      resetButton.layer.borderWidth     = 1
+      
+      if !firstRun {
+         setColorButton.layer.backgroundColor = myColor.cgColor
+         resetButton.layer.backgroundColor    = myColor.cgColor
+      }
+      // else we use the default color of the sliders
+   }
+   
+   func randomColor() -> UIColor {
+      //Better always in hsb model to better read or the button text
+      let maxHue        = 360
+      let maxBrightness = 100
+      
+      let v1 = CGFloat(Int.random(in: 0...maxHue))
+      let v2 = CGFloat(50)
+      let v3 = CGFloat(maxBrightness)
+      
+      print("\(v1),\(v2),\(v3)")
+      return UIColor(hue: v1, saturation: v2, brightness: v3, alpha: CGFloat(alpha))
+
+   }
+   
+   
    //MARK: -Other Auxiliary functions
    func cleaningContainerViews() {
       ColorNAmeView.backgroundColor    = .clear
@@ -292,11 +342,20 @@ class ViewController: UIViewController {
       SlidersView.backgroundColor      = .clear
       ButtonsView.backgroundColor      = .clear
    }
-   
-   func resetColourGlobalValues() {
-      rhVal = 0
-      gsVal = 0
-      bbVal = 0
+
+   func segmentedColorTypeSelected() -> Model {
+      let segment = segmentedColorType.selectedSegmentIndex
+      let colorTypeSelected: Model
+      
+      switch segment {
+         case 0:
+            colorTypeSelected = .rgb
+         case 1:
+            colorTypeSelected = .hsb
+         default:
+            colorTypeSelected = .rgb
+      }
+      return colorTypeSelected
    }
 
    
@@ -307,30 +366,21 @@ class ViewController: UIViewController {
       let alert = UIAlertController(title: "Give this colour a name", message: "Type the most original name for your new colour creation", preferredStyle: .alert)
       
       let actionOK = UIAlertAction(title: "🔥like it", style: .default) { action in
-         let segment = self.segmentedColorType.selectedSegmentIndex
-         let model: Model
          
-         switch segment {
-            case 0:
-               model = .rgb
-            case 1:
-               model = .hsb
-            default:
-               model = .rgb
-         }
+         self.firstRun = false //we don´t need the default colorNameLabel anymore
          
-
-         self.ColorNAmeView.backgroundColor = self.calculateColor(model: model)
+         self.ColorNAmeView.backgroundColor = self.calculateColor(model: self.segmentedColorTypeSelected())
+         self.myColor = self.ColorNAmeView.backgroundColor ?? self.randomColor()
          self.myColorName = {
             if alertText.text == "" { return "My Fav Colour"}
             return alertText.text ?? "Unknown"
          }()
+         
 
-         self.settingUI(model: model) //resetting after press the actionOK button of the alert
+         self.settingUI(model: self.segmentedColorTypeSelected()) //resetting after press the actionOK button of the alert
          
       }
-      
-      
+       
       let actionCancel = UIAlertAction(title: "meh! 😓", style: .destructive, handler: nil)
       
       

@@ -18,7 +18,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahM-Pf-lDY" userLabel="ColorNameView">
                                 <rect key="frame" x="40" y="20" width="240" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-1T-kC8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-1T-kC8">
                                         <rect key="frame" x="75" y="15" width="90.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -27,25 +27,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerX" secondItem="ahM-Pf-lDY" secondAttribute="centerX" id="6AQ-oi-dZF"/>
+                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerX" secondItem="ahM-Pf-lDY" secondAttribute="centerX" id="4DM-BX-w4i"/>
+                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerY" secondItem="ahM-Pf-lDY" secondAttribute="centerY" id="7Sp-mY-IQv"/>
                                     <constraint firstAttribute="height" constant="50" id="A8J-ZI-HPw"/>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="top" secondItem="ahM-Pf-lDY" secondAttribute="top" constant="15" id="DG6-Dq-Rzq"/>
                                     <constraint firstAttribute="width" constant="240" id="LgF-9Q-O6w"/>
                                     <constraint firstAttribute="height" constant="50" id="TWW-XG-JjQ"/>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerY" secondItem="ahM-Pf-lDY" secondAttribute="centerY" id="WfV-zo-9Lt"/>
                                     <constraint firstAttribute="width" constant="240" id="c90-fC-vzo"/>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerY" secondItem="ahM-Pf-lDY" secondAttribute="centerY" id="dMo-1z-Q2m"/>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="centerX" secondItem="ahM-Pf-lDY" secondAttribute="centerX" id="g2v-8k-nUa"/>
-                                    <constraint firstItem="bhd-1T-kC8" firstAttribute="leading" secondItem="ahM-Pf-lDY" secondAttribute="leading" constant="75" id="n7d-bz-y0F"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="A8J-ZI-HPw"/>
                                         <exclude reference="c90-fC-vzo"/>
-                                        <exclude reference="DG6-Dq-Rzq"/>
-                                        <exclude reference="dMo-1z-Q2m"/>
-                                        <exclude reference="g2v-8k-nUa"/>
-                                        <exclude reference="n7d-bz-y0F"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
@@ -54,12 +46,6 @@
                                         <exclude reference="LgF-9Q-O6w"/>
                                         <exclude reference="TWW-XG-JjQ"/>
                                         <include reference="c90-fC-vzo"/>
-                                        <exclude reference="6AQ-oi-dZF"/>
-                                        <include reference="DG6-Dq-Rzq"/>
-                                        <exclude reference="WfV-zo-9Lt"/>
-                                        <include reference="dMo-1z-Q2m"/>
-                                        <include reference="g2v-8k-nUa"/>
-                                        <include reference="n7d-bz-y0F"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -160,17 +146,23 @@
                                 <rect key="frame" x="40" y="464" width="240" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="3Ij-MZ-X6j" userLabel="Buttons Stack View">
-                                        <rect key="frame" x="37.5" y="25" width="165" height="30"/>
+                                        <rect key="frame" x="14" y="25" width="212" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP6-qd-dfn">
-                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="zrp-wu-VZW"/>
+                                                </constraints>
                                                 <state key="normal" title="Reset"/>
                                                 <connections>
                                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XXS-AI-e5q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyk-LG-TvH">
-                                                <rect key="frame" x="101" y="0.0" width="64" height="30"/>
+                                                <rect key="frame" x="137" y="0.0" width="75" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="vLG-vY-EX3"/>
+                                                </constraints>
                                                 <state key="normal" title="Set Color"/>
                                                 <connections>
                                                     <action selector="setColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m02-Hu-Xdd"/>
@@ -356,10 +348,12 @@
                         <outlet property="gsSlider" destination="GKu-gn-GoU" id="rWc-U6-22Q"/>
                         <outlet property="gsValueLabel" destination="PIE-Eg-f4y" id="ZHi-b8-bkP"/>
                         <outlet property="redHueLabel" destination="M0X-Ed-4pc" id="Q9H-PP-pnr"/>
+                        <outlet property="resetButton" destination="pP6-qd-dfn" id="3FI-9n-XCi"/>
                         <outlet property="rhSlider" destination="ax2-l1-uYX" id="P9q-HO-Mi7"/>
                         <outlet property="rhValueLabel" destination="LPE-IG-x2i" id="HcE-9m-WqT"/>
                         <outlet property="segmentedColorType" destination="ERL-IS-PhD" id="soD-IZ-dNb"/>
                         <outlet property="segmentedControlLabel" destination="fPA-oE-vL6" id="hYb-pr-Eci"/>
+                        <outlet property="setColorButton" destination="Gyk-LG-TvH" id="eNc-Kk-1Q9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
