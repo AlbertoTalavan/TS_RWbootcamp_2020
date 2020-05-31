@@ -12,7 +12,7 @@
 I used the AutoLayout and the StoryBoard as required for this assignment. It is optimized for and iPhone SE screen size but 
 it can be run on any iPhone supporting iOS13.  
 
-I could do adjust the screen for any screen resolution doing it programatically but I choose do it with StoryBoard just to 
+I could adjust the screen for any screen resolution doing it programatically but I choose do it with StoryBoard just to 
 practice the *AutoLayout* there and the *vary for traits*
 
 I have made some changes to the original assignment (and here is why):  
