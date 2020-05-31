@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA1C54D92484338F00F5CFA9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C54D82484338F00F5CFA9 /* InfoViewController.swift */; };
 		BACBF79A2481951000F9974A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF7992481951000F9974A /* AppDelegate.swift */; };
 		BACBF79C2481951000F9974A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF79B2481951000F9974A /* SceneDelegate.swift */; };
 		BACBF79E2481951000F9974A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF79D2481951000F9974A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA1C54D82484338F00F5CFA9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		BACBF7962481951000F9974A /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBF7992481951000F9974A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACBF79B2481951000F9974A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				BACBF7992481951000F9974A /* AppDelegate.swift */,
 				BACBF79B2481951000F9974A /* SceneDelegate.swift */,
 				BACBF79D2481951000F9974A /* ViewController.swift */,
+				BA1C54D82484338F00F5CFA9 /* InfoViewController.swift */,
 				BACBF79F2481951000F9974A /* Main.storyboard */,
 				BACBF7A22481951100F9974A /* Assets.xcassets */,
 				BACBF7A42481951100F9974A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				BACBF79E2481951000F9974A /* ViewController.swift in Sources */,
 				BACBF79A2481951000F9974A /* AppDelegate.swift in Sources */,
+				BA1C54D92484338F00F5CFA9 /* InfoViewController.swift in Sources */,
 				BACBF79C2481951000F9974A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

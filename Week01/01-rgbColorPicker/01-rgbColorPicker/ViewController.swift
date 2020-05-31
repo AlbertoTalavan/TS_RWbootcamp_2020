@@ -55,6 +55,7 @@ class ViewController: UIViewController {
    
    
    
+   
    //Starting program after loading the view
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -63,6 +64,25 @@ class ViewController: UIViewController {
       cleaningContainerViews()
       settingUI(model: model)                  //settingUI(model: .rgb)
   
+   }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      guard let ivc = segue.destination as? InfoViewController else { return }
+
+      ivc.color = resetButton.backgroundColor
+      
+      if segmentedColorTypeSelected() == .rgb {
+         ivc.model = "rgb"
+      } else if segmentedColorTypeSelected() == .hsb {
+         ivc.model = "hsb"
+      } else {
+         //code for other future color models (or else-if when more than one)
+      }
+      /*
+      ivc.v1 = rhVal
+      ivc.v2 = gsVal
+      ivc.v3 = bbVal
+      */
    }
    
    //MARK: - Segmented Control
@@ -102,12 +122,6 @@ class ViewController: UIViewController {
    
    
    //MARK: - Buttons
-   @IBAction func infoPressed(_ sender: UIButton) {
-      //segue to the next view
-      #warning("TODO this functionality")
-      
-   }
-   
    @IBAction func setColor(_ sender: UIButton) {
       //show alert view with text view to name our color
       showAlertView()
@@ -116,6 +130,36 @@ class ViewController: UIViewController {
    @IBAction func reset(_ sender: UIButton) {
       //resetting values depending of the position of the segmented control
       settingUI(model: segmentedColorTypeSelected())
+   }
+   
+   
+   //MARK: - Setting Buttons
+   func configureButtons(){
+      setColorButton.layer.cornerRadius = 5
+      setColorButton.layer.borderWidth  = 1
+      
+      resetButton.layer.cornerRadius    = 5
+      resetButton.layer.borderWidth     = 1
+      
+      if !firstRun {
+         setColorButton.layer.backgroundColor = myColor.cgColor
+         resetButton.layer.backgroundColor    = myColor.cgColor
+      }
+      // else we use the default color of the sliders
+   }
+   
+   func randomColor() -> UIColor {
+      //Better always in hsb model to better read or the button text
+      let maxHue        = 360
+      let maxBrightness = 100
+      
+      let v1 = CGFloat(Int.random(in: 0...maxHue))
+      let v2 = CGFloat(50)
+      let v3 = CGFloat(maxBrightness)
+      
+      print("\(v1),\(v2),\(v3)")
+      return UIColor(hue: v1, saturation: v2, brightness: v3, alpha: CGFloat(alpha))
+
    }
    
    
@@ -207,7 +251,7 @@ class ViewController: UIViewController {
       
       ////if we start the app in dark mode we need different default values
       if firstRun {
-         if traitCollection.userInterfaceStyle == .dark {
+         if traitCollection.userInterfaceStyle == .dark { 
             print("DarkMode")
             rhSlider.value = zero
             gsSlider.value = zero
@@ -303,39 +347,9 @@ class ViewController: UIViewController {
          //some code here if we add another model
       }
    }
-   
-   
-   //Setting Buttons
-   func configureButtons(){
-      setColorButton.layer.cornerRadius = 5
-      setColorButton.layer.borderWidth  = 1
-      
-      resetButton.layer.cornerRadius    = 5
-      resetButton.layer.borderWidth     = 1
-      
-      if !firstRun {
-         setColorButton.layer.backgroundColor = myColor.cgColor
-         resetButton.layer.backgroundColor    = myColor.cgColor
-      }
-      // else we use the default color of the sliders
-   }
-   
-   func randomColor() -> UIColor {
-      //Better always in hsb model to better read or the button text
-      let maxHue        = 360
-      let maxBrightness = 100
-      
-      let v1 = CGFloat(Int.random(in: 0...maxHue))
-      let v2 = CGFloat(50)
-      let v3 = CGFloat(maxBrightness)
-      
-      print("\(v1),\(v2),\(v3)")
-      return UIColor(hue: v1, saturation: v2, brightness: v3, alpha: CGFloat(alpha))
 
-   }
    
-   
-   //MARK: -Other Auxiliary functions
+   //MARK: - Other Auxiliary functions
    func cleaningContainerViews() {
       ColorNAmeView.backgroundColor    = .clear
       ColorModelView.backgroundColor   = .clear

@@ -232,7 +232,7 @@
                                                         <rect key="frame" x="144" y="0.0" width="30" height="31"/>
                                                         <state key="normal" title="info"/>
                                                         <connections>
-                                                            <action selector="infoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHi-7W-DgV"/>
+                                                            <segue destination="5h7-9A-3zk" kind="presentation" identifier="infoSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Iyo-2Z-HtJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -337,7 +337,7 @@
                     </view>
                     <connections>
                         <outlet property="ButtonsView" destination="Qr0-dN-1J8" id="77t-7W-U55"/>
-                        <outlet property="ColorModelView" destination="uTX-l9-fFQ" id="4vL-oe-w0e"/>
+                        <outlet property="ColorModelView" destination="uTX-l9-fFQ" id="Mbd-fM-22W"/>
                         <outlet property="ColorNAmeView" destination="ahM-Pf-lDY" id="Z6v-Vo-Pla"/>
                         <outlet property="SlidersView" destination="mkP-JE-93m" id="QJ3-3M-4AV"/>
                         <outlet property="bbSlider" destination="Wtu-Kb-6W2" id="QBP-ip-oko"/>
@@ -360,20 +360,96 @@
             </objects>
             <point key="canvasLocation" x="136.875" y="136.26760563380282"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="7sg-VV-2fp">
+        <!--Info View Controller-->
+        <scene sceneID="7DC-q7-Sg7">
             <objects>
-                <viewController id="Cfb-8J-0T5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DYL-F2-VNG">
+                <viewController id="5h7-9A-3zk" customClass="InfoViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5p-x8-Vcw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYU-HT-fgK">
+                                <rect key="frame" x="16" y="20" width="288" height="468"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39P-Jk-EWM">
+                                <rect key="frame" x="122.5" y="508" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Qfe-Yt-tb0"/>
+                                    <constraint firstAttribute="width" constant="75" id="fp9-EQ-m10"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qfe-Yt-tb0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Qfe-Yt-tb0"/>
+                                        <exclude reference="fp9-EQ-m10"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="5h7-9A-3zk" eventType="touchUpInside" id="kfa-Vy-yk9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Yik-mL-Uli"/>
+                        <constraints>
+                            <constraint firstItem="13l-Eb-BTC" firstAttribute="trailing" secondItem="cYU-HT-fgK" secondAttribute="trailing" constant="16" id="7xV-yg-SM8"/>
+                            <constraint firstItem="39P-Jk-EWM" firstAttribute="centerX" secondItem="g5p-x8-Vcw" secondAttribute="centerX" id="AzJ-PP-TOW"/>
+                            <constraint firstItem="39P-Jk-EWM" firstAttribute="top" secondItem="cYU-HT-fgK" secondAttribute="bottom" constant="20" id="Ejg-el-8fd"/>
+                            <constraint firstItem="cYU-HT-fgK" firstAttribute="top" secondItem="13l-Eb-BTC" secondAttribute="top" constant="20" id="MBh-ns-nwE"/>
+                            <constraint firstItem="cYU-HT-fgK" firstAttribute="leading" secondItem="13l-Eb-BTC" secondAttribute="leading" constant="16" id="Qci-AF-v7t"/>
+                            <constraint firstItem="13l-Eb-BTC" firstAttribute="bottom" secondItem="39P-Jk-EWM" secondAttribute="bottom" constant="20" id="Sdk-oW-9oZ"/>
+                            <constraint firstItem="cYU-HT-fgK" firstAttribute="leading" secondItem="13l-Eb-BTC" secondAttribute="leading" constant="16" id="a0R-2i-Jv4"/>
+                            <constraint firstItem="39P-Jk-EWM" firstAttribute="centerX" secondItem="g5p-x8-Vcw" secondAttribute="centerX" id="j4R-XE-6U9"/>
+                            <constraint firstItem="cYU-HT-fgK" firstAttribute="top" secondItem="13l-Eb-BTC" secondAttribute="top" constant="20" id="kOx-7h-USx"/>
+                            <constraint firstItem="13l-Eb-BTC" firstAttribute="bottom" secondItem="39P-Jk-EWM" secondAttribute="bottom" constant="30" id="ll0-NP-5kz"/>
+                            <constraint firstItem="39P-Jk-EWM" firstAttribute="top" secondItem="cYU-HT-fgK" secondAttribute="bottom" constant="20" id="tR8-9Y-ESs"/>
+                            <constraint firstItem="13l-Eb-BTC" firstAttribute="trailing" secondItem="cYU-HT-fgK" secondAttribute="trailing" constant="16" id="x12-Dp-xTc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="13l-Eb-BTC"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sdk-oW-9oZ"/>
+                                <exclude reference="x12-Dp-xTc"/>
+                                <exclude reference="Qci-AF-v7t"/>
+                                <exclude reference="kOx-7h-USx"/>
+                                <exclude reference="AzJ-PP-TOW"/>
+                                <exclude reference="tR8-9Y-ESs"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="7xV-yg-SM8"/>
+                                <include reference="Sdk-oW-9oZ"/>
+                                <exclude reference="ll0-NP-5kz"/>
+                                <include reference="x12-Dp-xTc"/>
+                                <exclude reference="MBh-ns-nwE"/>
+                                <include reference="Qci-AF-v7t"/>
+                                <exclude reference="a0R-2i-Jv4"/>
+                                <include reference="kOx-7h-USx"/>
+                                <include reference="AzJ-PP-TOW"/>
+                                <exclude reference="Ejg-el-8fd"/>
+                                <exclude reference="j4R-XE-6U9"/>
+                                <include reference="tR8-9Y-ESs"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="39P-Jk-EWM" id="tiW-kN-dR2"/>
+                        <outlet property="webView" destination="cYU-HT-fgK" id="mGQ-2V-re5"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QVy-il-C3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMZ-kR-CGF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060" y="140"/>
+            <point key="canvasLocation" x="1094.3661971830986" y="135"/>
         </scene>
     </scenes>
 </document>
