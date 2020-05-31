@@ -16,12 +16,13 @@ I could do adjust the screen for any screen resolution doing it programatically 
 practice the *AutoLayout* there and the *vary for traits*
 
 I have made some changes to the original assignment (and here is why):  
-- The sliders default position **now is** the one that make the **white colour** in each colour model (rgb:255,255,255 or 
-  hsb:0,0,100).  
+- The sliders default position **now is different** depending of the light or dark mode the device will be when it runs the
+  app. If the **device is in light mode** then the **default value will be black** (rgb:0,0,0 or hsb:0,0,0), and if the
+  **device is in dark mode** then the **default value will be white** (rgb:255,255,255 or hsb:0,0,100).  
   That is because iOS devices can be in both light or dark mode and **I am using UIColor.Label for the texts**. That means
-  if the **device is in light mode** and the **sliders default** to the leftmost position...(that **means black colour** in 
-  both rgb and hsb) **we will not be able to read any text of any label** because the ".Label" colour for
-  "light mode" is black
+  If in example the **device is in light mode** and the **sliders default** to the leftmost position...(that **means**
+  **black colour** in both rgb and hsb) **we will not be able to read any text of any label** because the ".Label" colour for
+  "light mode" is black.
 - The background of the app is changing colour in real time as we move any slider. I think it is a better way of see what is
   happening as you move any one of the sliders so,
 - When, in the AlertView, we hit the ok action (called "like it") we do not assign the colour to the background, instead  
