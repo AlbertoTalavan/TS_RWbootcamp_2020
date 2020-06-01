@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA1C54D92484338F00F5CFA9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C54D82484338F00F5CFA9 /* InfoViewController.swift */; };
+		BA1C54DD248524AB00F5CFA9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1C54DB2485249F00F5CFA9 /* WebKit.framework */; };
 		BACBF79A2481951000F9974A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF7992481951000F9974A /* AppDelegate.swift */; };
 		BACBF79C2481951000F9974A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF79B2481951000F9974A /* SceneDelegate.swift */; };
 		BACBF79E2481951000F9974A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBF79D2481951000F9974A /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		BA1C54D82484338F00F5CFA9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		BA1C54DB2485249F00F5CFA9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BACBF7962481951000F9974A /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBF7992481951000F9974A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACBF79B2481951000F9974A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1C54DD248524AB00F5CFA9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA1C54DA2485249E00F5CFA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA1C54DB2485249F00F5CFA9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BACBF78D2481951000F9974A = {
 			isa = PBXGroup;
 			children = (
 				BACBF7982481951000F9974A /* 01-rgbColorPicker */,
 				BACBF7972481951000F9974A /* Products */,
+				BA1C54DA2485249E00F5CFA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
