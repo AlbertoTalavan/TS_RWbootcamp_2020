@@ -8,12 +8,23 @@
 
 ## 01-rgbColorPicker app  
 
+| ![gif light](/Week01/Assets-Gifs/ColorPicker-light.gif) | ![gif dark](/Week01/Assets-Gifs/ColorPicker-dark.gif) |
+| ------------------------------------------------------- | ----------------------------------------------------- | 
+| iPhone in Light mode | iPhone in Dark mode |
+
+
+
+
+|![iOS 13.0](https://img.shields.io/badge/iOS-13.0-orange)|
+| ------------------------------------------------------- |
+|![swift 5](https://img.shields.io/badge/Swift-5-red)|
+
 **Previous considerations**  
 I used the AutoLayout and the StoryBoard as required for this assignment. It is optimized for and iPhone SE screen size but 
 it can be run on any iPhone supporting iOS13.  
 
 I could adjust the screen for any screen resolution doing it programatically but I choose do it with StoryBoard just to 
-practice the *AutoLayout* there and the *vary for traits*
+practice the *AutoLayout* there and the *vary for traits* ...but I will to improve it ^^!
 
 I have made some changes to the original assignment (and here is why):  
 - The sliders default position **now is different** depending of the light or dark mode the device will be when it runs the
