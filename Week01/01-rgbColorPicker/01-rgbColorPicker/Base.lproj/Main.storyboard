@@ -207,7 +207,7 @@
                                 <rect key="frame" x="40" y="75" width="240" height="105"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-Tx-syj" userLabel="Color Model Stack View">
-                                        <rect key="frame" x="33" y="19" width="174" height="67.5"/>
+                                        <rect key="frame" x="36.5" y="19" width="167" height="67.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPA-oE-vL6">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="20.5"/>
@@ -216,7 +216,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="btL-Zv-ZFd">
-                                                <rect key="frame" x="0.0" y="36.5" width="174" height="31"/>
+                                                <rect key="frame" x="0.0" y="36.5" width="164" height="31"/>
                                                 <subviews>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-IS-PhD">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="32"/>
@@ -228,9 +228,9 @@
                                                             <action selector="modeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ULe-mV-fDv"/>
                                                         </connections>
                                                     </segmentedControl>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brH-sU-KTn">
-                                                        <rect key="frame" x="144" y="0.0" width="30" height="31"/>
-                                                        <state key="normal" title="info"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brH-sU-KTn">
+                                                        <rect key="frame" x="144" y="0.0" width="20" height="31"/>
+                                                        <state key="normal" image="info.circle" catalog="system"/>
                                                         <connections>
                                                             <segue destination="5h7-9A-3zk" kind="presentation" identifier="infoSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Iyo-2Z-HtJ"/>
                                                         </connections>
@@ -347,6 +347,7 @@
                         <outlet property="greenSaturationLabel" destination="wUl-PJ-uee" id="2DF-s0-Xk4"/>
                         <outlet property="gsSlider" destination="GKu-gn-GoU" id="rWc-U6-22Q"/>
                         <outlet property="gsValueLabel" destination="PIE-Eg-f4y" id="ZHi-b8-bkP"/>
+                        <outlet property="infoButton" destination="brH-sU-KTn" id="8to-qH-SET"/>
                         <outlet property="redHueLabel" destination="M0X-Ed-4pc" id="Q9H-PP-pnr"/>
                         <outlet property="resetButton" destination="pP6-qd-dfn" id="3FI-9n-XCi"/>
                         <outlet property="rhSlider" destination="ax2-l1-uYX" id="P9q-HO-Mi7"/>
@@ -452,4 +453,7 @@
             <point key="canvasLocation" x="1094.3661971830986" y="135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

@@ -30,6 +30,7 @@ class ViewController: UIViewController {
    
    @IBOutlet weak var setColorButton: UIButton!
    @IBOutlet weak var resetButton: UIButton!
+   @IBOutlet weak var infoButton: UIButton!
    
    
    var rhVal: Float = 0.0 //Int value of the red/hue slider
@@ -141,9 +142,15 @@ class ViewController: UIViewController {
       resetButton.layer.cornerRadius    = 5
       resetButton.layer.borderWidth     = 1
       
+      //infoButton.layer.cornerRadius = 50
+      //infoButton.layer.borderWidth = 1
+      
+      
+      
       if !firstRun {
          setColorButton.layer.backgroundColor = myColor.cgColor
          resetButton.layer.backgroundColor    = myColor.cgColor
+         
       }
       // else we use the default color of the sliders
    }
