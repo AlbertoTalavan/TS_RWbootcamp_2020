@@ -33,11 +33,11 @@ class ViewController: UIViewController {
    @IBOutlet weak var infoButton: UIButton!
    
    
-   var rhVal: Float = 0.0 //Int value of the red/hue slider
-   var gsVal: Float = 0.0 //Int value of the green/sat slider
-   var bbVal: Float = 0.0 //Int value of the blue/bright slider
+   var rhVal: Float   = 0.0 //Int value of the red/hue slider
+   var gsVal: Float   = 0.0 //Int value of the green/sat slider
+   var bbVal: Float   = 0.0 //Int value of the blue/bright slider
    
-   let alpha = 1.0
+   let alpha: CGFloat = 1.0
    
    var firstRun = true
    
@@ -165,7 +165,7 @@ class ViewController: UIViewController {
       let v3 = CGFloat(maxBrightness)
       
       print("\(v1),\(v2),\(v3)")
-      return UIColor(hue: v1, saturation: v2, brightness: v3, alpha: CGFloat(alpha))
+      return UIColor(hue: v1, saturation: v2, brightness: v3, alpha: alpha)
 
    }
    
@@ -192,13 +192,13 @@ class ViewController: UIViewController {
          v1 = v1/rgbMax
          v2 = v2/rgbMax
          v3 = v3/rgbMax
-         color = UIColor(red: CGFloat(v1), green: CGFloat(v2), blue: CGFloat(v3), alpha: CGFloat(alpha))
+         color = UIColor(red: CGFloat(v1), green: CGFloat(v2), blue: CGFloat(v3), alpha: alpha)
       }
       else if model == .hsb {
          v1 = v1/hueMax
          v2 = v2/satMax
          v3 = v3/brightMax
-         color = UIColor(hue: CGFloat(v1), saturation: CGFloat(v2), brightness: CGFloat(v3), alpha: CGFloat(alpha))
+         color = UIColor(hue: CGFloat(v1), saturation: CGFloat(v2), brightness: CGFloat(v3), alpha: alpha)
       }
       else {
          //code here for other future value or else if if more than one
@@ -242,32 +242,31 @@ class ViewController: UIViewController {
 
       
       //initial value of the sliders
-      if model == .rgb {
-         rhSlider.value = rgbMax    //because we like to start in white
-         gsSlider.value = rgbMax
-         bbSlider.value = rgbMax
-
-      }else if model == .hsb{
+      if traitCollection.userInterfaceStyle == .dark {
+         //all values set to zero = black colour for both rgb and hsb
+         print("DarkMode")
          rhSlider.value = zero
          gsSlider.value = zero
-         bbSlider.value = brightMax //because we like to start in white
-                 
-      } else {
-                 //some code here if we add another model
-      }
-      
-      //if  the app is in dark mode we need different default values
-      if traitCollection.userInterfaceStyle == .dark {
-         if traitCollection.userInterfaceStyle == .dark { 
-            print("DarkMode")
+         bbSlider.value = zero
+         
+      } else { //traitCollection.userInterfaceStyle == .light
+         print("LightMode")
+         if model == .rgb {
+            rhSlider.value = rgbMax
+            gsSlider.value = rgbMax    //because we like to start in white
+            bbSlider.value = rgbMax
+
+         }else if model == .hsb{
             rhSlider.value = zero
             gsSlider.value = zero
-            bbSlider.value = zero
-
+            bbSlider.value = brightMax //because we like to start in white
+                    
+         } else {
+                    //some code here if we add another model
          }
       }
 
-      
+
       //Setting colour global values to zero
       rhVal = rhSlider.value
       gsVal = gsSlider.value
@@ -286,9 +285,9 @@ class ViewController: UIViewController {
       
       //setting  backgroundColor to default color
       if segmentedColorTypeSelected() == .rgb {
-         colour = UIColor(red: CGFloat(rhSlider.value), green: CGFloat(gsSlider.value), blue: CGFloat(bbSlider.value), alpha: CGFloat(alpha))
+         colour = UIColor(red: CGFloat(rhSlider.value), green: CGFloat(gsSlider.value), blue: CGFloat(bbSlider.value), alpha: alpha)
       } else if segmentedColorTypeSelected() == .hsb {
-         colour = UIColor(hue: CGFloat(rhSlider.value), saturation: CGFloat(gsSlider.value), brightness: CGFloat(bbSlider.value), alpha: CGFloat(alpha))
+         colour = UIColor(hue: CGFloat(rhSlider.value), saturation: CGFloat(gsSlider.value), brightness: CGFloat(bbSlider.value), alpha: alpha)
       } else {
          //future code here for other different color representation (or if-else if more than one)
       }
@@ -300,20 +299,21 @@ class ViewController: UIViewController {
    
    //MARK: - Setting Sliders
    func assignSliderMinMax (slider: UISlider, model: Model) {
-      let rgbMax          = 255
-      let hueMax          = 360
-      let sat_bright_Max  = 100
+      let rgbMax: Float          = 255
+      let hueMax: Float          = 360
+      let sat_bright_Max: Float  = 100
+      let zero: Float            = 0
 
       //Setting min value -> this is a common value for both types (rgb/hsb)
-      slider.minimumValue = 0
+      slider.minimumValue = zero
       
       //Setting Max value
       if model == .rgb { //IF RGB
-         slider.maximumValue = Float(rgbMax) //red,green and blue
+         slider.maximumValue = rgbMax //red,green and blue
          
       }else if model == .hsb{ // IF HSB
-         if slider == rhSlider { slider.maximumValue = Float(hueMax) }  // Hue max = 100
-         else { slider.maximumValue = Float(sat_bright_Max)}            //saturation and brightness max = 360
+         if slider == rhSlider { slider.maximumValue = hueMax }  // Hue max = 100
+         else { slider.maximumValue = sat_bright_Max}            //saturation and brightness max = 360
          
       } else {
          //some code here if we add another model or else if´s if we continue adding different ones
