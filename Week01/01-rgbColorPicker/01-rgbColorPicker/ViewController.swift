@@ -3,7 +3,7 @@
 //  01-rgbColorPicker
 //
 //  Created by Alberto Talaván on 29/05/2020.
-//  Copyright © 2020 Alberto Talavan. All rights reserved.
+//  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
 import UIKit
@@ -77,13 +77,8 @@ class ViewController: UIViewController {
       } else if segmentedColorTypeSelected() == .hsb {
          ivc.model = "hsb"
       } else {
-         //code for other future color models (or else-if when more than one)
+         //code for other future colour models (or else-if when more than one)
       }
-      /*
-      ivc.v1 = rhVal
-      ivc.v2 = gsVal
-      ivc.v3 = bbVal
-      */
    }
    
    //MARK: - Segmented Control
@@ -142,21 +137,17 @@ class ViewController: UIViewController {
       resetButton.layer.cornerRadius    = 5
       resetButton.layer.borderWidth     = 1
       
-      //infoButton.layer.cornerRadius = 50
-      //infoButton.layer.borderWidth = 1
-      
-      
-      
+
       if !firstRun {
          setColorButton.layer.backgroundColor = myColor.cgColor
          resetButton.layer.backgroundColor    = myColor.cgColor
          
-      }
-      // else we use the default color of the sliders
+      } // else we use the default color of the slider
+      
    }
    
    func randomColor() -> UIColor {
-      //Better always in hsb model to better read or the button text
+      //always in hsb model
       let maxHue        = 360
       let maxBrightness = 100
       
@@ -216,8 +207,8 @@ class ViewController: UIViewController {
       let rgbMax     = Float(255)
       let brightMax  = Float(100)
 
-      //Adding appropiate text to color name label
-      if firstRun { colorNameLabel.text = "RW Bootcamp 2020 🖥"}  //Add a function to randomly pick a color and a name
+      //Adding apropiate text to colour name label
+      if firstRun { colorNameLabel.text = "RW Bootcamp 2020 🖥"}
       else { colorNameLabel.text = myColorName }
       
       //configuring Buttons
@@ -262,7 +253,7 @@ class ViewController: UIViewController {
             bbSlider.value = brightMax //because we like to start in white
                     
          } else {
-                    //some code here if we add another model
+            //some code here if we add another model
          }
       }
 
@@ -289,7 +280,7 @@ class ViewController: UIViewController {
       } else if segmentedColorTypeSelected() == .hsb {
          colour = UIColor(hue: CGFloat(rhSlider.value), saturation: CGFloat(gsSlider.value), brightness: CGFloat(bbSlider.value), alpha: alpha)
       } else {
-         //future code here for other different color representation (or if-else if more than one)
+         //future code here for other different colour representation (or if-else if more than one)
       }
    
       
@@ -398,7 +389,7 @@ class ViewController: UIViewController {
          }()
          
 
-         self.settingUI(model: self.segmentedColorTypeSelected()) //resetting after press the actionOK button of the alert
+         self.settingUI(model: self.segmentedColorTypeSelected()) //resetting UI after press the actionOK button of the alert
          
       }
        
