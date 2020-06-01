@@ -256,8 +256,8 @@ class ViewController: UIViewController {
                  //some code here if we add another model
       }
       
-      ////if we start the app in dark mode we need different default values
-      if firstRun {
+      //if  the app is in dark mode we need different default values
+      if traitCollection.userInterfaceStyle == .dark {
          if traitCollection.userInterfaceStyle == .dark { 
             print("DarkMode")
             rhSlider.value = zero
