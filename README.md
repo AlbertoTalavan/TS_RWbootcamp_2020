@@ -1,4 +1,4 @@
 # TS_RWbootcamp_2020
  My RW bootcamp exercises and journey 
  
- (I will complete it later...in just a few minutes)
+ (I will complete it later...just in a few minutes)
