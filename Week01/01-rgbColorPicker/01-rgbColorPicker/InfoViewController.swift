@@ -15,13 +15,7 @@ class InfoViewController: UIViewController {
    
    var color: UIColor?
    
-   /*
-   var v1: Float?
-   var v2: Float?
-   var v3: Float?
-   
-   let alpha = CGFloat(1.0)
-   */
+
    
    @IBOutlet weak var webView: WKWebView!
    
@@ -74,25 +68,6 @@ class InfoViewController: UIViewController {
       closeButton.backgroundColor = color
 
    }
-   /*
-   func superViewColor(){
-      var color: UIColor
-      guard let model = model else { return } // if return background colour stills = .clear
-      guard let v1 = v1 else {return}
-      guard let v2 = v2 else {return}
-      guard let v3 = v3 else {return}
-      
-      if model == "rgb" {
-         color = UIColor(red: CGFloat(v1), green: CGFloat(v2), blue: CGFloat(v3), alpha: alpha)
-      }else if model == "hsb" {
-          color = UIColor(hue: CGFloat(v1), saturation: CGFloat(v2), brightness: CGFloat(v3), alpha: alpha)
-      }else {
-         //future code here
-         color = UIColor.clear
-      }
-      
-      view.backgroundColor = color
-   }
- */
+
    
 }
