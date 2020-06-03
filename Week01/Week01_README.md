@@ -27,7 +27,7 @@ I could adjust the screen for any screen resolution doing it programatically but
 practice the *AutoLayout* there and the *vary for traits* ...but I will to improve it ^^!
 
 I have made some changes to the original assignment (and here is why):  
-- The sliders default position **now is different** depending of the light or dark mode the device will be when it runs the
+- The sliders default position **now is different** depending of the light or dark mode the device is when it runs the
   app. If the **device is in light mode** then the **default value will be black** (rgb:0,0,0 or hsb:0,0,0), and if the
   **device is in dark mode** then the **default value will be white** (rgb:255,255,255 or hsb:0,0,100).  
   That is because iOS devices can be in both light or dark mode and **I am using UIColor.Label for the texts**. That means
