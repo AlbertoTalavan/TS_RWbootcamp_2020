@@ -43,7 +43,7 @@ I have made some changes to the original assignment (and here is why):
   sight is keeping it in some place... and I think this kind of container view is almost the best one!  
 - When you press the "info" button you go via segue to InfoViewController, but **depending of the color model selected at**
   **the moment you pressed it, the "webView" will show you the wikipedia info page for rgb or hsb** ... and,
-- the "close" button **will have a bacground color equal to "reset" and "set color" buttons**
+- the "close" button **will have its background color equal to "reset" and "set color" buttons**.
   
   
 #### The original assignment requirements:
