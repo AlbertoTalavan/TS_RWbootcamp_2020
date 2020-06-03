@@ -44,7 +44,7 @@ class ViewController: UIViewController {
    var myColorName = ""
    var myColor = UIColor()
 
-   enum Model {
+   enum colorType {
       case rgb
       case hsb
    }
@@ -61,9 +61,9 @@ class ViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       //initial settings
-      let model = segmentedColorTypeSelected() //by default is the index[0] -> .rgb
+      let colorType = segmentedColorTypeSelected() //by default is the index[0] -> .rgb
       cleaningContainerViews()
-      settingUI(model: model)                  //settingUI(model: .rgb)
+      settingUI(model: colorType)                  //settingUI(model: .rgb)
   
    }
    
@@ -73,9 +73,9 @@ class ViewController: UIViewController {
       ivc.color = resetButton.backgroundColor
       
       if segmentedColorTypeSelected() == .rgb {
-         ivc.model = "rgb"
+         ivc.colorType = "rgb"
       } else if segmentedColorTypeSelected() == .hsb {
-         ivc.model = "hsb"
+         ivc.colorType = "hsb"
       } else {
          //code for other future colour models (or else-if when more than one)
       }
@@ -166,7 +166,7 @@ class ViewController: UIViewController {
       view.backgroundColor = calculateColor(model: segmentedColorTypeSelected())
    }
    
-   func calculateColor(model: Model) -> UIColor {
+   func calculateColor(model: colorType) -> UIColor {
       //slider values are stored en rhVal, gsVal and bbVal
       var v1 = rhVal
       var v2 = gsVal
@@ -201,7 +201,7 @@ class ViewController: UIViewController {
    
    
    //MARK: - Setting values after reset or first run
-   func settingUI(model: Model){
+   func settingUI(model: colorType){
       var colour = UIColor.white  //initial colour in case we can make the proper one
       let zero       = Float(0)
       let rgbMax     = Float(255)
@@ -289,7 +289,7 @@ class ViewController: UIViewController {
    
    
    //MARK: - Setting Sliders
-   func assignSliderMinMax (slider: UISlider, model: Model) {
+   func assignSliderMinMax (slider: UISlider, model: colorType) {
       let rgbMax: Float          = 255
       let hueMax: Float          = 360
       let sat_bright_Max: Float  = 100
@@ -311,7 +311,7 @@ class ViewController: UIViewController {
       }
    }
    
-   func stylingSliders(model: Model) {
+   func stylingSliders(model: colorType) {
       //setting min/Max value to sliders
       if model == .rgb {
          rhSlider.tintColor = .systemRed ;   rhSlider.thumbTintColor = .systemRed
@@ -329,7 +329,7 @@ class ViewController: UIViewController {
    }
    
    func settingSlidersLabels() {
-      let model: Model = segmentedColorTypeSelected()
+      let model: colorType = segmentedColorTypeSelected()
       
       if model == .rgb {
          redHueLabel.text           = "Red"
@@ -355,9 +355,9 @@ class ViewController: UIViewController {
       ButtonsView.backgroundColor      = .clear
    }
 
-   func segmentedColorTypeSelected() -> Model {
+   func segmentedColorTypeSelected() -> colorType {
       let segment = segmentedColorType.selectedSegmentIndex
-      let colorTypeSelected: Model
+      let colorTypeSelected: colorType
       
       switch segment {
          case 0:
@@ -409,7 +409,7 @@ class ViewController: UIViewController {
    
    
    //MARK: - auxiliary print functions
-   func printColor(model: Model?, color: [Float]) {
+   func printColor(model: colorType?, color: [Float]) {
       print()
       print("## model : \(model)")
       print("## original values ===> rh: \(rhVal), gs: \(gsVal), bb: \(bbVal), alpha: \(alpha)")

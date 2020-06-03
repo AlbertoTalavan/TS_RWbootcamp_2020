@@ -11,7 +11,7 @@ import WebKit
 
 class InfoViewController: UIViewController {
    
-   var model: String?
+   var colorType: String?
    
    var color: UIColor?
    
@@ -38,10 +38,10 @@ class InfoViewController: UIViewController {
       //https://en.wikipedia.org/wiki/HSL_and_HSV
       var urlString: String = ""
       let request: URLRequest
-      if let model = model {
-         if model == "rgb" {
+      if let colorType = colorType {
+         if colorType == "rgb" {
             urlString = "https://en.wikipedia.org/wiki/RGB_color_model"
-         }else if model == "hsb" {
+         }else if colorType == "hsb" {
             urlString = "https://en.wikipedia.org/wiki/HSL_and_HSV"
          }
          
