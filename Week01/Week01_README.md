@@ -1,12 +1,8 @@
 # WEEK 1 apps (Monday 25 to Thursday 28 of 2020)
- - **Bull´s Eye:** Assigment from Monday 25 to Thursday 28 -> App resulting of following the "Your First iOS and UIKita App"
-                RayWenderlich.com webpage.  
- - **01-rgbColorPicker:** Assignment from Thursday 28 to Monday 1 of June -> **First assignment to do on our own**.
 
----
----
 
 ## 01-rgbColorPicker app  
+#### (first assignment to do on our own)
 
 | ![gif light](/Week01/Assets-Gifs/ColorPicker-light.gif) | ![gif dark](/Week01/Assets-Gifs/ColorPicker-dark.gif) |
 | ------------------------------------------------------- | ----------------------------------------------------- | 
