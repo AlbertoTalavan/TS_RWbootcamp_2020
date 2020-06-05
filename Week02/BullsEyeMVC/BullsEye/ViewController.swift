@@ -32,11 +32,12 @@ class ViewController: UIViewController {
 
    }
    
-   @IBAction func startOver (){
+   @IBAction func startOver() {
       round = 0
       score = 0
       startNewRound()
    }
+   
    
    @IBAction func showAlert() {
       let difference = abs(currentValue - targetValue)
