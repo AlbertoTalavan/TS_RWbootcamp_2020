@@ -18,6 +18,11 @@ class BullsEyeGame {
    private var points: Int = 0
    
    
+   
+   
+   
+   
+   //MARK: - SETTERS
    func updateScore(add value: Int) {
       score += value  //updating the score
    }
@@ -26,30 +31,9 @@ class BullsEyeGame {
       points += point
    }
    
-   
-   
-   //MARK: - SETTERS
    func setCurrentValue(_ value: Int){
       currentValue = value
    }
-   
-   func getTargetValue(_ value: Int){
-      targetValue = value
-   }
-   
-   func setScore(_ value: Int){
-      score = value
-   }
-   
-   func setRound(_ value: Int){
-      round = value
-   }
-   
-   /*
-   func setPoints(_ value: Int){
-      points = value
-   }
-   */
    
    func setDifference(_ value: Int){
       difference = value
@@ -89,7 +73,8 @@ class BullsEyeGame {
    
    
    
-   //MARK: - Alert parameters
+   //MARK: - Game Core Functionality
+   //It returns the title of the AlertView and points achieved in this round
    func gameNucleus() -> (String, Int) {
       var title: String
       var points: Int = 0
@@ -115,7 +100,7 @@ class BullsEyeGame {
    }
    
    
-   //MARK: - Start new round
+   //MARK: - Start new round And Reset
    func startNewRound() {
       points = 0
       round += 1

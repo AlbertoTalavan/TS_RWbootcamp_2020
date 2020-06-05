@@ -9,13 +9,7 @@
 import UIKit
 
 class Controller: UIViewController {
-   /*
-   var currentValue = 0
-   var targetValue  = 0
-   var score        = 0
-   var round        = 0
-   */
-   
+
    let game = BullsEyeGame()
    
    
@@ -117,8 +111,7 @@ class Controller: UIViewController {
    }
    
    
-   
-   
+
    func updateViews() {
       game.setCurrentValue(50)
       slider.value = Float(game.getCurrentValue())

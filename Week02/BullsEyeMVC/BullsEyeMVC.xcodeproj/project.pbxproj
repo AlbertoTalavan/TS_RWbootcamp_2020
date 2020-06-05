@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA96D77F247ECC2E000E3C5F /* Bull´s Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull´s Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA96D77F247ECC2E000E3C5F /* BullsEyeMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEyeMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA96D782247ECC2E000E3C5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA96D784247ECC2E000E3C5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA96D786247ECC2E000E3C5F /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		BA96D780247ECC2E000E3C5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA96D77F247ECC2E000E3C5F /* Bull´s Eye.app */,
+				BA96D77F247ECC2E000E3C5F /* BullsEyeMVC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			);
 			name = BullsEye;
 			productName = BullsEye;
-			productReference = BA96D77F247ECC2E000E3C5F /* Bull´s Eye.app */;
+			productReference = BA96D77F247ECC2E000E3C5F /* BullsEyeMVC.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA96D77A247ECC2E000E3C5F /* Build configuration list for PBXProject "BullsEye" */;
+			buildConfigurationList = BA96D77A247ECC2E000E3C5F /* Build configuration list for PBXProject "BullsEyeMVC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -295,8 +295,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.BullsEye;
-				PRODUCT_NAME = "Bull´s Eye";
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.BullsEyeMVC;
+				PRODUCT_NAME = BullsEyeMVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,8 +313,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.BullsEye;
-				PRODUCT_NAME = "Bull´s Eye";
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.BullsEyeMVC;
+				PRODUCT_NAME = BullsEyeMVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA96D77A247ECC2E000E3C5F /* Build configuration list for PBXProject "BullsEye" */ = {
+		BA96D77A247ECC2E000E3C5F /* Build configuration list for PBXProject "BullsEyeMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA96D791247ECC31000E3C5F /* Debug */,
