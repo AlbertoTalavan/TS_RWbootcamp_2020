@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class Controller: UIViewController {
+   /*
    var currentValue = 0
    var targetValue  = 0
    var score        = 0
    var round        = 0
+   */
+   
+   let game = BullsEyeGame()
+   
    
    @IBOutlet weak var slider:      UISlider!
    @IBOutlet weak var randomLabel: UILabel!
@@ -25,42 +30,45 @@ class ViewController: UIViewController {
       super.viewDidLoad()
       
       stylingSlider()
-      currentValue = Int(slider.value.rounded())
-      scoreLabel.text = String(0)
-      roundLabel.text = String(0)
+      game.setCurrentValue(Int(slider.value.rounded()))
+      
+      scoreLabel.text = String(game.getScore())
+      roundLabel.text = String(game.getRound())
       startOver()
 
    }
    
-   @IBAction func startOver() {
-      round = 0
-      score = 0
-      startNewRound()
+   @IBAction func startOver (){
+      game.reset()
+      updateViews()
    }
    
    
    @IBAction func showAlert() {
-      let difference = abs(currentValue - targetValue)
-      var points = 100 - difference
-      let title: String
+      //Calculate difference
+      game.calculateDifference(this: game.getCurrentValue(), minus: game.getTargetValue())
+      
+      //Difference in absolute value
+      game.setDifference(abs(game.getDifference()))
+      
+      
+      //assign points
+      game.addPoints(100 - game.getDifference())
+      
+      //obtain show alert parameters and store them in tuple
+      let tuple: (title: String, points: Int) = game.gameNucleus()
+      
+      //alert title
+      let title = tuple.title
+      
+      //updating the amount of points achieved if necessary
+      game.addPoints(tuple.points)
 
-      if difference == 0 {
-         title = "Perfect!"
-         points += 100
-      }else if difference == 1 {
-         title = "You almost had it!"
-         points += 50
-      }else if difference < 5 {
-         title = "You almost had it!"
-      } else if difference < 10 {
-         title = "Pretty good!"
-      } else {
-         title = "meh, not even close!"
-      }
+
+      //Alert message (hardcoded here)
+      let message = "You scored: \(game.getPoints())"
       
-      let message = "You scored: \(points)"
       
-      score += points
       
       
       let alert = UIAlertController(
@@ -69,7 +77,9 @@ class ViewController: UIViewController {
                   preferredStyle: .alert)
       
       let action = UIAlertAction(title: "awesome", style: .default) { (action) in
-         self.startNewRound()
+         self.game.updateScore(add: self.game.getPoints())
+         self.game.startNewRound()
+         self.updateViews()
       }
       
       alert.addAction(action)
@@ -78,9 +88,12 @@ class ViewController: UIViewController {
       
    }
    
+   
+   
    @IBAction func sliderMoved(_ slider: UISlider) {
       let roundedValue = slider.value.rounded()
-      currentValue = Int(roundedValue)
+      game.setCurrentValue(Int(roundedValue))
+      
    }
    
    
@@ -103,20 +116,16 @@ class ViewController: UIViewController {
       slider.setMaximumTrackImage(trackRightResizable, for: .normal)
    }
    
-   func startNewRound() {
-      round += 1
-      targetValue = Int.random(in: 1...100)
-      
-      currentValue = 50
-      slider.value = Float(currentValue)
-      
-      updateLabels()
-   }
    
-   func updateLabels() {
-      randomLabel.text = String(targetValue)
-      scoreLabel.text  = String(score)
-      roundLabel.text  = String(round)
+   
+   
+   func updateViews() {
+      game.setCurrentValue(50)
+      slider.value = Float(game.getCurrentValue())
+      
+      randomLabel.text = String(game.getTargetValue())
+      scoreLabel.text  = String(game.getScore())
+      roundLabel.text  = String(game.getRound())
       
    }
    
