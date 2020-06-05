@@ -42,7 +42,7 @@
 		BA96D776247ECC2E000E3C5F = {
 			isa = PBXGroup;
 			children = (
-				BA96D781247ECC2E000E3C5F /* BullsEye */,
+				BA96D781247ECC2E000E3C5F /* BullsEyeMVC */,
 				BA96D780247ECC2E000E3C5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,7 +55,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BA96D781247ECC2E000E3C5F /* BullsEye */ = {
+		BA96D781247ECC2E000E3C5F /* BullsEyeMVC */ = {
 			isa = PBXGroup;
 			children = (
 				BA9977A6248AB2FD002E9639 /* Model.swift */,
@@ -67,7 +67,7 @@
 				BA96D784247ECC2E000E3C5F /* SceneDelegate.swift */,
 				BA96D790247ECC31000E3C5F /* Info.plist */,
 			);
-			path = BullsEye;
+			path = BullsEyeMVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

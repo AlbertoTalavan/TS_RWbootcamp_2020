@@ -109,7 +109,7 @@ class BullsEyeGame {
    }
    
    func reset () {
-      round      = 0
+      round      = 1
       score      = 0
       points     = 0
       difference = 0
