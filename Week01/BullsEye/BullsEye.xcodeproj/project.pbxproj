@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA4367EC248021A500268779 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4367EB248021A500268779 /* AboutViewController.swift */; };
 		BA4367EE248023D900268779 /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4367ED248023D900268779 /* AboutAuthorViewController.swift */; };
 		BA4367F02480384200268779 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = BA4367EF2480384200268779 /* BullsEye.html */; };
 		BA96D783247ECC2E000E3C5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA96D782247ECC2E000E3C5F /* AppDelegate.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA4367EB248021A500268779 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BA4367ED248023D900268779 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
 		BA4367EF2480384200268779 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		BA96D77F247ECC2E000E3C5F /* Bull´s Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull´s Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +63,6 @@
 				BA96D782247ECC2E000E3C5F /* AppDelegate.swift */,
 				BA96D784247ECC2E000E3C5F /* SceneDelegate.swift */,
 				BA96D786247ECC2E000E3C5F /* ViewController.swift */,
-				BA4367EB248021A500268779 /* AboutViewController.swift */,
 				BA4367ED248023D900268779 /* AboutAuthorViewController.swift */,
 				BA96D788247ECC2E000E3C5F /* Main.storyboard */,
 				BA4367EF2480384200268779 /* BullsEye.html */,
@@ -150,7 +147,6 @@
 			files = (
 				BA96D787247ECC2E000E3C5F /* ViewController.swift in Sources */,
 				BA96D783247ECC2E000E3C5F /* AppDelegate.swift in Sources */,
-				BA4367EC248021A500268779 /* AboutViewController.swift in Sources */,
 				BA96D785247ECC2E000E3C5F /* SceneDelegate.swift in Sources */,
 				BA4367EE248023D900268779 /* AboutAuthorViewController.swift in Sources */,
 			);
