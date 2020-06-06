@@ -120,6 +120,14 @@ class Controller: UIViewController {
       scoreLabel.text  = String(game.getScore())
       roundLabel.text  = String(game.getRound())
       
+      //crossfade transition
+      let transition = CATransition()
+      transition.type = CATransitionType.fade
+      transition.duration = 1
+      transition.timingFunction = CAMediaTimingFunction(name:
+                                  CAMediaTimingFunctionName.easeOut)
+      view.layer.add(transition, forKey: nil)
+      
    }
    
 
