@@ -25,9 +25,7 @@ class Controller: UIViewController {
       
       stylingSlider()
       game.setCurrentValue(to: Int(slider.value.rounded()))
-      
-      scoreLabel.text = String(game.getScore())
-      roundLabel.text = String(game.getRound())
+
       startOver()
 
    }
