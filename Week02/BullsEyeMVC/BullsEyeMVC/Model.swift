@@ -6,121 +6,83 @@
 //  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
+//: ## Mark Down in PlayGround
+
+//: [=> WThis is a link...] (@next)
+
 import Foundation
 
 class BullsEyeGame {
-   private var currentValue = 0
+   private var currentValue = 0 //doing that we do not need init()
    private var targetValue  = 0
    private var score        = 0
    private var round        = 0
+   private var points       = 0
    
-   private var difference: Int?
-   private var points: Int = 0
+   private var difference: Int { //computed property
+      abs(currentValue - targetValue)
+   }
+
    
-   
-   
-   
-   
-   
-   //MARK: - SETTERS
-   func updateScore(add value: Int) {
+   //MARK: - Score and Points (adding a value)
+   func addScore(add value: Int) {
       score += value  //updating the score
    }
    
-   func addPoints(_ point: Int) {
-      points += point
+   func addPoints(add value: Int) {
+      points += value
    }
    
-   func setCurrentValue(_ value: Int){
+   func nextRound() {
+      round += 1
+   }
+   
+   
+   //MARK: - SETTERS
+   func setCurrentValue(to value: Int){
       currentValue = value
    }
+
+   func setTargetValue(to value: Int){
+      targetValue = value
+   }
    
-   func setDifference(_ value: Int){
-      difference = value
+   func setScore(to value: Int) {
+      score = value
+   }
+   
+   func setRound(to value: Int){
+      round = value
+   }
+   
+   func setPoints(to value: Int){
+      points = value
    }
    
    
    //MARK: - GETTERS
    func getCurrentValue() -> Int{
-      return currentValue
+      currentValue
    }
    
    func getTargetValue() -> Int{
-      return targetValue
+      targetValue
    }
    
    func getScore() -> Int{
-      return score
+      score
    }
    
    func getRound() -> Int{
-      return round
+      round
    }
    
    func getPoints() -> Int {
-      return points
+      points
    }
    
    func getDifference() -> Int {
-      return difference ?? 0
+      difference
    }
-   
-   
-   //MARK: - Calc. Difference between target and value
-   func calculateDifference(this current:Int, minus target: Int){
-      difference = current - target
-   }
-   
-   
-   
-   //MARK: - Game Core Functionality
-   //It returns the title of the AlertView and points achieved in this round
-   func gameNucleus() -> (String, Int) {
-      var title: String
-      var points: Int = 0
-      
-      guard let difference = difference else { return ("something went wront", 0)}
-      
-      if difference == 0 {
-         title = "Perfect!"
-         points += 100
-      }else if difference == 1 {
-         title = "You almost had it!"
-         points += 50
-      }else if difference < 5 {
-         title = "You almost had it!"
-      } else if difference < 10 {
-         title = "Pretty good!"
-      } else {
-              title = "meh, not even close!"
-      }
-      
-      
-      return (title, points)
-   }
-   
-   
-   //MARK: - Start new round And Reset
-   func startNewRound() {
-      points = 0
-      round += 1
-      targetValue = Int.random(in: 1...100)
-
-   }
-   
-   func reset () {
-      round      = 1
-      score      = 0
-      points     = 0
-      difference = 0
-      
-      targetValue = Int.random(in: 1...100)
-      
-      
-      
-   }
-
-   
-
    
 }

@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA96D77E247ECC2E000E3C5F /* BullsEye */ = {
+		BA96D77E247ECC2E000E3C5F /* BullsEyeMVC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA96D793247ECC31000E3C5F /* Build configuration list for PBXNativeTarget "BullsEye" */;
+			buildConfigurationList = BA96D793247ECC31000E3C5F /* Build configuration list for PBXNativeTarget "BullsEyeMVC" */;
 			buildPhases = (
 				BA96D77B247ECC2E000E3C5F /* Sources */,
 				BA96D77C247ECC2E000E3C5F /* Frameworks */,
@@ -85,7 +85,7 @@
 			);
 			dependencies = (
 			);
-			name = BullsEye;
+			name = BullsEyeMVC;
 			productName = BullsEye;
 			productReference = BA96D77F247ECC2E000E3C5F /* BullsEyeMVC.app */;
 			productType = "com.apple.product-type.application";
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA96D77E247ECC2E000E3C5F /* BullsEye */,
+				BA96D77E247ECC2E000E3C5F /* BullsEyeMVC */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BullsEyeMVC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BullsEyeMVC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA96D793247ECC31000E3C5F /* Build configuration list for PBXNativeTarget "BullsEye" */ = {
+		BA96D793247ECC31000E3C5F /* Build configuration list for PBXNativeTarget "BullsEyeMVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA96D794247ECC31000E3C5F /* Debug */,
