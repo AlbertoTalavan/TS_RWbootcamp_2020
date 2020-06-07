@@ -65,10 +65,10 @@ class Controller: UIViewController {
    
    //MARK: - Game Core Functionality
    func alertViewStringComponents() -> (String, String, String) {
-      var title: String
-      var extraPoints: Int = 0
+      let title: String
       let message: String
       let hitMeText: String
+      var extraPoints: Int = 0
       
       let difference = game.getDifference()
       
