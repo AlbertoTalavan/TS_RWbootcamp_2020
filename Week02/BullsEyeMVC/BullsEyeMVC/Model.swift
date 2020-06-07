@@ -6,9 +6,6 @@
 //  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
-//: ## Mark Down in PlayGround
-
-//: [=> WThis is a link...] (@next)
 
 import Foundation
 
@@ -23,21 +20,7 @@ class BullsEyeGame {
       abs(currentValue - targetValue)
    }
 
-   
-   //MARK: - Score and Points (adding a value)
-   func addScore(add value: Int) {
-      score += value  //updating the score
-   }
-   
-   func addPoints(add value: Int) {
-      points += value
-   }
-   
-   func nextRound() {
-      round += 1
-   }
-   
-   
+
    //MARK: - SETTERS
    func setCurrentValue(to value: Int){
       currentValue = value

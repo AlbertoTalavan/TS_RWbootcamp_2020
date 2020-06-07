@@ -3,7 +3,7 @@
 //  BullsEye
 //
 //  Created by Alberto Talaván on 27/05/2020.
-//  Copyright © 2020 Alberto Talavan. All rights reserved.
+//  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
 import UIKit
@@ -39,35 +39,15 @@ class Controller: UIViewController {
    }
 
    @IBAction func showAlert() {
- /*
-      //computed property inside the Model)
-      // - Calculate difference (currentValue - targetValue)
-      // - Difference in absolute value => abs(difference)
+      let tuple: (title: String, message: String, buttonMessage: String) = alertViewStringComponents()
 
-      
-      //assign points addPoints(100 - difference) (in alertTitleComponents)
-      //game.addPoints(add: 100 - game.getDifference())
- */
-      //obtain show alert parameters and store them in tuple
-      let tuple: (title: String, message: String) = alertViewComponents()
-       
-/*
-      //updating the amount of points achieved if necessary
-      //in alertTitleComponents
-      //game.addPoints(add: tuple.points)
-
-
-      //Alert message (hardcoded here) in alertTitleComponents
-      //let message = "You scored: \(game.getPoints())"
- */
-      
       let alert = UIAlertController(
          title: tuple.title,
          message: tuple.message,
          preferredStyle: .alert)
       
-      let action = UIAlertAction(title: "awesome", style: .default) { (action) in
-         self.game.addScore(add: self.game.getPoints())
+      let action = UIAlertAction(title: tuple.buttonMessage, style: .default) { (action) in
+         self.addScore(add: self.game.getPoints())
          self.startNewRound()
          self.updateViews()
       }
@@ -86,52 +66,71 @@ class Controller: UIViewController {
    
    
    //MARK: - Game Core Functionality
-   func alertViewComponents() -> (String, String) {
+   func alertViewStringComponents() -> (String, String, String) {
       var title: String
       var extraPoints: Int = 0
       let message: String
+      let hitMeText: String
       
       let difference = game.getDifference()
       
       if difference == 0 {
          title = "Perfect!"
          extraPoints += 100
+         hitMeText = "I´m the best"
       }else if difference == 1 {
          title = "You almost had it!"
          extraPoints += 50
+         hitMeText = "I rock!"
       }else if difference < 5 {
          title = "You almost had it!"
+         hitMeText = "pretty awesome"
       } else if difference < 10 {
          title = "Pretty good!"
+         hitMeText = "awesome"
       } else {
          title = "meh!, not even close!"
+         hitMeText = "mmm allright"
       }
       
       //adding total points after getting extraPoints
-      game.addPoints(add: 100 - game.getDifference() + extraPoints)
+      addPoints(add: 100 - game.getDifference() + extraPoints)
       
       message = "You scored: \(game.getPoints())"
       
       
-      return (title, message)
+      return (title, message, hitMeText)
+   }
+   
+   //MARK: - Score and Points (adding a value)
+   func addScore(add value: Int) {
+      let score = game.getScore()
+      game.setScore(to: score + value)  //updating the score
+   }
+   
+   func addPoints(add value: Int) {
+      let points = game.getPoints()
+      game.setPoints(to: points + value)
    }
    
    
    //MARK: - Start new round And Reset
    func startNewRound() {
-   game.setPoints(to: 0)
-   game.nextRound()
-   game.setTargetValue(to: Int.random(in: 1...100))
-
+      nextRound()
+      game.setPoints(to: 0)
+      game.setTargetValue(to: Int.random(in: 1...100))
    }
      
    func reset() {
-   game.setRound(to: 1)
-   game.setScore(to: 0)
-   game.setPoints(to: 0)
-      
-   game.setTargetValue( to: Int.random(in: 1...100))
-
+      game.setRound(to: 1)
+      game.setScore(to: 0)
+      game.setPoints(to: 0)
+      game.setTargetValue( to: Int.random(in: 1...100))
+   }
+   
+   func nextRound() {
+      let round = game.getRound()
+      game.setRound(to: round + 1)
    }
    
    
