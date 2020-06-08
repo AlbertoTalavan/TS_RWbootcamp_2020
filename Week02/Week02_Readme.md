@@ -6,7 +6,7 @@ This week assignments :
 - **Reversed Bulls Eye:** (In progress)  
 I know, you are thinking of mandatoriness of this one too...  
                        but....NOPE!!, this is the optional one ...SURPRISE!!!! 
-                       I´m pretty sure you didn´t expect it LoL.
+                       Pretty sure you didn´t expect it huh?.
 ---
 ### Bull´s Eye MVC
 I have used a class (instead of a struct) because of the following reasons:
