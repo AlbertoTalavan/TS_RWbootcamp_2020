@@ -35,10 +35,10 @@ class ViewController: UIViewController {
    var rgbAspirant = RGB()
    
    var hintIsShowed = false
-   var lastScores: Array<Int> = []  //declare this way just to practice
-                                    //same as var lastScores = [Int]()
+   var lastScores: Array<Int> = []  //declared this way just to practice
+                                    //same as: -var lastScores = [Int]()-
    
-   var quickDiff: Int { //slider Hint
+   var quickDiff: Int {
       abs(game.getTargetValue() - game.getCurrentValue())
    }
    
@@ -55,14 +55,13 @@ class ViewController: UIViewController {
    
    //MARK: - Actions
    @IBAction func aSliderMoved(sender: UISlider) {
-      let roundedValue = sender.value.rounded() //OK
+      let roundedValue = sender.value.rounded()
       switch sender {
          case redSlider:
             rgbAspirant.r = Int(roundedValue)
             redLabel.text = String(rgbAspirant.r)
             guessLabel.backgroundColor = UIColor.init(rgbStruct: rgbAspirant)
             applyHint(to: redSlider)
-            //sliderHint(blueSlider)
          case greenSlider:
             rgbAspirant.g = Int(roundedValue)
             greenLabel.text = String(rgbAspirant.g)
@@ -82,7 +81,7 @@ class ViewController: UIViewController {
       
       let tuple: (title: String, message: String, buttonMessage: String) = alertViewStringComponents()
       
-      //need to change the aligment of the alert view message
+      //changing the alignment of both: alert view message and title
       let  paragraphStyle = NSMutableParagraphStyle()
       paragraphStyle.alignment = .left
       
@@ -111,12 +110,11 @@ class ViewController: UIViewController {
       
       alert.addAction(action)
       
-      //applying message aligment = .left
+      //applying message alignment to alert => .left
       alert.setValue(alertTitle, forKey: "attributedTitle")
       alert.setValue(alertMessage, forKey: "attributedMessage")
       
-      
-      
+
       present(alert, animated: true, completion: nil)
    }
 
@@ -130,7 +128,7 @@ class ViewController: UIViewController {
       else { applyHintAllSliders()}
    }
    
-   //MARK: - Slider Hint
+   //MARK: - Slider Hint  involved Methods
    func showHint(){
       if hintIsShowed == false {
          hintLabel.isHidden  = true
@@ -140,7 +138,7 @@ class ViewController: UIViewController {
          hintLabel.isHidden  = false
          hintSwitch.isHidden = false
          hintSwitch.isOn = true
-         applyHintAllSliders()        //not sure if strictly necessary here
+         applyHintAllSliders()
       }
    }
    
@@ -165,7 +163,6 @@ class ViewController: UIViewController {
             hintIsShowed = false
          }
       }
-      
    }
 
    func sliderHint(_ sender: UISlider) {
@@ -189,8 +186,6 @@ class ViewController: UIViewController {
 
       sender.minimumTrackTintColor = color
    }
-   
-   
    
    func applyHint(to slider: UISlider) {
       if hintIsShowed && hintSwitch.isOn == true {
@@ -262,7 +257,7 @@ class ViewController: UIViewController {
    //MARK: - Score and Points (adding a value)
    func addScore(add value: Int) {
       let score = game.getScore()
-      game.setScore(to: score + value)  //updating the score
+      game.setScore(to: score + value)
    }
    
    func addPoints(add value: Int) {
@@ -280,9 +275,8 @@ class ViewController: UIViewController {
       rgbAspirant.setDefaultValues()
       rgbTarget.setRandomValues()
       
-      //checking if hint necessary
+      //checking if hint is necessary
       checkLastScores()
-      
    }
    
    func reset() {
@@ -311,11 +305,11 @@ class ViewController: UIViewController {
  
    // Update Views
    func updateViews() {
-      //updating targetLabel bg color
+      //updating targetLabel background color
       targetLabel.backgroundColor = UIColor.init(rgbStruct: rgbTarget)
       guessLabel.backgroundColor = UIColor.init(rgbStruct: rgbAspirant)
       
-      //updatting sliders position
+      //updating sliders position
       redSlider.value   = Float(rgbAspirant.r)
       greenSlider.value = Float(rgbAspirant.g)
       blueSlider.value  = Float(rgbAspirant.b)
@@ -325,7 +319,7 @@ class ViewController: UIViewController {
       sliderHint(greenSlider)
       sliderHint(blueSlider)
       
-      //updatting labels
+      //updating labels
       scoreLabel.text  = "Score: \(game.getScore())"
       roundLabel.text  = "Round: \(game.getRound())"
       
@@ -346,9 +340,7 @@ class ViewController: UIViewController {
    func stylingButton(_ button: UIButton) {
       button.layer.cornerRadius = 15
    }
-   
-   
-   
+
 }
 
 

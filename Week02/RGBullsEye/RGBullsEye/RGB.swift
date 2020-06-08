@@ -1,10 +1,8 @@
 //
-//  ViewController.swift
+//  RGB.swift
 //  BullsEye
 //
-//  Created by Alberto Talaván on 07/06/2020.
-//  Copyright © 2020 Alberto Talaván. All rights reserved.
-//
+
 
 import UIKit
 

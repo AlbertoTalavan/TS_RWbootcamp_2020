@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BullsEyeGame.swift
 //  BullsEye
 //
 //  Created by Alberto Talaván on 07/06/2020.
@@ -7,11 +7,7 @@
 //
 
 import Foundation
-/*
-struct BullsEyeGame {  // might be class?
 
-}
-*/
 class BullsEyeGame {
    private var currentValue = 0 //doing that we do not need init()
    private var targetValue  = 0
@@ -19,7 +15,7 @@ class BullsEyeGame {
    private var round        = 0
    private var points       = 0
    
-   /*
+   /* // Kept here because it was in my original game Model
    private var difference: Int { //computed property
       abs(currentValue - targetValue)
    }
@@ -31,12 +27,10 @@ class BullsEyeGame {
       currentValue = value
    }
  
-
    func setTargetValue(to value: Int){
       targetValue = value
    }
 
-   
    func setScore(to value: Int) {
       score = value
    }
@@ -59,7 +53,6 @@ class BullsEyeGame {
       targetValue
    }
   
-   
    func getScore() -> Int{
       score
    }
@@ -72,7 +65,7 @@ class BullsEyeGame {
       points
    }
    
-   /*
+   /* //Kept here because it was in my original game Model
    func getDifference() -> Int {
       difference
    }
