@@ -38,7 +38,7 @@
                                                     <constraint firstAttribute="width" constant="70" id="Ezl-oK-Lx1"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -193,6 +193,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="gessTextField" destination="4cH-Z9-2wJ" id="IzY-5G-qgl"/>
                         <outlet property="roundLabel" destination="zsl-pr-HLh" id="uOb-eV-Hm7"/>
                         <outlet property="scoreLabel" destination="1OA-wu-5ij" id="kxh-Ot-C8z"/>
                         <outlet property="slider" destination="qen-jK-FiK" id="tb0-AI-DQK"/>

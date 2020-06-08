@@ -12,16 +12,19 @@ class Controller: UIViewController {
 
    let game = BullsEyeGame()
    
+   @IBOutlet weak var gessTextField: UITextField!
    
    @IBOutlet weak var slider:      UISlider!
-   @IBOutlet weak var randomLabel: UILabel!
    @IBOutlet weak var scoreLabel:  UILabel!
    @IBOutlet weak var roundLabel:  UILabel!
    
    
    
+   
    override func viewDidLoad() {
       super.viewDidLoad()
+      
+      //self.hideKeyboard() // used to dismiss the keyboard if pressed outside it
       
       stylingSlider()
       game.setCurrentValue(to: Int(slider.value.rounded()))
@@ -30,6 +33,14 @@ class Controller: UIViewController {
 
    }
    
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      super.touchesBegan(touches, with: event)
+      
+      view.endEditing(true)
+   }
+   
+   
+   
    //MARK: - Actions
    @IBAction func startOver() {
       reset()
@@ -37,6 +48,7 @@ class Controller: UIViewController {
    }
 
    @IBAction func showAlert() {
+      #warning("To REVISE")
       let tuple: (title: String, message: String, buttonMessage: String) = alertViewStringComponents()
 
       let alert = UIAlertController(
@@ -57,6 +69,7 @@ class Controller: UIViewController {
    }
 
    @IBAction func sliderMoved(_ slider: UISlider) {
+      #warning("To REVISE") // This one now it is not useful, we´ll place the slider to it´s random position
       let roundedValue = slider.value.rounded()
       game.setCurrentValue(to: Int(roundedValue))
       
@@ -64,6 +77,7 @@ class Controller: UIViewController {
    
    
    //MARK: - Game Core Functionality
+   #warning("To REVISE")
    func alertViewStringComponents() -> (String, String, String) {
       let title: String
       let message: String
@@ -153,10 +167,11 @@ class Controller: UIViewController {
    }
    
    func updateViews() {
+      #warning("To REVISE")
       game.setCurrentValue(to: 50)
       slider.value = Float(game.getCurrentValue())
       
-      randomLabel.text = String(game.getTargetValue())
+      //randomLabel.text = String(game.getTargetValue())  Does not exists anymore
       scoreLabel.text  = String(game.getScore())
       roundLabel.text  = String(game.getRound())
       
