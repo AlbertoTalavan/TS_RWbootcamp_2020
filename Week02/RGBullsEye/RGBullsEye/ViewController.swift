@@ -25,11 +25,18 @@ class ViewController: UIViewController {
    @IBOutlet weak var roundLabel: UILabel!
    @IBOutlet weak var scoreLabel: UILabel!
    
+   @IBOutlet weak var hintLabel: UILabel!
+   @IBOutlet weak var hintSwitch: UISwitch!
+   
    @IBOutlet weak var hitmeButton: UIButton!
    
    let game        = BullsEyeGame()
    var rgbTarget   = RGB()
    var rgbAspirant = RGB()
+   
+   var hintIsShowed = false
+   var lastScores: Array<Int> = []  //declare this way just to practice
+                                    //same as var lastScores = [Int]()
    
    var quickDiff: Int { //slider Hint
       abs(game.getTargetValue() - game.getCurrentValue())
@@ -54,17 +61,18 @@ class ViewController: UIViewController {
             rgbAspirant.r = Int(roundedValue)
             redLabel.text = String(rgbAspirant.r)
             guessLabel.backgroundColor = UIColor.init(rgbStruct: rgbAspirant)
-            sliderHint(redSlider)
+            applyHint(to: redSlider)
+            //sliderHint(blueSlider)
          case greenSlider:
             rgbAspirant.g = Int(roundedValue)
             greenLabel.text = String(rgbAspirant.g)
             guessLabel.backgroundColor = UIColor.init(rgbStruct: rgbAspirant)
-         sliderHint(greenSlider)
+            applyHint(to: greenSlider)
          case blueSlider:
             rgbAspirant.b = Int(roundedValue)
             blueLabel.text = String(rgbAspirant.b)
             guessLabel.backgroundColor = UIColor.init(rgbStruct: rgbAspirant)
-            sliderHint(blueSlider)
+            applyHint(to: blueSlider)
          default:
             break
       }
@@ -96,6 +104,7 @@ class ViewController: UIViewController {
       
       let action = UIAlertAction(title: tuple.buttonMessage, style: .default) { (action) in
          self.addScore(add: self.game.getPoints())
+         self.addLastScore(score: self.game.getPoints())
          self.startNewRound()
          self.updateViews()
       }
@@ -116,30 +125,91 @@ class ViewController: UIViewController {
       updateViews()
    }
    
+   @IBAction func switchMoved(sender: UISwitch){
+      if !hintSwitch.isOn { slidersDefaultColor(); }
+      else { applyHintAllSliders()}
+   }
    
    //MARK: - Slider Hint
+   func showHint(){
+      if hintIsShowed == false {
+         hintLabel.isHidden  = true
+         hintSwitch.isHidden = true
+         slidersDefaultColor()
+      }else {
+         hintLabel.isHidden  = false
+         hintSwitch.isHidden = false
+         hintSwitch.isOn = true
+         applyHintAllSliders()        //not sure if strictly necessary here
+      }
+   }
+   
+   func addLastScore(score points: Int) {
+      if lastScores.count >= 2 {
+         lastScores.removeFirst()
+      }
+      lastScores.append(points)
+   }
+   
+   func checkLastScores(){
+      if lastScores != [] {
+         if lastScores[lastScores.count - 1] >= 100 {
+            hintIsShowed = false
+            hintSwitch.isOn = false
+         }
+      }
+      if lastScores.count >= 2 {
+         if lastScores[0] <= 85 && lastScores[1] <= 85 {
+            hintIsShowed = true
+         } else {
+            hintIsShowed = false
+         }
+      }
+      
+   }
 
    func sliderHint(_ sender: UISlider) {
-      #warning("REVISE")
       var color = UIColor()
 
       switch sender {
          case redSlider:
             game.setTargetValue(to: rgbTarget.r)
             game.setCurrentValue(to: rgbAspirant.r)
-         color = UIColor.red.withAlphaComponent(CGFloat(quickDiff)/100.0)
+            color = UIColor.red.withAlphaComponent(CGFloat(quickDiff)/100.0)
          case greenSlider:
             game.setTargetValue(to: rgbTarget.g)
             game.setCurrentValue(to: rgbAspirant.g)
-         color = UIColor.green.withAlphaComponent(CGFloat(quickDiff)/100.0)
+            color = UIColor.green.withAlphaComponent(CGFloat(quickDiff)/100.0)
          case blueSlider:
             game.setTargetValue(to: rgbTarget.b)
             game.setCurrentValue(to: rgbAspirant.b)
-         color = UIColor.blue.withAlphaComponent(CGFloat(quickDiff)/100.0)
+            color = UIColor.blue.withAlphaComponent(CGFloat(quickDiff)/100.0)
          default: break
       }
 
       sender.minimumTrackTintColor = color
+   }
+   
+   
+   
+   func applyHint(to slider: UISlider) {
+      if hintIsShowed && hintSwitch.isOn == true {
+         sliderHint(slider)
+      } else {
+         slidersDefaultColor()
+      }
+   }
+   
+   func applyHintAllSliders() {
+      sliderHint(redSlider)
+      sliderHint(greenSlider)
+      sliderHint(blueSlider)
+   }
+   
+   func slidersDefaultColor() {
+      redSlider.minimumTrackTintColor = UIColor.systemRed
+      greenSlider.minimumTrackTintColor = UIColor.systemGreen
+      blueSlider.minimumTrackTintColor = UIColor.systemBlue
    }
    
 
@@ -210,6 +280,9 @@ class ViewController: UIViewController {
       rgbAspirant.setDefaultValues()
       rgbTarget.setRandomValues()
       
+      //checking if hint necessary
+      checkLastScores()
+      
    }
    
    func reset() {
@@ -256,6 +329,9 @@ class ViewController: UIViewController {
       scoreLabel.text  = "Score: \(game.getScore())"
       roundLabel.text  = "Round: \(game.getRound())"
       
+      //showing Hint if needed
+      showHint()
+      
       
       //crossfade transition
       let transition = CATransition()
@@ -270,6 +346,8 @@ class ViewController: UIViewController {
    func stylingButton(_ button: UIButton) {
       button.layer.cornerRadius = 15
    }
+   
+   
    
 }
 
