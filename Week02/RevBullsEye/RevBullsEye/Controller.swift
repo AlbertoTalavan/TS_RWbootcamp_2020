@@ -27,7 +27,7 @@ class Controller: UIViewController {
       //self.hideKeyboard() // used to dismiss the keyboard if pressed outside it
       
       stylingSlider()
-      game.setCurrentValue(to: Int(slider.value.rounded()))
+      //game.setCurrentValue(to: Int(slider.value.rounded()))
 
       startOver()
 
@@ -48,7 +48,12 @@ class Controller: UIViewController {
    }
 
    @IBAction func showAlert() {
-      #warning("To REVISE")
+      //updating currentValue
+      let guessString: String? = gessTextField.text
+      guard let guessInt = Int(guessString ?? "0") else { return }
+      game.setCurrentValue(to: guessInt)
+      
+      
       let tuple: (title: String, message: String, buttonMessage: String) = alertViewStringComponents()
 
       let alert = UIAlertController(
@@ -68,12 +73,14 @@ class Controller: UIViewController {
       
    }
 
+   /* //Slider Moved
    @IBAction func sliderMoved(_ slider: UISlider) {
       #warning("To REVISE") // This one now it is not useful, we´ll place the slider to it´s random position
       let roundedValue = slider.value.rounded()
       game.setCurrentValue(to: Int(roundedValue))
       
    }
+   */
    
    
    //MARK: - Game Core Functionality
@@ -113,6 +120,7 @@ class Controller: UIViewController {
       
       return (title, message, hitMeText)
    }
+   
    
    //MARK: - Score and Points (adding a value)
    func addScore(add value: Int) {
@@ -169,11 +177,13 @@ class Controller: UIViewController {
    func updateViews() {
       #warning("To REVISE")
       game.setCurrentValue(to: 50)
-      slider.value = Float(game.getCurrentValue())
+      slider.value = Float(game.getTargetValue())
       
       //randomLabel.text = String(game.getTargetValue())  Does not exists anymore
       scoreLabel.text  = String(game.getScore())
       roundLabel.text  = String(game.getRound())
+      
+      gessTextField.text = "0"
       
       //crossfade transition
       let transition = CATransition()
