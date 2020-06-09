@@ -175,7 +175,6 @@ class Controller: UIViewController {
    }
    
    func updateViews() {
-      #warning("To REVISE")
       game.setCurrentValue(to: 50)
       slider.value = Float(game.getTargetValue())
       
