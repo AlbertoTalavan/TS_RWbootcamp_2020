@@ -2,9 +2,8 @@
 
 This week assignments :
 - **Bull´s Eye MVC:** this one is mandatory, 
-- **RGB Bull´s Eye:** this one is also mandatory,  
-- **Reversed Bulls Eye:** (In progress)  
-I know, you are thinking of mandatoriness of this one too...  
+- **RGB Bull´s Eye:** also mandatory,  
+- **Reversed Bulls Eye:** I know, you are thinking of mandatoriness of this one too...  
                        but....NOPE!!, this is the optional one ...SURPRISE!!!! 
                        Pretty sure you didn´t expect it huh?.
 ---
@@ -41,7 +40,7 @@ That said, **as I am NOT using  INHERITANCE**... I think **a struct would be the
 As requested, and in order to test it, I have used the same model I did in the previous exercise  (BullsEyeMVC)
 
 I have made some minor changes to the exercise proposed in the assignment:  
-- **Added a hint switch:** It will be showed if you get less than 85 points in your last 2 attempts to match (your last 2 rounds), and it will fade away after you get a perfect or almost perfect match,
+- **Added a hint switch:** and **_I Love this one._** It will be showed if you get less than 85 points in your last 2 attempts to match (your last 2 rounds), and it will fade away after you get a perfect or almost perfect match,
 - Due to the previous one I have also **modified the AboutViewController text** adding the info about the "Hint"
 - **Changed UI colours to conform both light and dark mode.**  
 - **Changed the AlertView title and message attributes:** in order to be able to align the title and the message because
