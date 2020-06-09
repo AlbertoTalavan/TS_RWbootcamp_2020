@@ -39,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA72404E248F15CA003DE866 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA9977A6248AB2FD002E9639 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA72404F248F15E2003DE866 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BA96D786247ECC2E000E3C5F /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BA96D776247ECC2E000E3C5F = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +74,8 @@
 		BA96D781247ECC2E000E3C5F /* RevBullsEye */ = {
 			isa = PBXGroup;
 			children = (
-				BA9977A6248AB2FD002E9639 /* Model.swift */,
-				BA96D786247ECC2E000E3C5F /* Controller.swift */,
+				BA72404F248F15E2003DE866 /* Controller */,
+				BA72404E248F15CA003DE866 /* Model */,
 				BA96D788247ECC2E000E3C5F /* Main.storyboard */,
 				BA96D78D247ECC31000E3C5F /* LaunchScreen.storyboard */,
 				BA96D78B247ECC31000E3C5F /* Assets.xcassets */,
