@@ -222,8 +222,6 @@ class ViewController: UIViewController {
       
       let rgbDifference = rgbAspirant.difference(target: rgbTarget)
       let difference    = Int (rgbDifference * 100.0)
-         print("rgbDifference: \(rgbDifference)")
-         print("difference...: \(difference)")
       
       if difference == 0 {
          title = "Perfect!"

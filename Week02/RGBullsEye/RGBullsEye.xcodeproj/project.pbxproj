@@ -54,6 +54,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA72404A248F0EB5003DE866 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB57F61BED941D00003224 /* BullsEyeGame.swift */,
+				CDCB57F71BED941D00003224 /* RGB.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA72404B248F0ECA003DE866 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB57E61BED8F4800003224 /* ViewController.swift */,
+				CDCB57FA1BED986300003224 /* AboutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CDCB57D81BED8F4800003224 = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				CDCB57E41BED8F4800003224 /* AppDelegate.swift */,
-				CDCB57E61BED8F4800003224 /* ViewController.swift */,
-				CDCB57F61BED941D00003224 /* BullsEyeGame.swift */,
-				CDCB57F71BED941D00003224 /* RGB.swift */,
-				CDCB57FA1BED986300003224 /* AboutViewController.swift */,
+				BA72404B248F0ECA003DE866 /* Controller */,
+				BA72404A248F0EB5003DE866 /* Model */,
 				CDCB57E81BED8F4800003224 /* Main.storyboard */,
 				181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */,
 				CDCB57EB1BED8F4800003224 /* Assets.xcassets */,
