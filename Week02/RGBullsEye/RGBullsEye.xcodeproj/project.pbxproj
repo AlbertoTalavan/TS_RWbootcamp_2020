@@ -91,12 +91,12 @@
 		CDCB57E31BED8F4800003224 /* RGBullsEye */ = {
 			isa = PBXGroup;
 			children = (
-				CDCB57E41BED8F4800003224 /* AppDelegate.swift */,
 				BA72404B248F0ECA003DE866 /* Controller */,
 				BA72404A248F0EB5003DE866 /* Model */,
 				CDCB57E81BED8F4800003224 /* Main.storyboard */,
 				181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */,
 				CDCB57EB1BED8F4800003224 /* Assets.xcassets */,
+				CDCB57E41BED8F4800003224 /* AppDelegate.swift */,
 				CDCB57F01BED8F4800003224 /* Info.plist */,
 			);
 			path = RGBullsEye;
