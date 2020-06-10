@@ -157,7 +157,7 @@ class ViewController: UIViewController {
          }
       }
       if lastScores.count >= 2 {
-         if lastScores[0] <= 85 && lastScores[1] <= 85 {
+         if lastScores[0] <= 95 && lastScores[1] <= 95 {
             hintIsShowed = true
          } else {
             hintIsShowed = false
