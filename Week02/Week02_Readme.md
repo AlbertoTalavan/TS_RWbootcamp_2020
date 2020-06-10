@@ -73,6 +73,6 @@ I have made some minor changes to the exercise proposed in the assignment:
 This app is a reverse mode of Bull´s Eye, and here the slider gets a random value that we have to guess so:
 - Now there is a **Text Field** (instead of a Label) **where** we can **"guess" the value of the slider**,
 - In order to input our guessed value we have to use the Keyboard (numeric),
-- which one will be **dismissed tapped anywhere outside of it** (the keyboard).
+- which one will be **dismissed tapping anywhere outside of it** (the keyboard).
 - Also owns the **fade transition** to improve visuals.
 
