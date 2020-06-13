@@ -1,35 +1,10 @@
-/// Copyright (c) 2020 Razeware LLC
-/// 
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-/// 
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-/// 
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-/// 
-/// This project and source code may use libraries or frameworks that are
-/// released under various Open-Source licenses. Use of those libraries and
-/// frameworks are governed by their own individual licenses.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
+//
+//  ViewController.swift
+//  Cryptly
+//
+//  Created by Alberto Talaván on 13/06/2020.
+//  Copyright © 2020 Alberto Talaván. All rights reserved.
+//
 import UIKit
 
 class HomeViewController: UIViewController{
@@ -42,7 +17,14 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
   @IBOutlet weak var themeSwitch: UISwitch!
+  
+  let cryptoData = DataGenerator.shared.generateData()
+  
+  let light = LightTheme()
+  let dark = DarkTheme()
     
+  
+  //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
@@ -50,16 +32,23 @@ class HomeViewController: UIViewController{
     setView1Data()
     setView2Data()
     setView3Data()
+    
+    
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    registerForTheme()
   }
   
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
+    unregisterForTheme()
   }
+  
 
+  //MARK: - Setting Up Views
   func setupViews() {
       
     view1.backgroundColor = .systemGray6
@@ -94,14 +83,76 @@ class HomeViewController: UIViewController{
   }
   
   func setView1Data() {
+    //var currenciesString: String
+    //let currenciesName = cryptoData.map { $0.map { ($0.name) }}
+    let currenciesName = cryptoData?.map({ (currency)in
+      currency.name
+    })
+    
+    guard let currencies = currenciesName else { return }
+    view1TextLabel.text = currencies.joined(separator: ", ")
+
   }
   
   func setView2Data() {
+
+    let currenciesName = cryptoData.map { $0 }?.filter { $0.currentValue > $0.previousValue}.map { $0.name }
+
+    guard let currencies = currenciesName else { return }
+    view2TextLabel.text = currencies.joined(separator: ", ")
   }
   
   func setView3Data() {
+    // cryptoData has the data
+    let currenciesName = cryptoData.map { $0 }?.filter { $0.currentValue < $0.previousValue}.map { $0.name }
+     
+    guard let currencies = currenciesName else { return }
+    view3TextLabel.text = currencies.joined(separator: ", ")
   }
   
+  
+  //MARK: - Actions
   @IBAction func switchPressed(_ sender: Any) {
+    if themeSwitch.isOn {
+      //dark theme
+      themeChanged()
+    } else {
+      #warning("maybe it is not necessary... we´ll see after implement themeChanged")
+      //to change between dark an light
+      themeChanged()
+    }
   }
+}
+
+
+
+extension HomeViewController: Themable {
+  func registerForTheme() {
+    // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs. See the hint at the end of this document for some code you can use here.
+    
+    NotificationCenter.default.addObserver(self, selector: #selector (themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+  }
+  
+  func unregisterForTheme() {
+    //should remove the current object as an observer. We have a handy hint for this too. :
+    NotificationCenter.default.removeObserver(self)
+    
+  }
+  
+  @objc func themeChanged() {
+    /*
+     should:
+     For view1, view2, view3:
+        - Set the backgroundColor to the current theme’s widgetBackgroundColor
+        - Set the layer’s border color to the current theme’s borderColor
+     
+     For view1TextLabel, view2TextLable, view3TextLabel:
+        -Set the textColor to the current theme’s textColor
+     
+     For the main view:
+        -Set the backgroundColor to the current theme’s backgroundColor
+     */
+  }
+  
+  
 }

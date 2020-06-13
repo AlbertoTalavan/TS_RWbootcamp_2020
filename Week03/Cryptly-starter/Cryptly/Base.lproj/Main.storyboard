@@ -28,7 +28,7 @@
         <!--Home View Controller-->
         <scene sceneID="9KI-BV-L4a">
             <objects>
-                <viewController id="5r6-eT-R08" customClass="HomeViewController" customModule="Cryptly_starter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5r6-eT-R08" customClass="HomeViewController" customModule="Cryptly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mvF-6T-uLm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
