@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/albertotalavan/Developer/Bootcamp_RW_git/TS_RWbootcamp_2020/Week03/Cryptly-starter/Cryptly.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
