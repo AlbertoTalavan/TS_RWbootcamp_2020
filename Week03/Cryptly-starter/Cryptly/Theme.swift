@@ -27,11 +27,8 @@ protocol Themable {
 
 struct LightTheme: Theme {
   var backgroundColor: UIColor
-  
   var textColor: UIColor
-  
   var borderColor: UIColor
-  
   var widgetBackgroundColor: UIColor
   
   init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor, widgetBackgroundColor: UIColor) {
@@ -41,13 +38,17 @@ struct LightTheme: Theme {
     self.widgetBackgroundColor = widgetBackgroundColor
     
   }
-  
+
+
   init() {
-    self.backgroundColor = UIColor.systemBackground
-    self.textColor = UIColor.label
-    self.borderColor = UIColor.systemOrange
-    self.widgetBackgroundColor = UIColor.systemGray5
+    self.backgroundColor = UIColor(hue: 0.1, saturation: 0.70, brightness: 1.0, alpha: 1.0)
+    self.textColor = UIColor.white
+    /*self.borderColor = UIColor(hue: 0.092, saturation: 1.0, brightness: 0.99, alpha: 1.0)
+    self.widgetBackgroundColor = UIColor(hue: 0.1, saturation: 0.85, brightness: 1.0, alpha: 1.0)*/
+    self.borderColor = UIColor(hue: 0.092, saturation: 1.0, brightness: 0.99, alpha: 1.0)
+    self.widgetBackgroundColor = UIColor(hue: 0.55, saturation: 0.68, brightness: 0.97, alpha: 1.0)
   }
+
 
 }
 
@@ -65,19 +66,16 @@ struct DarkTheme: Theme {
     self.textColor = textColor
     self.borderColor = borderColor
     self.widgetBackgroundColor = widgetBackgroundColor
-    
   }
-  
+
   init() {
-    self.backgroundColor = UIColor.systemBackground
-    self.textColor = UIColor.label
-    self.borderColor = UIColor.systemOrange
-    self.widgetBackgroundColor = UIColor.white
+    self.backgroundColor = UIColor(hue: 0.80, saturation: 0.77, brightness: 0.98, alpha: 1.0)
+    self.textColor = UIColor.white
+    self.borderColor = UIColor(hue: 0.76, saturation: 0.76, brightness: 1.0, alpha: 1.0)
+    self.widgetBackgroundColor = UIColor(hue: 0.727, saturation: 0.55, brightness: 0.76, alpha: 1.0)
   }
   
   
 }
 
 
-//let light = LightTheme()
-//let dark = DarkTheme()

@@ -19,14 +19,13 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var themeSwitch: UISwitch!
   
   let cryptoData = DataGenerator.shared.generateData()
-  
-  let light = LightTheme()
-  let dark = DarkTheme()
     
   
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+
     setupViews()
     setupLabels()
     setView1Data()
@@ -51,24 +50,24 @@ class HomeViewController: UIViewController{
   //MARK: - Setting Up Views
   func setupViews() {
       
-    view1.backgroundColor = .systemGray6
-    view1.layer.borderColor = UIColor.lightGray.cgColor
+    //view1.backgroundColor = .systemGray6
+    //view1.layer.borderColor = UIColor.lightGray.cgColor
     view1.layer.borderWidth = 1.0
     view1.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
     view1.layer.shadowOffset = CGSize(width: 0, height: 2)
     view1.layer.shadowRadius = 4
     view1.layer.shadowOpacity = 0.8
     
-    view2.backgroundColor = .systemGray6
-    view2.layer.borderColor = UIColor.lightGray.cgColor
+    //view2.backgroundColor = .systemGray6
+    //view2.layer.borderColor = UIColor.lightGray.cgColor
     view2.layer.borderWidth = 1.0
     view2.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
     view2.layer.shadowOffset = CGSize(width: 0, height: 2)
     view2.layer.shadowRadius = 4
     view2.layer.shadowOpacity = 0.8
     
-    view3.backgroundColor = .systemGray6
-    view3.layer.borderColor = UIColor.lightGray.cgColor
+    //view3.backgroundColor = .systemGray6
+    //view3.layer.borderColor = UIColor.lightGray.cgColor
     view3.layer.borderWidth = 1.0
     view3.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
     view3.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -113,19 +112,46 @@ class HomeViewController: UIViewController{
   
   //MARK: - Actions
   @IBAction func switchPressed(_ sender: Any) {
-    if themeSwitch.isOn {
-      //dark theme
-      themeChanged()
+    themeChanged()
+  }
+  
+  //MARK: - UI set up due to switch
+  func checkDeviceTheme() {
+    if traitCollection.userInterfaceStyle == .light {
+      themeSwitch.isOn = false
     } else {
-      #warning("maybe it is not necessary... we´ll see after implement themeChanged")
-      //to change between dark an light
-      themeChanged()
+      themeSwitch.isOn = true
     }
   }
+  
+  func settingUI(theme: Theme) {
+    //main View
+    view.backgroundColor     = theme.backgroundColor
+    
+    //heading label
+    headingLabel.textColor   = theme.textColor
+    
+    //view1
+    view1.backgroundColor    = theme.widgetBackgroundColor
+    view1.layer.borderColor  = theme.borderColor.cgColor
+    view1TextLabel.textColor = theme.textColor
+    
+    //view2
+    view2.backgroundColor    = theme.widgetBackgroundColor
+    view2.layer.borderColor  = theme.borderColor.cgColor
+    view2TextLabel.textColor = theme.textColor
+    
+    //view3
+    view3.backgroundColor    = theme.widgetBackgroundColor
+    view3.layer.borderColor  = theme.borderColor.cgColor
+    view3TextLabel.textColor = theme.textColor
+  }
+  
 }
 
 
 
+//MARK: - Extension
 extension HomeViewController: Themable {
   func registerForTheme() {
     // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs. See the hint at the end of this document for some code you can use here.
@@ -140,18 +166,8 @@ extension HomeViewController: Themable {
   }
   
   @objc func themeChanged() {
-    /*
-     should:
-     For view1, view2, view3:
-        - Set the backgroundColor to the current theme’s widgetBackgroundColor
-        - Set the layer’s border color to the current theme’s borderColor
-     
-     For view1TextLabel, view2TextLable, view3TextLabel:
-        -Set the textColor to the current theme’s textColor
-     
-     For the main view:
-        -Set the backgroundColor to the current theme’s backgroundColor
-     */
+    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
+    else { settingUI(theme: LightTheme()) }
   }
   
   
