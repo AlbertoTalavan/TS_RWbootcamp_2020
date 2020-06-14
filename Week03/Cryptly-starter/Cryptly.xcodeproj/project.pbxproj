@@ -18,6 +18,7 @@
 		A1F9E04F249268D200323226 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E04E249268D200323226 /* Model.swift */; };
 		A1F9E0512492690000323226 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E0502492690000323226 /* ThemeManager.swift */; };
 		A1F9E0532492690B00323226 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E0522492690B00323226 /* Theme.swift */; };
+		BA842AAC2496B1CD0034845E /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA842AAB2496B1CD0034845E /* RoundedCorners.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A1F9E04E249268D200323226 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A1F9E0502492690000323226 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A1F9E0522492690B00323226 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		BA842AAB2496B1CD0034845E /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				185CB20123C78CE6009F7571 /* Main.storyboard */,
 				A1F9E04E249268D200323226 /* Model.swift */,
 				A1F9E0522492690B00323226 /* Theme.swift */,
+				BA842AAB2496B1CD0034845E /* RoundedCorners.swift */,
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
 				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
 				185CB20923C78CE8009F7571 /* Info.plist */,
@@ -197,6 +200,7 @@
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
 				A1F9E049249267DB00323226 /* HomeViewController.swift in Sources */,
+				BA842AAC2496B1CD0034845E /* RoundedCorners.swift in Sources */,
 				A1F9E04B2492688C00323226 /* DataGenerator.swift in Sources */,
 				A1F9E0512492690000323226 /* ThemeManager.swift in Sources */,
 				A1F9E0532492690B00323226 /* Theme.swift in Sources */,

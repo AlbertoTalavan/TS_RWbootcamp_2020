@@ -10,9 +10,21 @@
 import Foundation
 
 struct CryptoCurrency: Codable {
+  enum Trend: Int, Codable {
+    case falling, rising
+  }
+  
   var name: String
   var symbol: String
   var currentValue: Double
   var previousValue: Double
+  
+  var difference: Double {
+    currentValue - previousValue
+  }
+  
+  var trend: Trend {
+    difference < 0 ? .falling : .rising
+  }
   
 }

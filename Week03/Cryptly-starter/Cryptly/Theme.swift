@@ -44,7 +44,6 @@ struct LightTheme: Theme {
     
   }
 
-
   init() {
     self.backgroundColor = UIColor(hue: 0.1, saturation: 0.70, brightness: 1.0, alpha: 1.0)
     self.textColor = UIColor.white

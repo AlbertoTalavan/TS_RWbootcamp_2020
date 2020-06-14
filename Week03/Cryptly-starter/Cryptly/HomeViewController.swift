@@ -26,6 +26,23 @@ extension HomeViewController: Themable {
   
 }
 
+/* //
+extension UIView: Roundable {
+  var cornerRadius: CGFloat {
+    get {
+      <#code#>
+    }
+    set {
+      <#code#>
+    }
+  }
+  
+  func round() {
+    self.layer.cornerRadius = self.cornerRadius
+  }
+
+}
+*/
 
 class HomeViewController: UIViewController{
 
@@ -50,13 +67,8 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var themeSwitch: UISwitch!
 
   let cryptoData = DataGenerator.shared.generateData()
-  
-  enum Trend {
-    case rising
-    case falling
-  }
-  
-  let valueRise: Float = 0
+
+  let valueRise: Float = 0 // positive/negative value means: rising/falling trend
     
   
   //MARK: - ViewController Methods
@@ -69,7 +81,6 @@ class HomeViewController: UIViewController{
     setView1Data()
     setView2Data()
     setView3Data()
-    
     
     
   }
@@ -116,7 +127,7 @@ class HomeViewController: UIViewController{
   }
   
   func setView2Data() {
-    let currenciesName = cryptoData.map { $0 }?.filter { $0.currentValue > $0.previousValue}.map { $0.name }
+    let currenciesName = cryptoData?.filter { $0.trend == .rising }.map { $0.name }
 
     guard let currencies = currenciesName else { return }
     view2TextLabel.text = currencies.joined(separator: ", ")
@@ -124,10 +135,18 @@ class HomeViewController: UIViewController{
   
   func setView3Data() {
     // cryptoData has the data
-    let currenciesName = cryptoData.map { $0 }?.filter { $0.currentValue < $0.previousValue}.map { $0.name }
+    let currenciesName = cryptoData?.filter { $0.trend == .falling }.map { $0.name }
      
     guard let currencies = currenciesName else { return }
     view3TextLabel.text = currencies.joined(separator: ", ")
+  }
+  
+  func setFallinViewData(){
+    
+  }
+  
+  func setRisingViewData(){
+    
   }
   
   
@@ -166,11 +185,14 @@ class HomeViewController: UIViewController{
     
     //fallingView
     setUpViewComponents(whichOne: fallingView, theme)
+    mostFallingLabel.textColor = theme.textColor
     fallingValueLabel.textColor = theme.fallingColor
     
     //risingView
     setUpViewComponents(whichOne: risingView, theme)
+    mostRisingLabel.textColor = theme.textColor
     risingValueLabel.textColor = theme.risingColor
+    
   }
   
 }
