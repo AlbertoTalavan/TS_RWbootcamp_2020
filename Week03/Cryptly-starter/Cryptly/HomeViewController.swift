@@ -7,26 +7,64 @@
 //
 import UIKit
 
+
+extension HomeViewController: Themable {
+  func registerForTheme() {
+    // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs.
+    NotificationCenter.default.addObserver(self, selector: #selector (themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+  }
+  
+  func unregisterForTheme() {
+    //should remove the current object as an observer.
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc func themeChanged() {
+    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
+    else { settingUI(theme: LightTheme()) }
+  }
+  
+}
+
+
 class HomeViewController: UIViewController{
 
   @IBOutlet weak var view1: UIView!
   @IBOutlet weak var view2: UIView!
   @IBOutlet weak var view3: UIView!
+  
+  @IBOutlet weak var fallingView: UIView!
+  @IBOutlet weak var risingView: UIView!
+  
   @IBOutlet weak var headingLabel: UILabel!
+  
   @IBOutlet weak var view1TextLabel: UILabel!
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
-  @IBOutlet weak var themeSwitch: UISwitch!
   
+  @IBOutlet weak var mostFallingLabel: UILabel!
+  @IBOutlet weak var fallingValueLabel: UILabel!
+  @IBOutlet weak var mostRisingLabel: UILabel!
+  @IBOutlet weak var risingValueLabel: UILabel!
+
+  @IBOutlet weak var themeSwitch: UISwitch!
+
   let cryptoData = DataGenerator.shared.generateData()
+  
+  enum Trend {
+    case rising
+    case falling
+  }
+  
+  let valueRise: Float = 0
     
   
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    themeSwitch.isOn ? settingUI(theme: DarkTheme()) : settingUI(theme: LightTheme())
 
-    setupViews()
     setupLabels()
     setView1Data()
     setView2Data()
@@ -48,45 +86,29 @@ class HomeViewController: UIViewController{
   
 
   //MARK: - Setting Up Views
-  func setupViews() {
-      
-    //view1.backgroundColor = .systemGray6
-    //view1.layer.borderColor = UIColor.lightGray.cgColor
-    view1.layer.borderWidth = 1.0
-    view1.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-    view1.layer.shadowOffset = CGSize(width: 0, height: 2)
-    view1.layer.shadowRadius = 4
-    view1.layer.shadowOpacity = 0.8
+  func setUpViewComponents(whichOne myView: UIView, _ theme: Theme){
+    //no changing components
+    myView.layer.borderWidth = 1.0
+    myView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+    myView.layer.shadowOffset = CGSize(width: 0, height: 2)
+    myView.layer.shadowRadius = 4
+    myView.layer.shadowOpacity = 0.8
     
-    //view2.backgroundColor = .systemGray6
-    //view2.layer.borderColor = UIColor.lightGray.cgColor
-    view2.layer.borderWidth = 1.0
-    view2.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-    view2.layer.shadowOffset = CGSize(width: 0, height: 2)
-    view2.layer.shadowRadius = 4
-    view2.layer.shadowOpacity = 0.8
-    
-    //view3.backgroundColor = .systemGray6
-    //view3.layer.borderColor = UIColor.lightGray.cgColor
-    view3.layer.borderWidth = 1.0
-    view3.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-    view3.layer.shadowOffset = CGSize(width: 0, height: 2)
-    view3.layer.shadowRadius = 4
-    view3.layer.shadowOpacity = 0.8
+    //changing components
+    myView.backgroundColor    = theme.widgetBackgroundColor
+    myView.layer.borderColor  = theme.borderColor.cgColor
   }
   
   func setupLabels() {
     headingLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     view1TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    fallingValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    risingValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
   }
   
   func setView1Data() {
-    //var currenciesString: String
-    //let currenciesName = cryptoData.map { $0.map { ($0.name) }}
-    let currenciesName = cryptoData?.map({ (currency)in
-      currency.name
-    })
+    let currenciesName = cryptoData?.map { $0.name }
     
     guard let currencies = currenciesName else { return }
     view1TextLabel.text = currencies.joined(separator: ", ")
@@ -94,7 +116,6 @@ class HomeViewController: UIViewController{
   }
   
   func setView2Data() {
-
     let currenciesName = cryptoData.map { $0 }?.filter { $0.currentValue > $0.previousValue}.map { $0.name }
 
     guard let currencies = currenciesName else { return }
@@ -119,7 +140,7 @@ class HomeViewController: UIViewController{
   func checkDeviceTheme() {
     if traitCollection.userInterfaceStyle == .light {
       themeSwitch.isOn = false
-    } else {
+    } else { //userInterfaceStyle == .dark or Any
       themeSwitch.isOn = true
     }
   }
@@ -132,43 +153,28 @@ class HomeViewController: UIViewController{
     headingLabel.textColor   = theme.textColor
     
     //view1
-    view1.backgroundColor    = theme.widgetBackgroundColor
-    view1.layer.borderColor  = theme.borderColor.cgColor
+    setUpViewComponents(whichOne: view1, theme)
     view1TextLabel.textColor = theme.textColor
     
     //view2
-    view2.backgroundColor    = theme.widgetBackgroundColor
-    view2.layer.borderColor  = theme.borderColor.cgColor
+    setUpViewComponents(whichOne: view2, theme)
     view2TextLabel.textColor = theme.textColor
     
     //view3
-    view3.backgroundColor    = theme.widgetBackgroundColor
-    view3.layer.borderColor  = theme.borderColor.cgColor
+    setUpViewComponents(whichOne: view3, theme)
     view3TextLabel.textColor = theme.textColor
+    
+    //fallingView
+    setUpViewComponents(whichOne: fallingView, theme)
+    fallingValueLabel.textColor = theme.fallingColor
+    
+    //risingView
+    setUpViewComponents(whichOne: risingView, theme)
+    risingValueLabel.textColor = theme.risingColor
   }
   
 }
 
 
 
-//MARK: - Extension
-extension HomeViewController: Themable {
-  func registerForTheme() {
-    // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs. See the hint at the end of this document for some code you can use here.
-    
-    NotificationCenter.default.addObserver(self, selector: #selector (themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
-  }
-  
-  func unregisterForTheme() {
-    //should remove the current object as an observer. We have a handy hint for this too. :
-    NotificationCenter.default.removeObserver(self)
-    
-  }
-  
-  @objc func themeChanged() {
-    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
-    else { settingUI(theme: LightTheme()) }
-  }
-  
-  
-}
+
