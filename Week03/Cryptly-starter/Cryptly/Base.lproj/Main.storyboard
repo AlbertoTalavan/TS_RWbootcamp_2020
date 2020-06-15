@@ -39,7 +39,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ" userLabel="View1">
                                 <rect key="frame" x="20" y="188.33333333333334" width="374" height="120.00000000000003"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-O3-GIK">
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2pP-O3-GIK" secondAttribute="trailing" constant="20" id="zbV-5W-GWx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97" userLabel="View2">
                                 <rect key="frame" x="20" y="328.33333333333331" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-T8-YB9">
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="trailing" secondItem="tPy-T8-YB9" secondAttribute="trailing" constant="20" id="yfN-Sc-Ppi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb" userLabel="View3">
                                 <rect key="frame" x="20" y="468.33333333333326" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-Bb-EWS">
@@ -109,7 +109,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Falling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-4K-WUD">
-                                                <rect key="frame" x="18" y="24" width="136" height="20"/>
+                                                <rect key="frame" x="18" y="23.666666666666629" width="136.66666666666666" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -194,18 +194,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fallingValueLabel" destination="xxw-wZ-SyV" id="vG3-Bm-ioX"/>
-                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="BEK-JW-chs"/>
+                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="Cjv-eE-xNc"/>
                         <outlet property="headingLabel" destination="zrp-g0-HX2" id="CEx-vX-zmI"/>
                         <outlet property="mostFallingLabel" destination="g2P-4K-WUD" id="1fU-dX-fmy"/>
                         <outlet property="mostRisingLabel" destination="0Ck-eY-tyh" id="daA-CX-rua"/>
                         <outlet property="risingValueLabel" destination="jQm-2L-lbq" id="hxN-Rz-hIE"/>
-                        <outlet property="risingView" destination="ury-jo-4iK" id="c2K-ft-Pyd"/>
+                        <outlet property="risingView" destination="ury-jo-4iK" id="Fgk-ho-sKM"/>
                         <outlet property="themeSwitch" destination="kW6-Ms-UCP" id="Vpv-W6-XtS"/>
-                        <outlet property="view1" destination="4oo-MW-3FZ" id="7mY-sa-8ZH"/>
+                        <outlet property="view1" destination="4oo-MW-3FZ" id="TsH-qu-EcI"/>
                         <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="L2m-KB-P6Q"/>
-                        <outlet property="view2" destination="DpI-h7-D97" id="Y0z-cT-8qw"/>
+                        <outlet property="view2" destination="DpI-h7-D97" id="OOc-hT-ajI"/>
                         <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="VJN-xd-312"/>
-                        <outlet property="view3" destination="DNM-6D-sSb" id="vA8-mC-2c7"/>
+                        <outlet property="view3" destination="DNM-6D-sSb" id="qng-xu-xkR"/>
                         <outlet property="view3TextLabel" destination="UCh-Bb-EWS" id="8RB-Dk-G3v"/>
                     </connections>
                 </viewController>

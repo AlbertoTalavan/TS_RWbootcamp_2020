@@ -7,50 +7,16 @@
 //
 import UIKit
 
-
-extension HomeViewController: Themable {
-  func registerForTheme() {
-    // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs.
-    NotificationCenter.default.addObserver(self, selector: #selector (themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
-  }
-  
-  func unregisterForTheme() {
-    //should remove the current object as an observer.
-    NotificationCenter.default.removeObserver(self)
-  }
-  
-  @objc func themeChanged() {
-    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
-    else { settingUI(theme: LightTheme()) }
-  }
-  
-}
-
-/* //
-extension UIView: Roundable {
-  var cornerRadius: CGFloat {
-    get {
-      <#code#>
-    }
-    set {
-      <#code#>
-    }
-  }
-  
-  func round() {
-    self.layer.cornerRadius = self.cornerRadius
-  }
-
-}
-*/
-
 class HomeViewController: UIViewController{
 
+  //@IBOutlet var widgetViews: [WidgetView]!
+  
   @IBOutlet weak var view1: UIView!
   @IBOutlet weak var view2: UIView!
   @IBOutlet weak var view3: UIView!
   
   @IBOutlet weak var fallingView: UIView!
+  
   @IBOutlet weak var risingView: UIView!
   
   @IBOutlet weak var headingLabel: UILabel!
@@ -69,18 +35,22 @@ class HomeViewController: UIViewController{
   let cryptoData = DataGenerator.shared.generateData()
 
   let valueRise: Float = 0 // positive/negative value means: rising/falling trend
+  
     
   
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    themeSwitch.isOn ? settingUI(theme: DarkTheme()) : settingUI(theme: LightTheme())
+    settingUI(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+    //themeSwitch.isOn ? ThemeManager.shared.set(theme: DarkTheme()) : ThemeManager.shared.set(theme: LightTheme())
 
+    
     setupLabels()
     setView1Data()
     setView2Data()
     setView3Data()
+    setFallinViewData()
+    setRisingViewData()
     
     
   }
@@ -105,9 +75,13 @@ class HomeViewController: UIViewController{
     myView.layer.shadowRadius = 4
     myView.layer.shadowOpacity = 0.8
     
+    myView.round()
+    
     //changing components
-    myView.backgroundColor    = theme.widgetBackgroundColor
-    myView.layer.borderColor  = theme.borderColor.cgColor
+    //myView.backgroundColor    = ThemeManager.shared.currentTheme?.widgetBackgroundColor
+      myView.backgroundColor    = theme.widgetBackgroundColor
+    //myView.layer.borderColor  = ThemeManager.shared.currentTheme?.borderColor.cgColor
+      myView.layer.borderColor  = theme.borderColor.cgColor
   }
   
   func setupLabels() {
@@ -119,43 +93,58 @@ class HomeViewController: UIViewController{
   }
   
   func setView1Data() {
-    let currenciesName = cryptoData?.map { $0.name }
-    
-    guard let currencies = currenciesName else { return }
+    guard let cryptoData = cryptoData else { return }
+    let currencies = cryptoData.map { $0.name }
+ 
     view1TextLabel.text = currencies.joined(separator: ", ")
 
   }
   
   func setView2Data() {
-    let currenciesName = cryptoData?.filter { $0.trend == .rising }.map { $0.name }
+    guard let cryptoData = cryptoData else { return }
+    let currencies = cryptoData.filter { $0.trend == .rising }.map { $0.name }
 
-    guard let currencies = currenciesName else { return }
     view2TextLabel.text = currencies.joined(separator: ", ")
   }
   
   func setView3Data() {
-    // cryptoData has the data
-    let currenciesName = cryptoData?.filter { $0.trend == .falling }.map { $0.name }
+    guard let cryptoData = cryptoData else { return }
+    let currencies = cryptoData.filter { $0.trend == .falling }.map { $0.name }
      
-    guard let currencies = currenciesName else { return }
     view3TextLabel.text = currencies.joined(separator: ", ")
   }
   
   func setFallinViewData(){
+    guard let cryptoData = cryptoData else { return }
+    let currency = cryptoData.min { $0.difference <= $1.difference }
     
+    if let currency = currency {
+      fallingValueLabel.text = "\(currency.name): \(currency.difference)"
+    }else {
+      fallingValueLabel.text = "no currency data "
+    }
   }
   
   func setRisingViewData(){
-    
+    guard let cryptoData = cryptoData else { return }
+    let currency = cryptoData.min { $0.difference >= $1.difference }
+    if let currency = currency {
+      risingValueLabel.text = "\(currency.name): \(currency.difference)"
+    }else {
+      risingValueLabel.text = "no currency data "
+    }
   }
   
   
   //MARK: - Actions
   @IBAction func switchPressed(_ sender: Any) {
     themeChanged()
+    //themeSwitch.isOn ? ThemeManager.shared.set(theme: DarkTheme()) : ThemeManager.shared.set(theme: LightTheme())
+     //ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
   }
   
   //MARK: - UI set up due to switch
+  /*
   func checkDeviceTheme() {
     if traitCollection.userInterfaceStyle == .light {
       themeSwitch.isOn = false
@@ -163,6 +152,7 @@ class HomeViewController: UIViewController{
       themeSwitch.isOn = true
     }
   }
+  */
   
   func settingUI(theme: Theme) {
     //main View
@@ -195,6 +185,47 @@ class HomeViewController: UIViewController{
     
   }
   
+}
+
+//MARK: - Extensions
+extension HomeViewController: Themable {
+  func registerForTheme() {
+    // should use NotificationCenter to add the current object as an observer for when the “themeChanged” notification occurs.
+    NotificationCenter.default.addObserver(self, selector: #selector (themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+  }
+  
+  func unregisterForTheme() {
+    //should remove the current object as an observer.
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc func themeChanged() {
+    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
+    else { settingUI(theme: LightTheme()) }
+    //themeSwitch.isOn ? settingUI(theme: DarkTheme()) : settingUI(theme: LightTheme())
+     //ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+  }
+  
+}
+extension UIView : Roundable {
+  internal var cornerRadius: CGFloat {
+    get {
+      10
+    }
+    set {
+      CGFloat(newValue)
+    }
+  }
+  
+  func round() {
+    layer.cornerRadius = cornerRadius
+  }
+  
+  func setCornerRadius(to radius: CGFloat) {
+    cornerRadius = radius
+  }
+  
+
 }
 
 

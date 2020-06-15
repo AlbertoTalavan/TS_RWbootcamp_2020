@@ -32,7 +32,7 @@ struct LightTheme: Theme {
   var textColor: UIColor
   var borderColor: UIColor
   var widgetBackgroundColor: UIColor
-  let fallingColor: UIColor = .systemPink
+  let fallingColor: UIColor = .systemRed
   let risingColor: UIColor = UIColor(named: "myGreen") ?? UIColor.systemGreen
   
   
