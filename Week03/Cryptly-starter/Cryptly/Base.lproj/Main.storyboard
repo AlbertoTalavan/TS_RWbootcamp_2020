@@ -39,7 +39,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ" userLabel="View1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ" userLabel="View1" customClass="WidgetView" customModule="Cryptly" customModuleProvider="target">
                                 <rect key="frame" x="20" y="188.33333333333334" width="374" height="120.00000000000003"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-O3-GIK">
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2pP-O3-GIK" secondAttribute="trailing" constant="20" id="zbV-5W-GWx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97" userLabel="View2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97" userLabel="View2" customClass="WidgetView" customModule="Cryptly" customModuleProvider="target">
                                 <rect key="frame" x="20" y="328.33333333333331" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-T8-YB9">
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="trailing" secondItem="tPy-T8-YB9" secondAttribute="trailing" constant="20" id="yfN-Sc-Ppi"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb" userLabel="View3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb" userLabel="View3" customClass="WidgetView" customModule="Cryptly" customModuleProvider="target">
                                 <rect key="frame" x="20" y="468.33333333333326" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-Bb-EWS">
@@ -99,7 +99,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="R9x-P7-OVx" userLabel="Bottom Stack View">
                                 <rect key="frame" x="20" y="608.33333333333337" width="374" height="120"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCk-DQ-yX6" userLabel="FallingView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCk-DQ-yX6" userLabel="FallingView" customClass="WidgetView" customModule="Cryptly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-999.999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxw-wZ-SyV">
@@ -125,7 +125,7 @@
                                             <constraint firstItem="xxw-wZ-SyV" firstAttribute="top" secondItem="g2P-4K-WUD" secondAttribute="bottom" constant="31.666666666666629" id="oqk-ud-YJ3"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ury-jo-4iK" userLabel="RisingView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ury-jo-4iK" userLabel="RisingView" customClass="WidgetView" customModule="Cryptly" customModuleProvider="target">
                                         <rect key="frame" x="200.66666666666663" y="0.0" width="173.33333333333337" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Rising" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ck-eY-tyh">
@@ -194,18 +194,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fallingValueLabel" destination="xxw-wZ-SyV" id="vG3-Bm-ioX"/>
-                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="Cjv-eE-xNc"/>
+                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="dwD-hJ-8Jk"/>
                         <outlet property="headingLabel" destination="zrp-g0-HX2" id="CEx-vX-zmI"/>
                         <outlet property="mostFallingLabel" destination="g2P-4K-WUD" id="1fU-dX-fmy"/>
                         <outlet property="mostRisingLabel" destination="0Ck-eY-tyh" id="daA-CX-rua"/>
                         <outlet property="risingValueLabel" destination="jQm-2L-lbq" id="hxN-Rz-hIE"/>
-                        <outlet property="risingView" destination="ury-jo-4iK" id="Fgk-ho-sKM"/>
+                        <outlet property="risingView" destination="ury-jo-4iK" id="Xn1-p7-mrJ"/>
                         <outlet property="themeSwitch" destination="kW6-Ms-UCP" id="Vpv-W6-XtS"/>
-                        <outlet property="view1" destination="4oo-MW-3FZ" id="TsH-qu-EcI"/>
+                        <outlet property="view1" destination="4oo-MW-3FZ" id="6Pb-3K-mgn"/>
                         <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="L2m-KB-P6Q"/>
-                        <outlet property="view2" destination="DpI-h7-D97" id="OOc-hT-ajI"/>
+                        <outlet property="view2" destination="DpI-h7-D97" id="6l2-zP-JN6"/>
                         <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="VJN-xd-312"/>
-                        <outlet property="view3" destination="DNM-6D-sSb" id="qng-xu-xkR"/>
+                        <outlet property="view3" destination="DNM-6D-sSb" id="sIe-6q-hNn"/>
                         <outlet property="view3TextLabel" destination="UCh-Bb-EWS" id="8RB-Dk-G3v"/>
                     </connections>
                 </viewController>

@@ -14,7 +14,7 @@ protocol Roundable: UIView {
   
 }
 
-/*
+
 class WidgetView: UIView, Roundable {
   internal var cornerRadius: CGFloat = 0.0
   
@@ -30,9 +30,7 @@ class WidgetView: UIView, Roundable {
   func setCornerRadius(to radius: CGFloat) {
     cornerRadius = radius
   }
-
-  
   
 }
- */
+
 

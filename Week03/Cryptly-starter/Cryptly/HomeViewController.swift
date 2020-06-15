@@ -11,13 +11,11 @@ class HomeViewController: UIViewController{
 
   //@IBOutlet var widgetViews: [WidgetView]!
   
-  @IBOutlet weak var view1: UIView!
-  @IBOutlet weak var view2: UIView!
-  @IBOutlet weak var view3: UIView!
-  
-  @IBOutlet weak var fallingView: UIView!
-  
-  @IBOutlet weak var risingView: UIView!
+  @IBOutlet weak var view1: WidgetView!
+  @IBOutlet weak var view2: WidgetView!
+  @IBOutlet weak var view3: WidgetView!
+  @IBOutlet weak var fallingView: WidgetView!
+  @IBOutlet weak var risingView: WidgetView!
   
   @IBOutlet weak var headingLabel: UILabel!
   
@@ -67,7 +65,7 @@ class HomeViewController: UIViewController{
   
 
   //MARK: - Setting Up Views
-  func setUpViewComponents(whichOne myView: UIView, _ theme: Theme){
+  func setUpViewComponents(whichOne myView: WidgetView, _ theme: Theme){
     //no changing components
     myView.layer.borderWidth = 1.0
     myView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
@@ -75,7 +73,20 @@ class HomeViewController: UIViewController{
     myView.layer.shadowRadius = 4
     myView.layer.shadowOpacity = 0.8
     
+    //-----------------------
+    switch myView {
+    case view1: myView.setCornerRadius(to: 30)
+    case view2, view3: myView.setCornerRadius(to: 10 )
+    case fallingView, risingView:
+      myView.setCornerRadius(to: 35)
+      //myView.clipsToBounds = true
+    default:
+      break
+    }
+    
     myView.round()
+    //----------------
+    
     
     //changing components
     //myView.backgroundColor    = ThemeManager.shared.currentTheme?.widgetBackgroundColor
@@ -144,16 +155,6 @@ class HomeViewController: UIViewController{
   }
   
   //MARK: - UI set up due to switch
-  /*
-  func checkDeviceTheme() {
-    if traitCollection.userInterfaceStyle == .light {
-      themeSwitch.isOn = false
-    } else { //userInterfaceStyle == .dark or Any
-      themeSwitch.isOn = true
-    }
-  }
-  */
-  
   func settingUI(theme: Theme) {
     //main View
     view.backgroundColor     = theme.backgroundColor
@@ -207,13 +208,14 @@ extension HomeViewController: Themable {
   }
   
 }
+/*
 extension UIView : Roundable {
   internal var cornerRadius: CGFloat {
     get {
-      10
+      20
     }
     set {
-      CGFloat(newValue)
+      self.cornerRadius = newValue
     }
   }
   
@@ -227,6 +229,7 @@ extension UIView : Roundable {
   
 
 }
+ */
 
 
 
