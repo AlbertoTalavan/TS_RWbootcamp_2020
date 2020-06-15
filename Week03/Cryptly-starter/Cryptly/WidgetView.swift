@@ -10,14 +10,14 @@ import UIKit
 
 protocol Roundable: UIView {
   var cornerRadius: CGFloat {get set}
-  func round()
   
+  func round()
 }
 
 
 class WidgetView: UIView, Roundable {
-  internal var cornerRadius: CGFloat = 0.0
   
+  internal var cornerRadius: CGFloat = 0.0
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)

@@ -35,6 +35,8 @@ struct LightTheme: Theme {
   let fallingColor: UIColor = .systemRed
   let risingColor: UIColor = UIColor(named: "myGreen") ?? UIColor.systemGreen
   
+  //let name = "Light" //just for visual testing in lldb
+  
   
   init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor, widgetBackgroundColor: UIColor) {
     self.backgroundColor = backgroundColor
@@ -45,9 +47,9 @@ struct LightTheme: Theme {
   }
 
   init() {
-    self.backgroundColor = UIColor(hue: 0.1, saturation: 0.70, brightness: 1.0, alpha: 1.0)
-    self.textColor = UIColor.white
-    self.borderColor = UIColor(hue: 0.092, saturation: 1.0, brightness: 0.99, alpha: 1.0)
+    self.backgroundColor       = UIColor(hue: 0.1, saturation: 0.70, brightness: 1.0, alpha: 1.0)
+    self.textColor             = UIColor.white
+    self.borderColor           = UIColor(hue: 0.092, saturation: 1.0, brightness: 0.99, alpha: 1.0)
     self.widgetBackgroundColor = UIColor(hue: 0.55, saturation: 0.68, brightness: 0.97, alpha: 1.0)
   }
 
@@ -62,6 +64,8 @@ struct DarkTheme: Theme {
   let fallingColor: UIColor = .systemRed
   let risingColor: UIColor = .systemGreen
   
+  //let name = "Dark" //just for visual testing in lldb
+  
   init(backgroundColor: UIColor, textColor: UIColor, borderColor: UIColor, widgetBackgroundColor: UIColor) {
     self.backgroundColor = backgroundColor
     self.textColor = textColor
@@ -70,9 +74,9 @@ struct DarkTheme: Theme {
   }
 
   init() {
-    self.backgroundColor = UIColor(hue: 0.80, saturation: 0.77, brightness: 0.98, alpha: 1.0)
-    self.textColor = UIColor.white
-    self.borderColor = UIColor(hue: 0.76, saturation: 0.76, brightness: 1.0, alpha: 1.0)
+    self.backgroundColor       = UIColor(hue: 0.80, saturation: 0.77, brightness: 0.98, alpha: 1.0)
+    self.textColor             = UIColor.white
+    self.borderColor           = UIColor(hue: 0.76, saturation: 0.76, brightness: 1.0, alpha: 1.0)
     self.widgetBackgroundColor = UIColor(hue: 0.727, saturation: 0.55, brightness: 0.76, alpha: 1.0)
   }
   

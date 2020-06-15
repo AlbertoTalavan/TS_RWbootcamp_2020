@@ -14,8 +14,9 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var view1: WidgetView!
   @IBOutlet weak var view2: WidgetView!
   @IBOutlet weak var view3: WidgetView!
+  
   @IBOutlet weak var fallingView: WidgetView!
-  @IBOutlet weak var risingView: WidgetView!
+  @IBOutlet weak var risingView:  WidgetView!
   
   @IBOutlet weak var headingLabel: UILabel!
   
@@ -23,10 +24,10 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
   
-  @IBOutlet weak var mostFallingLabel: UILabel!
+  @IBOutlet weak var mostFallingLabel:  UILabel!
   @IBOutlet weak var fallingValueLabel: UILabel!
-  @IBOutlet weak var mostRisingLabel: UILabel!
-  @IBOutlet weak var risingValueLabel: UILabel!
+  @IBOutlet weak var mostRisingLabel:   UILabel!
+  @IBOutlet weak var risingValueLabel:  UILabel!
 
   @IBOutlet weak var themeSwitch: UISwitch!
 
@@ -39,10 +40,11 @@ class HomeViewController: UIViewController{
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    settingUI(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
-    //themeSwitch.isOn ? ThemeManager.shared.set(theme: DarkTheme()) : ThemeManager.shared.set(theme: LightTheme())
 
-    
+    ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+
+    settingUI(theme: ThemeManager.shared.currentTheme! )
+
     setupLabels()
     setView1Data()
     setView2Data()
@@ -66,14 +68,15 @@ class HomeViewController: UIViewController{
 
   //MARK: - Setting Up Views
   func setUpViewComponents(whichOne myView: WidgetView, _ theme: Theme){
+    
     //no changing components
-    myView.layer.borderWidth = 1.0
-    myView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-    myView.layer.shadowOffset = CGSize(width: 0, height: 2)
-    myView.layer.shadowRadius = 4
+    myView.layer.borderWidth   = 1.0
+    myView.layer.shadowColor   = UIColor.black.withAlphaComponent(0.2).cgColor
+    myView.layer.shadowOffset  = CGSize(width: 0, height: 2)
+    myView.layer.shadowRadius  = 4
     myView.layer.shadowOpacity = 0.8
     
-    //-----------------------
+    //applying round() with different cornerRadius values
     switch myView {
     case view1: myView.setCornerRadius(to: 30)
     case view2, view3: myView.setCornerRadius(to: 10 )
@@ -83,24 +86,19 @@ class HomeViewController: UIViewController{
     default:
       break
     }
-    
     myView.round()
-    //----------------
-    
     
     //changing components
-    //myView.backgroundColor    = ThemeManager.shared.currentTheme?.widgetBackgroundColor
-      myView.backgroundColor    = theme.widgetBackgroundColor
-    //myView.layer.borderColor  = ThemeManager.shared.currentTheme?.borderColor.cgColor
-      myView.layer.borderColor  = theme.borderColor.cgColor
+    myView.backgroundColor    = theme.widgetBackgroundColor
+    myView.layer.borderColor  = theme.borderColor.cgColor
   }
   
   func setupLabels() {
-    headingLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-    view1TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-    view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    headingLabel.font      = UIFont.systemFont(ofSize: 20, weight: .medium)
+    view1TextLabel.font    = UIFont.systemFont(ofSize: 18, weight: .regular)
+    view2TextLabel.font    = UIFont.systemFont(ofSize: 18, weight: .regular)
     fallingValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-    risingValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    risingValueLabel.font  = UIFont.systemFont(ofSize: 18, weight: .regular)
   }
   
   func setView1Data() {
@@ -139,6 +137,7 @@ class HomeViewController: UIViewController{
   func setRisingViewData(){
     guard let cryptoData = cryptoData else { return }
     let currency = cryptoData.min { $0.difference >= $1.difference }
+    
     if let currency = currency {
       risingValueLabel.text = "\(currency.name): \(currency.difference)"
     }else {
@@ -149,9 +148,8 @@ class HomeViewController: UIViewController{
   
   //MARK: - Actions
   @IBAction func switchPressed(_ sender: Any) {
-    themeChanged()
     //themeSwitch.isOn ? ThemeManager.shared.set(theme: DarkTheme()) : ThemeManager.shared.set(theme: LightTheme())
-     //ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+    ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
   }
   
   //MARK: - UI set up due to switch
@@ -201,35 +199,11 @@ extension HomeViewController: Themable {
   }
   
   @objc func themeChanged() {
-    if themeSwitch.isOn { settingUI(theme: DarkTheme()) }
-    else { settingUI(theme: LightTheme()) }
-    //themeSwitch.isOn ? settingUI(theme: DarkTheme()) : settingUI(theme: LightTheme())
-     //ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
+    settingUI(theme: ThemeManager.shared.currentTheme!)
   }
   
 }
-/*
-extension UIView : Roundable {
-  internal var cornerRadius: CGFloat {
-    get {
-      20
-    }
-    set {
-      self.cornerRadius = newValue
-    }
-  }
-  
-  func round() {
-    layer.cornerRadius = cornerRadius
-  }
-  
-  func setCornerRadius(to radius: CGFloat) {
-    cornerRadius = radius
-  }
-  
 
-}
- */
 
 
 
