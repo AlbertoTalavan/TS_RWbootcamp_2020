@@ -194,19 +194,19 @@
                     </navigationItem>
                     <connections>
                         <outlet property="fallingValueLabel" destination="xxw-wZ-SyV" id="vG3-Bm-ioX"/>
-                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="dwD-hJ-8Jk"/>
+                        <outlet property="fallingView" destination="cCk-DQ-yX6" id="0uD-bB-C2K"/>
                         <outlet property="headingLabel" destination="zrp-g0-HX2" id="CEx-vX-zmI"/>
-                        <outlet property="mostFallingLabel" destination="g2P-4K-WUD" id="1fU-dX-fmy"/>
-                        <outlet property="mostRisingLabel" destination="0Ck-eY-tyh" id="daA-CX-rua"/>
+                        <outlet property="mostFallingLabel" destination="g2P-4K-WUD" id="ISd-Mq-uYz"/>
+                        <outlet property="mostRisingLabel" destination="0Ck-eY-tyh" id="CL7-ws-qLq"/>
                         <outlet property="risingValueLabel" destination="jQm-2L-lbq" id="hxN-Rz-hIE"/>
-                        <outlet property="risingView" destination="ury-jo-4iK" id="Xn1-p7-mrJ"/>
+                        <outlet property="risingView" destination="ury-jo-4iK" id="S4q-7b-O1T"/>
                         <outlet property="themeSwitch" destination="kW6-Ms-UCP" id="Vpv-W6-XtS"/>
-                        <outlet property="view1" destination="4oo-MW-3FZ" id="6Pb-3K-mgn"/>
-                        <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="L2m-KB-P6Q"/>
-                        <outlet property="view2" destination="DpI-h7-D97" id="6l2-zP-JN6"/>
-                        <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="VJN-xd-312"/>
-                        <outlet property="view3" destination="DNM-6D-sSb" id="sIe-6q-hNn"/>
-                        <outlet property="view3TextLabel" destination="UCh-Bb-EWS" id="8RB-Dk-G3v"/>
+                        <outlet property="view1" destination="4oo-MW-3FZ" id="tjf-ag-xBc"/>
+                        <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="a8d-Bs-Lib"/>
+                        <outlet property="view2" destination="DpI-h7-D97" id="Uxp-MW-oZm"/>
+                        <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="6Mi-1c-Nyt"/>
+                        <outlet property="view3" destination="DNM-6D-sSb" id="57p-pQ-Uds"/>
+                        <outlet property="view3TextLabel" destination="UCh-Bb-EWS" id="fzf-Pa-Hal"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szC-q4-zjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

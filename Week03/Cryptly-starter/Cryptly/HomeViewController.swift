@@ -8,19 +8,16 @@
 import UIKit
 
 class HomeViewController: UIViewController{
-
-  //@IBOutlet var widgetViews: [WidgetView]!
-  //@IBOutlet var widgetLabels: [UILabel]!
-  
+ 
   @IBOutlet weak var view1: WidgetView!
   @IBOutlet weak var view2: WidgetView!
   @IBOutlet weak var view3: WidgetView!
   
   @IBOutlet weak var fallingView: WidgetView!
   @IBOutlet weak var risingView:  WidgetView!
-  
+
   @IBOutlet weak var headingLabel: UILabel!
-  
+
   @IBOutlet weak var view1TextLabel: UILabel!
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
@@ -36,33 +33,33 @@ class HomeViewController: UIViewController{
 
   let valueRise: Float = 0 // positive/negative value means: rising/falling trend
   
-    
-//------------------//------------------
   var widgetViews: [WidgetView] = []
-  var widgetLabels: [UILabel] = []
-//------------------//------------------
+  var widgetLabels: [UILabel]   = []
+
   
   
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-//------------------//------------------//------------------
+    
+    //grouping views and labels to, later, set them up in one line of code
     widgetViews = [view1, view2, view3, fallingView, risingView]
     widgetLabels = [view1TextLabel, view2TextLabel, view3TextLabel, mostFallingLabel, mostRisingLabel]
-//------------------//------------------//------------------
+
 
     ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
 
     settingUI(theme: ThemeManager.shared.currentTheme! )
 
     setupLabels()
+    
     setView1Data()
     setView2Data()
     setView3Data()
+    
     setFallinViewData()
     setRisingViewData()
-    
-    
+
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -95,8 +92,10 @@ class HomeViewController: UIViewController{
   
   func setupLabels() {
     headingLabel.font      = UIFont.systemFont(ofSize: 20, weight: .medium)
-    view1TextLabel.font    = UIFont.systemFont(ofSize: 18, weight: .regular)
-    view2TextLabel.font    = UIFont.systemFont(ofSize: 18, weight: .regular)
+    
+    widgetLabels.forEach { $0.font = UIFont.systemFont(ofSize: 18, weight: .regular) }
+    
+    //special labels not included in widgetLa
     fallingValueLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     risingValueLabel.font  = UIFont.systemFont(ofSize: 18, weight: .regular)
   }
