@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController{
 
   //@IBOutlet var widgetViews: [WidgetView]!
+  //@IBOutlet var widgetLabels: [UILabel]!
   
   @IBOutlet weak var view1: WidgetView!
   @IBOutlet weak var view2: WidgetView!
@@ -36,10 +37,19 @@ class HomeViewController: UIViewController{
   let valueRise: Float = 0 // positive/negative value means: rising/falling trend
   
     
+//------------------//------------------
+  var widgetViews: [WidgetView] = []
+  var widgetLabels: [UILabel] = []
+//------------------//------------------
+  
   
   //MARK: - ViewController Methods
   override func viewDidLoad() {
     super.viewDidLoad()
+//------------------//------------------//------------------
+    widgetViews = [view1, view2, view3, fallingView, risingView]
+    widgetLabels = [view1TextLabel, view2TextLabel, view3TextLabel, mostFallingLabel, mostRisingLabel]
+//------------------//------------------//------------------
 
     ThemeManager.shared.set(theme: themeSwitch.isOn ? DarkTheme() : LightTheme())
 
@@ -67,15 +77,8 @@ class HomeViewController: UIViewController{
   
 
   //MARK: - Setting Up Views
-  func setUpViewComponents(whichOne myView: WidgetView, _ theme: Theme){
-    
-    //no changing components
-    myView.layer.borderWidth   = 1.0
-    myView.layer.shadowColor   = UIColor.black.withAlphaComponent(0.2).cgColor
-    myView.layer.shadowOffset  = CGSize(width: 0, height: 2)
-    myView.layer.shadowRadius  = 4
-    myView.layer.shadowOpacity = 0.8
-    
+  func applyRoundToWidgetView(whichOne myView: WidgetView){
+ 
     //applying round() with different cornerRadius values
     switch myView {
     case view1: myView.setCornerRadius(to: 30)
@@ -88,9 +91,6 @@ class HomeViewController: UIViewController{
     }
     myView.round()
     
-    //changing components
-    myView.backgroundColor    = theme.widgetBackgroundColor
-    myView.layer.borderColor  = theme.borderColor.cgColor
   }
   
   func setupLabels() {
@@ -157,31 +157,39 @@ class HomeViewController: UIViewController{
     //main View
     view.backgroundColor     = theme.backgroundColor
     
+    //WidgetViews
+      //no changing components
+      widgetViews.forEach { $0.setView()}
+      
+      //changing components
+      widgetViews.forEach {
+        $0.backgroundColor = theme.widgetBackgroundColor
+        $0.layer.borderColor = theme.borderColor.cgColor
+      }
+    
+    
     //heading label
     headingLabel.textColor   = theme.textColor
     
-    //view1
-    setUpViewComponents(whichOne: view1, theme)
-    view1TextLabel.textColor = theme.textColor
+    //WidgetLabels 1 - 3 colours
+    widgetLabels.forEach {$0.textColor = theme.textColor }
     
-    //view2
-    setUpViewComponents(whichOne: view2, theme)
-    view2TextLabel.textColor = theme.textColor
+    //special labels colours
+      //falling value colour = red
+      fallingValueLabel.textColor = theme.fallingColor
+      
+      //rising value colour = green
+      risingValueLabel.textColor = theme.risingColor
     
-    //view3
-    setUpViewComponents(whichOne: view3, theme)
-    view3TextLabel.textColor = theme.textColor
-    
-    //fallingView
-    setUpViewComponents(whichOne: fallingView, theme)
-    mostFallingLabel.textColor = theme.textColor
-    fallingValueLabel.textColor = theme.fallingColor
-    
-    //risingView
-    setUpViewComponents(whichOne: risingView, theme)
-    mostRisingLabel.textColor = theme.textColor
-    risingValueLabel.textColor = theme.risingColor
-    
+
+    //Rounding widgetViews
+    applyRoundToWidgetView(whichOne: view1)
+    applyRoundToWidgetView(whichOne: view2)
+    applyRoundToWidgetView(whichOne: view3)
+    applyRoundToWidgetView(whichOne: fallingView)
+    applyRoundToWidgetView(whichOne: risingView)
+
+
   }
   
 }
