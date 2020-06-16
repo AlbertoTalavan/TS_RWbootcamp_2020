@@ -10,7 +10,7 @@ In order to refactor the setupViews() function:
 
 
 Roundable protocol:
--  I've created a property for the corner radius value `var cornerRadius: CGFloat {get set}`. I have included `set` in order to be able to use a method to update this value if necessary (I used to give different corner radius to each WidgetView-
-- It also have the `func round()`method and,
-- `func setCornerRadius(to: radius: CGFloat)`in order to update the cornerRadius value (because it declared as `internal` to avoid unnespected changes.
-
+-  I've created a property for the corner radius value `var cornerRadius: CGFloat {get set}`. I have included `set` in order to be able to use a method to update this value if necessary (I used it to give different corner radius to each WidgetView).
+- Due to this **cornerRadius** is a **stored property** I need to **conform WidgetView class to Roundable** protocol, **instead of use an extension** to add Roundable to WidgetView class.
+- WidgetView class also includes `func round()` method (to apply the cornerRadius value) and,
+- `func setCornerRadius(to: radius: CGFloat)`in order to update its value (because it is declared as `internal` to avoid unnespected value changes).
