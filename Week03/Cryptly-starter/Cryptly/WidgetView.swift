@@ -15,7 +15,7 @@ protocol Roundable: UIView {
 }
 
 
-class WidgetView: UIView, Roundable {
+final class WidgetView: UIView, Roundable {
   
   internal var cornerRadius: CGFloat = 0.0
 
