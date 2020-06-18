@@ -9,7 +9,7 @@ We are given a chrashing app and our mission is to solve all the problems we fac
   
   - In **func setUpLeftSideUI()**: As we did not have instatiated the variable house1, one problem came because this function forces the unwrapping of house1 and its properties  (i.e. `priceLabelLeft.text = house1!.price!`). Instead of instantiate house1 on `viewDidLoad()` we could have taken the possibility of use:
     - if let / guard let : for a secure unwrap of house and its properties, or 
-    - conditional operator: `priceLabelLeft.text = house1?.price`, but with this solution we still having a house1 nill value and, although the app will not crash and will run, but will not show any values on the labels...
+    - conditional operator ?: `priceLabelLeft.text = house1?.price`, but with this solution we still having a house1 nill value and, although the app will not crash and will run, but will not show any values on the labels...
   
   - That done, it was necessary to **fix the connection between the IBOutlet** of one of the Labels **and its corresponding StoryBoard Label**.
  
