@@ -14,12 +14,12 @@ We are given a chrashing app and our mission is to solve all the problems we fac
   - That done, it was necessary to **fix the connection between the IBOutlet** of one of the Labels **and its corresponding StoryBoard Label**.
  
 - With the app running, when we press the button to add the second house, after pressing the "ok" button on the alert view, the new house was never showed on screen:
-  - The problem here was the **alpha channel of the Labels and the ImageView**. First time we go through the function involved in showing the data of this second house (`setUpRightSideUI()`), as we start the app, **house2 is not instantiated yet**, so this functions set the **alpha channel values** of all the labels and the imageView **equal to zero**. Second and following times **we come back to this function**... we were not **re-setting the value of those alpha channels**
+  - The problem here was the **alpha channel of the Labels and the ImageView**. First time we go through the function involved in showing the data of this second house `setUpRightSideUI()`, as we start the app, **house2 is not instantiated yet**, so this functions set the **alpha channel values** of all the labels and the imageView **equal to zero**. Second and following times **we come back to this function**... we were not **re-setting the value of those alpha channels**
   
  
   
-<br>  
+
 --- 
-<br>
+
 **Compatibility Slider:** 
   - [ ] In progress ...
