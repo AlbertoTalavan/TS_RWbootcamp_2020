@@ -57,4 +57,6 @@ We are given a chrashing app and our mission is to solve a pair of three of snea
 --- 
 
 **Compatibility Slider:** 
+
+status:
   - [x] In progress at this very moment ...
