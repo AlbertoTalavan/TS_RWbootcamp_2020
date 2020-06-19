@@ -57,6 +57,7 @@ We are given a chrashing app and our mission is to solve a pair of three of snea
 --- 
 
 **Compatibility Slider:** 
+We have a partial project the one we have to finish (fixing uy, completing logic and so on...).  
 
-status:
+Curent status:
   - [x] In progress at this very moment ...
