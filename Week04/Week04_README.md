@@ -1,7 +1,7 @@
 # Week 04 (Monday 15 June to Sunday 21 June)
  
 **Debugging Comparison Shopper:**  
-We are given a chrashing app and our mission is to solve all the problems we face:
+We are given a chrashing app and our mission is to solve a pair of three of sneaky problems we face:
 
 - The app does not run. That was produced because of some problems:
   - **house1 was not instantiated**, it was created as an optional `var house1: House?` but never instantiated,
@@ -11,8 +11,8 @@ We are given a chrashing app and our mission is to solve all the problems we fac
   override func viewDidLoad() {
       super.viewDidLoad()
       
-      setUpLeftSideUI()
-      setUpRightSideUI()
+      setUpLeftSideUI()  //does not controll the nil value for house1 => that means "lots of problems"
+      setUpRightSideUI() //No problems here, inside it the nil value is taken in consideration
   
       house1?.price = "$12,000"
       house1?.bedrooms = "3 bedrooms"
@@ -28,8 +28,8 @@ We are given a chrashing app and our mission is to solve all the problems we fac
           house1 = House()
             
           house1?.address = "3898 Melody Ln, Santa Clara CA"
-            house1?.price = "$12,000"
-            house1?.bedrooms = "3 bedrooms"
+          house1?.price = "$12,000"
+          house1?.bedrooms = "3 bedrooms"
           
           setUpLeftSideUI()
           setUpRightSideUI()
