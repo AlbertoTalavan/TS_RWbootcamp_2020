@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Roundable: UIView {
+protocol Roundable where Self: UIView { //can only conforms to UIView
   var cornerRadius: CGFloat {get set}
   
   func round()
