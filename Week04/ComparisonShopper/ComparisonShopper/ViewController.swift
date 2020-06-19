@@ -92,7 +92,8 @@ class ViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
                 var house = House()
                
-               alert.textFields?.forEach { //checking for non "" values in textfields
+               alert.textFields?.forEach {
+                  //checking for "" values in textfields (empty values means we didn´t type anything inside them)
                   if $0.text == "" { $0.text = "\(String(describing: $0.placeholder!)) not available" }
                }
                 house.address = alert.textFields?[0].text
