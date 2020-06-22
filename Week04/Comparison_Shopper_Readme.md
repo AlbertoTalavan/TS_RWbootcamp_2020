@@ -1,6 +1,6 @@
-# Week 04 (Monday 15 June to Sunday 21 June)
+**Week 04 (Monday 15 June to Sunday 21 June**
  
-**Debugging Comparison Shopper:**  
+## Debugging Comparison Shopper:* 
 We are given a chrashing app and our mission is to solve a pair of three of sneaky problems we face:
 
 - The app does not run. That was produced because of some problems:
