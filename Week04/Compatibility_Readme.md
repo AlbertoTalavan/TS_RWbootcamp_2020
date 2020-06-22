@@ -7,12 +7,36 @@ Curent status:
 
 We have a partial project the one we have to finish (fixing uy, completing logic and so on...).
 
+I have **created a CompatibilityGame Model** which is the Model of the app.  
+
+Control between the Model and the UI is permormed on the Controller (our viewController in the app), BUT **I added a `func restart()`method to the Model** just because in my opinion **the model should be able to control** it initial state during the game, I mean **not all the states** but **at least the initial one (the reset())**, performing the default operations to prepare it to be used by the Controller. The controller is who gives the order to reset it (it made a call to reset() using the game object instantiated in it, and takes control of other settings that are being controlled by itself).
+```Swift
+//inside the viewController
+func restart() {
+      
+      game.reset() //Call the reset() Method of the model
+   
+      currentPerson = game.getPerson1()                           //sets currentPerson to person1
+      
+      questionLabel.text = "User 1, what do you think about..."   //default message
+      compatibilityItemLabel.text = game.getCompatibilityItem()
+      
+      updateStarBorderWidth(for: leftStar)  //this controls which star is taking the "frame" (left start means user 1)
+      
+      slider.value = 3.0 //default value
+   }
+
+```
+
 #### Well, referred to the **"UI"** aspect of the app I did the following updates:
 - Added StackViws and constraints to Story Board:
   - **Upper VStack View** : this is a Vertical Stack View containing a "question label" and a "HStackView" (Horizontal Stack View).
   - **Slider Emoji VStack**: Vertical Stack View composed of an "Emojis HStack" and a slider.
   - **Button**: used to go through the next topic.
- - Also was given a touch of colour to made it a little nicer, and usable in both light and dark modes as well as land, portrait orientations.
+ - A touch of color was given to made it a little nicer, and usable, in both light and dark modes as well as land, portrait orientations.
+ - Even **a "frame" was added to** the left and right **stars image views**: The behaviour of this frame consists in help visualizing which player turn are we at any moment as follows:
+   - User 1 round......: left star has the frame
+   - turn for User 2...: right star has the frame
 
 #### For the **"Logic"** part what I did was:  
 - Instead of only Two topics now we will have **between Two and Five of all the 15 different topics**.
@@ -31,7 +55,7 @@ private func assignCompatibilitySubjects(){
          subjectsChosen.append(subjectsFree.remove(at: randomIndex))
       }
       compatibilityItems.append(contentsOf: subjectsChosen)
-   }
+}
 ```
 - **Value of the slider was kept between 1 and 5** as it was originally designed: this way the **minimum compatibility score** we are able to obtain **will be 20%**.
 
@@ -44,24 +68,21 @@ func getTitleAndMessage () -> (String, String, String)  {
     //some code....
     switch  compatibility { 
       case 0...29:              //each case corresponds a each "compatibility zone"
-        //code...
-      case 30...49:
-         //code...
-      case 50...69:
-        //code...
-      case 70...89:
-        //code...
-      case 90...100:
-        //code...
+      
+      // more case sentences...
+      
       default:
          break
       }
+}
 ```
 
 - Those three  **String objects will be stored in a tuple** inside the alert view just **to use them when required**.
-```Swift 
-  //this shows an alert view
-   func showResults () {
+```Swift
+//inside view Controller
+  
+func showResults () { //this shows an alert view
+   
       let stringsTuple: (title: String, message: String, action: String) = getTitleAndMessage()
       
       let alert = UIAlertController(title: stringsTuple.title, message: stringsTuple.message, preferredStyle: .alert)
@@ -84,7 +105,7 @@ I use a metod that compares the max number of items and if the index is bigger t
 //inside the game Model...
 func updateCurrentItemIndex() {
       compatibilityItems.count > (currentItemIndex + 1) ? (currentItemIndex += 1) : resetCurrentItemIndex()
-   }
+}
 ```
 
   
