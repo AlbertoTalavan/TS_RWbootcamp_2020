@@ -29,31 +29,31 @@ func restart() {
 - Added StackViws and constraints to Story Board:
   - **Upper VStack View** : this is a Vertical Stack View containing a "question label" and a "HStackView" (Horizontal Stack View).
   - **Slider Emoji VStack**: Vertical Stack View composed of an "Emojis HStack" and a slider.
-  - **Button**: used to go through the next topic.
- - A touch of color was given to made it a little nicer, and usable, in both light and dark modes as well as land, portrait orientations.
- - Even **a "frame" was added to** the left and right **stars image views**: The behaviour of this frame consists in help visualizing which player turn are we at any moment as follows:
-   - User 1 round......: left star has the frame
-   - turn for User 2...: right star has the frame
+  - **Button**: used to step into the next topic.
+ - A **touch of color was given** to made it a little nicer, and usable, in both **light and dark modes** as well as **land and portrait orientations**.
+ - Even **a "frame" was added to** the left and right **stars image views**: **The goal of this frame is to help visualizing which player owns the turn at any moment as follows:
+   - User 1 round......: left star has the frame. The frame will be hidden for the other one.
+   - turn for User 2...: now the right star is the only one who has the frame. 
 
 #### For the **"Logic"** part what I did was:  
-- Instead of only Two topics now we will have **between Two and Five of all the 15 different topics**.
+- Instead of only two topics, now we will have randomly choosen **between Two and Five**, chosen **from the** all **15 different topics**.
 ```Swift
 //inside the game Model...
-func setTopicsNumber(howMany: Int.random(in: 2...5))
+func setTopicsNumber(howMany: Int.random(in: 2...5))    //each new play we will have a random set of topics between 2 and 5
 
 private func assignCompatibilitySubjects(){
-      var subjectsChosen = [String]()
-      var subjectsFree = subjects
+      var subjectsChosen = [String]()            //stores the subjects already selected
+      var subjectsFree = subjects                //stores the subjects we still have to choose 
       
       var randomIndex = 0
       for _ in 1...howManyTopics {
          randomIndex = Int.random(in: 0 ..< subjectsFree.count)
-         subjectsChosen.append(subjectsFree.remove(at: randomIndex))
+         subjectsChosen.append(subjectsFree.remove(at: randomIndex))   //with remove(at:) we assure we will not have repeated topics
       }
       compatibilityItems.append(contentsOf: subjectsChosen)
 }
 ```
-- **Value of the slider was kept between 1 and 5** as it was originally designed: this way the **minimum compatibility score** we are able to obtain **will be 20%**.
+- **Value of the slider was kept between 1 and 5** as it was originally designed: this way the **minimum compatibility score** we are able to obtain **will be 20%** ... We do not want to potentially discourage future couples you know ^_^!.
 
 
 - Have been **introduced "compatibility zones"**: this way **each "zone" will display a different value for tittle, message and action button text** during test results, 
@@ -92,17 +92,25 @@ func showResults () { //this shows an alert view
 }
 
 ```
-- **First Results** View will be shown (an AlertView) and **later** ,after pressing the "ok" action button, **the game will be reset**.  
+- **First Results** View will be shown (it is an AlertView), and **later** ,after pressing the "ok" action button, **the game will be reset**. 
+(The assignment specified the opposite... but I think this way the UI is less confusing).
 
 
-- In order **to avoid crashes due to "index out of range"** when we are looking at `compatibilityItems[currentItemIndex]` : and due to in my app we will have between 2 and 5 items
-I use a metod that compares the max number of items and if the index is bigger than it, this index will be reset to its initial value (zero) 
+- In order **to avoid crashes due to "index out of range"** when we are looking at `compatibilityItems[currentItemIndex]` : and because of the randomly number of chosen topics (items) I have implemented, I use a method that compares the max number of items and if the index is bigger than that, this index will be reset to its initial value (zero), otherwise this index is incremented by 1. Take a look at the code below.
 ```Swift 
 //inside the game Model...
 func updateCurrentItemIndex() {
       compatibilityItems.count > (currentItemIndex + 1) ? (currentItemIndex += 1) : resetCurrentItemIndex()
 }
 ```
+
+And that is the most important things about this app. 
+
+**The app code is also commented for a faster understanding.**
+
+
+
+>v1.0
 
   
 
