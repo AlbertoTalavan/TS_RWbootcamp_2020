@@ -47,7 +47,6 @@ func setTopicsNumber(howMany: Int.random(in: 2...5))
 private func assignCompatibilitySubjects(){
       var subjectsChosen = [String]()
       var subjectsFree = subjects
-      //subjectsFree.append(contentsOf: subjects.map { $0 })
       
       var randomIndex = 0
       for _ in 1...howManyTopics {
