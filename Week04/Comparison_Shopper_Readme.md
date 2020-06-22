@@ -28,8 +28,8 @@ We are given a crashing app and our mission is to solve a pair or three sneaky p
             
           house1 = House()     //instance of House() 
             
-          house1?.address = "3898 Melody Ln, Santa Clara CA"  //Adding this one we will not have any nil value for each of 
-          house1?.price = "$12,000"                           // the three properties
+          house1?.address = "3898 Melody Ln, Santa Clara CA"  //Adding this one we will not have any nil value for  
+          house1?.price = "$12,000"                           // each of the three properties
           house1?.bedrooms = "3 bedrooms"
           
           setUpLeftSideUI()      //Now we ARE ABLE to go through this methdo without "problems"
@@ -55,3 +55,6 @@ We are given a crashing app and our mission is to solve a pair or three sneaky p
 - Once we have the app running, when we press the button to add the second house, and after pressing the "ok" button on the displayed alert view, the new house was never showed on screen:
   - That bug was the result of the setting of the **alpha channel of both: Labels and the ImageView**. First time we cal the method involved in showing the data of that second house `setUpRightSideUI()`(just when we start the app) **house2 is not yet instantiated**, so this functions set the **alpha channel values** of all the labels and the imageView **equal to zero**. Later, when **we come back again to this method**... we were not **re-setting the value of those alpha channels**, so them will still set to zero forever. **Changing the alpha channel to its max value** (1.0) *when house2 is not nill*, **solves this bug**.
 
+
+
+>v1.1
