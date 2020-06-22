@@ -106,7 +106,12 @@ func updateCurrentItemIndex() {
 
 And that is the most important things about this app. 
 
-**The app code is also commented for a faster understanding.**
+**The app code is also commented for a faster understanding.**  
+
+#
+#
+#
+
 
 
 
