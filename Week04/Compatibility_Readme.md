@@ -39,8 +39,8 @@ func restart() {
 - Instead of only two topics, now we will have randomly choosen **between Two and Five**, chosen **from the** all **15 different topics**.
 ```Swift
 //inside the game Model...
-func setTopicsNumber(howMany: Int.random(in: 2...5))    //each new play we will have a random set of topics between 2 and 5
-
+func setTopicsNumber(howMany: Int.random(in: 2...5))    //each new play we will have a random set of topics 
+                                                        // between 2 and 5
 private func assignCompatibilitySubjects(){
       var subjectsChosen = [String]()            //stores the subjects already selected
       var subjectsFree = subjects                //stores the subjects we still have to choose 
