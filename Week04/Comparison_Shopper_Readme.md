@@ -64,4 +64,4 @@ And that´s all for this app.
 #
 #
 
->v1.1
+>v1.0
