@@ -7,7 +7,7 @@ The task consists in finishing a partial project (fixing UI, giving it logic, et
 ### As for the **UI** of the app I did the following updates:
 - I have **created a CompatibilityGame Model** which is the Model of the app.  
 
-- Control between the Model and the UI is permormed on the Controller (our viewController in the app), BUT **I added a `func restart()`method to the Model** just because in my opinion **the model should be able to control** it initial state during the game, I mean **not all the states** but **at least the initial one (the reset())**, performing the default operations to prepare it to be used by the Controller. The controller is who gives the order to reset it (it made a call to reset() using the game object instantiated in it, and takes control of other settings that are being controlled by itself).
+- Control between the Model and the UI is performed by the Controller (our viewController in the app), BUT **I added a `func restart()`method to the Model** just because in my opinion **the model should be able to control** its initial state during the game, I mean **not all the states** but **at least the initial one (the reset())**, performing the default operations to prepare it to be used by the Controller. The controller is who gives the order to reset it (it made a call to reset() using the game object instantiated in it, and takes control of other settings that are being controlled by itself).
 ```Swift
 //inside the viewController
 func restart() {
