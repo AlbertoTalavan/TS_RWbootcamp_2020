@@ -1,24 +1,24 @@
 # TS_RWbootcamp_2020 
 
 
-# Name:  
+**Name:**  
 Alberto Talaván.  
 
-# Discord username:  
+**Discord username:**  
 TS: Alberto Talavan.  
 
-# Basic Location:  
+**Basic Location:**  
 Madrid SPAIN 🇪🇸  
 
-# Programming Experience:  
+**Programming Experience:**  
 Along my life I have been working in some different fields (electronics, desktop support, ...), but my background is mostly in networking and security (snoc).
 I have done some programming courses along my life in different languajes but I have never worked as a developer before.
 Since, more or less, the last year I felt I was tired of not doing the thing I love the most and started my process of changing careers and focus on iOS and Swift...and I still loving it... so here I am taking my habilities as far as I can to achieve my dream job.  
 
-# Goals:  
+**Goals:**  
 Become a great iOS software engineer, and make a living doing the things I love the most! (create new things and try to solve problems).  
 
-# Hoobies / Interests:  
+**Hoobies / Interests:**  
 I love multiple things... some of them are: 
 - Programming (I am passionate about that), my dog (Hi there I´m León 🐶),
 - Sports, 
