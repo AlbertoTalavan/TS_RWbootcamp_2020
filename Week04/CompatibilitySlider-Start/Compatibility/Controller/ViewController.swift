@@ -142,7 +142,6 @@ class ViewController: UIViewController {
    }
    
    func updateStarBorderWidth(for sender: UIImageView) {
-      let defaultColor = UIColor.systemBackground.cgColor
       let opposite: UIImageView?
 
       sender == leftStar ? (opposite = rightStar) : (opposite = leftStar)
