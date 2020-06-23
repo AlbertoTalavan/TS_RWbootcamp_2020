@@ -30,6 +30,5 @@ I love multiple things... some of them are:
 - TV wild life documentals, 
 - and so much more...  
   
-  
->v1.1  
+ 
 
