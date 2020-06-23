@@ -118,17 +118,17 @@ That said, I have created an #if DEBUG directive to add an extension for the gam
   extension MyGameModel { //this is a random name, not the original one
    
       func testTN(_ password: String) -> Int? {               
-         if password == "just for testing purposes " {       //i a write the correct String then we perform the real functionlait
-            return howManyTopics
+         if password == "just for testing purposes " {       //i a write the correct String then we perform the real
+            return howManyTopics                             // functionality
          }
          return nil
       }
       
-    func sp(_ password: String, _ p: Person) {            //this password: String parameter is used, later, as a filter
-         if password == "just for testing purposes " {    //if the specific String is given, we perform the real functionality
-            resetPerson(who: person1)
+    func sp(_ password: String, _ p: Person) {            //this password: String parameter is used, later, as a 
+         if password == "just for testing purposes " {    // filter if the specific String is given, we perform 
+            resetPerson(who: person1)                     // the real functionality
             person1 = p
-         }                                                //if NOT ... nothing changes inside the normal working of the model
+         }                                                //if NOT ... the method does nothing
       }
 
 #endif
