@@ -4,7 +4,7 @@
 
 The task consists in finishing a partial project (fixing UI, giving it logic, etc.):  
 
-#### As for the **UI** of the app I did the following updates:
+### As for the **UI** of the app I did the following updates:
 - I have **created a CompatibilityGame Model** which is the Model of the app.  
 
 - Control between the Model and the UI is permormed on the Controller (our viewController in the app), BUT **I added a `func restart()`method to the Model** just because in my opinion **the model should be able to control** it initial state during the game, I mean **not all the states** but **at least the initial one (the reset())**, performing the default operations to prepare it to be used by the Controller. The controller is who gives the order to reset it (it made a call to reset() using the game object instantiated in it, and takes control of other settings that are being controlled by itself).
@@ -35,7 +35,7 @@ func restart() {
    - User 1 round......: left star has the frame. The frame will be hidden for the other one.
    - turn for User 2...: now the right star is the only one who has the frame. 
 
-#### For the **"Logic"** part what I did was:  
+### For the **"Logic"** part what I did was:  
 - Instead of only two topics, now we will have randomly choosen **between Two and Five**, chosen **from the** all **15 different topics**.
 ```Swift
 //inside the game Model...
@@ -104,7 +104,7 @@ func updateCurrentItemIndex() {
 }
 ```  
 
-#### Added the Unit Tests for the game model methods
+### Added the Unit Tests for the game model methods
 
 - I divided the tests into two categories:
   - **Black-box tests:**: where only the exposed api methods are tested, and  
