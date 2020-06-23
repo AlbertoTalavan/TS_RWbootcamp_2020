@@ -102,7 +102,41 @@ func showResults () { //this shows an alert view
 func updateCurrentItemIndex() {
       compatibilityItems.count > (currentItemIndex + 1) ? (currentItemIndex += 1) : resetCurrentItemIndex()
 }
+```  
+
+#### Added the Unit Tests for the game model methods
+
+- I divided the tests into two categories:
+  - **Black-box tests:**: where only the exposed api methods are tested, and  
+  - **White-box tests:**  where I have test the private methods.
+
+That said, I have created an #if DEBUG directive to add an extension for the game model (aka. CompatibilityGame class) to include there the necessary public functions needesd to test their private homonymous. Doing that into the #if directive it will not be shipped to production:
+- I choose NO COMMON names for those methods jus to avoid use them into production code (in this case into the viewController)
+- And is also used a String parameter (it is like a "kind of password") in order to avoid, when possible, wrong behaviour if any of those functions are used outside the test sandbox. In example:
+```Swift
+#if DEBUG
+  extension MyGameModel { //this is a random name, not the original one
+   
+      func testTN(_ password: String) -> Int? {               
+         if password == "just for testing purposes " {       //i a write the correct String then we perform the real functionlait
+            return howManyTopics
+         }
+         return nil
+      }
+      
+    func sp(_ password: String, _ p: Person) {            //this password: String parameter is used, later, as a filter
+         if password == "just for testing purposes " {    //if the specific String is given, we perform the real functionality
+            resetPerson(who: person1)
+            person1 = p
+         }                                                //if NOT ... nothing changes inside the normal working of the model
+      }
+
+#endif
+
 ```
+- But I do not know if this is necessary or not... of If there is other real procedure to do this kind of things. So I need some (a lot of) feedback LOL.  
+
+
 
 And that is the most important things about this app. 
 
