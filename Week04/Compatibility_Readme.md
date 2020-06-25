@@ -2,7 +2,12 @@
 
 ## Compatibility Slider: 
 
+| ![user1](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark1.png "User1 playing") | ![result](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/landscapeLight.png "final score") | ![user2](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png "User2 playing") |
+| --- | --- | --- |
+
 The task consists in finishing a partial project (fixing UI, giving it logic, etc.):  
+
+
 
 ### As for the **UI** of the app I did the following updates:
 - I have **created a CompatibilityGame Model** which is the Model of the app.  
