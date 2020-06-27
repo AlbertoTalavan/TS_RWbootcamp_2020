@@ -45,8 +45,6 @@
 		C3C9D373249B324C001F55A6 /* Birdie-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birdie-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D377249B324C001F55A6 /* Birdie_FinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birdie_FinalTests.swift; sourceTree = "<group>"; };
 		C3C9D379249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3C9D382249B324C001F55A6 /* Birdie_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birdie_FinalUITests.swift; sourceTree = "<group>"; };
-		C3C9D384249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C9D392249B3448001F55A6 /* TextPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostModel.swift; sourceTree = "<group>"; };
 		C3C9D394249B3453001F55A6 /* ImagePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostModel.swift; sourceTree = "<group>"; };
 		C3C9D396249B346E001F55A6 /* MediaPostProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostProtocol.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			children = (
 				C3C9D35C249B324B001F55A6 /* Birdie-Final */,
 				C3C9D376249B324C001F55A6 /* Birdie-FinalTests */,
-				C3C9D381249B324C001F55A6 /* Birdie-FinalUITests */,
 				C3C9D35B249B324B001F55A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,15 +110,6 @@
 				C3C9D379249B324C001F55A6 /* Info.plist */,
 			);
 			path = "Birdie-FinalTests";
-			sourceTree = "<group>";
-		};
-		C3C9D381249B324C001F55A6 /* Birdie-FinalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C3C9D382249B324C001F55A6 /* Birdie_FinalUITests.swift */,
-				C3C9D384249B324C001F55A6 /* Info.plist */,
-			);
-			path = "Birdie-FinalUITests";
 			sourceTree = "<group>";
 		};
 		C3C9D390249B325C001F55A6 /* AppDelegate */ = {
