@@ -1,3 +1,0 @@
-```Swift
-//some code here ...
-```
