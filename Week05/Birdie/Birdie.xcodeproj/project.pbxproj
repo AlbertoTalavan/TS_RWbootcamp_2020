@@ -15,7 +15,6 @@
 		C3C9D36A249B324C001F55A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C9D369249B324C001F55A6 /* Assets.xcassets */; };
 		C3C9D36D249B324C001F55A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3C9D36B249B324C001F55A6 /* LaunchScreen.storyboard */; };
 		C3C9D378249B324C001F55A6 /* Birdie_FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D377249B324C001F55A6 /* Birdie_FinalTests.swift */; };
-		C3C9D383249B324C001F55A6 /* Birdie_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D382249B324C001F55A6 /* Birdie_FinalUITests.swift */; };
 		C3C9D393249B3448001F55A6 /* TextPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D392249B3448001F55A6 /* TextPostModel.swift */; };
 		C3C9D395249B3453001F55A6 /* ImagePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D394249B3453001F55A6 /* ImagePostModel.swift */; };
 		C3C9D397249B346E001F55A6 /* MediaPostProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D396249B346E001F55A6 /* MediaPostProtocol.swift */; };
@@ -31,17 +30,10 @@
 			remoteGlobalIDString = C3C9D359249B324B001F55A6;
 			remoteInfo = "Birdie-Final";
 		};
-		C3C9D37F249B324C001F55A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3C9D352249B324B001F55A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3C9D359249B324B001F55A6;
-			remoteInfo = "Birdie-Final";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C3C9D35A249B324B001F55A6 /* Birdie-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C9D35A249B324B001F55A6 /* Birdie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D35D249B324B001F55A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9D35F249B324B001F55A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3C9D361249B324B001F55A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +45,6 @@
 		C3C9D373249B324C001F55A6 /* Birdie-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birdie-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D377249B324C001F55A6 /* Birdie_FinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birdie_FinalTests.swift; sourceTree = "<group>"; };
 		C3C9D379249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3C9D37E249B324C001F55A6 /* Birdie-FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birdie-FinalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D382249B324C001F55A6 /* Birdie_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birdie_FinalUITests.swift; sourceTree = "<group>"; };
 		C3C9D384249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C9D392249B3448001F55A6 /* TextPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostModel.swift; sourceTree = "<group>"; };
@@ -78,13 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3C9D37B249B324C001F55A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,9 +85,8 @@
 		C3C9D35B249B324B001F55A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3C9D35A249B324B001F55A6 /* Birdie-Final.app */,
+				C3C9D35A249B324B001F55A6 /* Birdie.app */,
 				C3C9D373249B324C001F55A6 /* Birdie-FinalTests.xctest */,
-				C3C9D37E249B324C001F55A6 /* Birdie-FinalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,7 +186,7 @@
 			);
 			name = "Birdie-Final";
 			productName = "Birdie-Final";
-			productReference = C3C9D35A249B324B001F55A6 /* Birdie-Final.app */;
+			productReference = C3C9D35A249B324B001F55A6 /* Birdie.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C3C9D372249B324C001F55A6 /* Birdie-FinalTests */ = {
@@ -224,24 +207,6 @@
 			productReference = C3C9D373249B324C001F55A6 /* Birdie-FinalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3C9D37D249B324C001F55A6 /* Birdie-FinalUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C3C9D38D249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-FinalUITests" */;
-			buildPhases = (
-				C3C9D37A249B324C001F55A6 /* Sources */,
-				C3C9D37B249B324C001F55A6 /* Frameworks */,
-				C3C9D37C249B324C001F55A6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C3C9D380249B324C001F55A6 /* PBXTargetDependency */,
-			);
-			name = "Birdie-FinalUITests";
-			productName = "Birdie-FinalUITests";
-			productReference = C3C9D37E249B324C001F55A6 /* Birdie-FinalUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,13 +224,9 @@
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = C3C9D359249B324B001F55A6;
 					};
-					C3C9D37D249B324C001F55A6 = {
-						CreatedOnToolsVersion = 11.4;
-						TestTargetID = C3C9D359249B324B001F55A6;
-					};
 				};
 			};
-			buildConfigurationList = C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie-Final" */;
+			buildConfigurationList = C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -280,7 +241,6 @@
 			targets = (
 				C3C9D359249B324B001F55A6 /* Birdie-Final */,
 				C3C9D372249B324C001F55A6 /* Birdie-FinalTests */,
-				C3C9D37D249B324C001F55A6 /* Birdie-FinalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,13 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C3C9D371249B324C001F55A6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3C9D37C249B324C001F55A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,14 +290,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C3C9D37A249B324C001F55A6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C3C9D383249B324C001F55A6 /* Birdie_FinalUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -352,11 +297,6 @@
 			isa = PBXTargetDependency;
 			target = C3C9D359249B324B001F55A6 /* Birdie-Final */;
 			targetProxy = C3C9D374249B324C001F55A6 /* PBXContainerItemProxy */;
-		};
-		C3C9D380249B324C001F55A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C3C9D359249B324B001F55A6 /* Birdie-Final */;
-			targetProxy = C3C9D37F249B324C001F55A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,14 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Birdie-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-Final";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Birdie;
+				PRODUCT_NAME = Birdie;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -517,14 +457,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Birdie-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-Final";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Birdie;
+				PRODUCT_NAME = Birdie;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -536,7 +476,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Birdie-FinalTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -558,7 +498,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Birdie-FinalTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,50 +514,10 @@
 			};
 			name = Release;
 		};
-		C3C9D38E249B324C001F55A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "Birdie-FinalUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-FinalUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Birdie-Final";
-			};
-			name = Debug;
-		};
-		C3C9D38F249B324C001F55A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "Birdie-FinalUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-FinalUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Birdie-Final";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie-Final" */ = {
+		C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3C9D385249B324C001F55A6 /* Debug */,
@@ -640,15 +540,6 @@
 			buildConfigurations = (
 				C3C9D38B249B324C001F55A6 /* Debug */,
 				C3C9D38C249B324C001F55A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C3C9D38D249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-FinalUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3C9D38E249B324C001F55A6 /* Debug */,
-				C3C9D38F249B324C001F55A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

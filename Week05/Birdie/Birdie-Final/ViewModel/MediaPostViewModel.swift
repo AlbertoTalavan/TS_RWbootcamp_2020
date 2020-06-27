@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 class MediaPostsViewModel {
     static let shared = MediaPostsViewModel()
 
@@ -41,3 +41,4 @@ extension Date {
         return str
     }
 }
+*/
