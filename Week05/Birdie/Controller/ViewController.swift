@@ -25,6 +25,10 @@ class ViewController: UIViewController {
 
    }
    
+   override func viewDidAppear(_ animated: Bool) {
+      tableview.reloadData()
+   }
+   
    
    func setUpTableView() {
       // Set delegates, register custom cells, set up datasource, etc.
