@@ -19,8 +19,10 @@ class MediaPostsHandler: NSObject {
         let imagePost2 = ImagePost(textBody: "Went to the Aquarium today :]", userName: "Audrey", timestamp: Date(timeIntervalSince1970: 30000), image: UIImage(named: "octopus")!)
         let textPost1 = TextPost(textBody: "Hello World!", userName: "Bhagat", timestamp: Date(timeIntervalSince1970: 20000))
         let textPost2 = TextPost(textBody: "This is my favorite social media app!", userName: "Jeff", timestamp: Date(timeIntervalSince1970: 40000))
+      let myTextPost = TextPost(textBody: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ", userName: "Alberto", timestamp: Date(timeIntervalSince1970: 20000))
+      let myTextPost2 = ImagePost(textBody: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ", userName: "León", timestamp: Date(timeIntervalSince1970: 40000), image: UIImage(named: "mascot_swift-badge")!)
 
-        mediaPosts = [imagePost1, imagePost2, textPost1, textPost2]
+        mediaPosts = [imagePost1, imagePost2, textPost1, textPost2, myTextPost, myTextPost2]
         mediaPosts = mediaPosts.sorted(by: { $0.timestamp > $1.timestamp })
     }
 
@@ -33,5 +35,6 @@ class MediaPostsHandler: NSObject {
         mediaPosts.append(imagePost)
         mediaPosts = mediaPosts.sorted(by: { $0.timestamp > $1.timestamp })
     }
+   
 
 }

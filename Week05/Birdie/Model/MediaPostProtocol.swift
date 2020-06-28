@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//import UIKit
 
 // We use this protocol so both text posts and image posts
 // can be in the MediaPostsHandler.shared.mediaPosts array

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Birdie_Final
+@testable import Birdie-MVC
 
 class Birdie_FinalTests: XCTestCase {
 
