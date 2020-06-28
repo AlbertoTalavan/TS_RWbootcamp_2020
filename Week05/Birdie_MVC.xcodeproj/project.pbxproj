@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		BAF74DB124A7D8BA007D7FC7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		C3C9D35A249B324B001F55A6 /* Birdie-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C9D35A249B324B001F55A6 /* Birdie_MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdie_MVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D35D249B324B001F55A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3C9D35F249B324B001F55A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3C9D361249B324B001F55A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		C3C9D369249B324C001F55A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3C9D36C249B324C001F55A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3C9D36E249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3C9D373249B324C001F55A6 /* Birdie-MVC-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birdie-MVC-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C9D373249B324C001F55A6 /* Birdie_MVC-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Birdie_MVC-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D377249B324C001F55A6 /* Birdie_FinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birdie_FinalTests.swift; sourceTree = "<group>"; };
 		C3C9D379249B324C001F55A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3C9D392249B3448001F55A6 /* TextPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostModel.swift; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		C3C9D35B249B324B001F55A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3C9D35A249B324B001F55A6 /* Birdie-MVC.app */,
-				C3C9D373249B324C001F55A6 /* Birdie-MVC-FinalTests.xctest */,
+				C3C9D35A249B324B001F55A6 /* Birdie_MVC.app */,
+				C3C9D373249B324C001F55A6 /* Birdie_MVC-FinalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3C9D359249B324B001F55A6 /* Birdie-MVC-Final */ = {
+		C3C9D359249B324B001F55A6 /* Birdie_MVC-Final */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3C9D387249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-MVC-Final" */;
+			buildConfigurationList = C3C9D387249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie_MVC-Final" */;
 			buildPhases = (
 				C3C9D356249B324B001F55A6 /* Sources */,
 				C3C9D357249B324B001F55A6 /* Frameworks */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = "Birdie-MVC-Final";
+			name = "Birdie_MVC-Final";
 			productName = "Birdie-Final";
-			productReference = C3C9D35A249B324B001F55A6 /* Birdie-MVC.app */;
+			productReference = C3C9D35A249B324B001F55A6 /* Birdie_MVC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C3C9D372249B324C001F55A6 /* Birdie-MVC-FinalTests */ = {
+		C3C9D372249B324C001F55A6 /* Birdie_MVC-FinalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3C9D38A249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-MVC-FinalTests" */;
+			buildConfigurationList = C3C9D38A249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie_MVC-FinalTests" */;
 			buildPhases = (
 				C3C9D36F249B324C001F55A6 /* Sources */,
 				C3C9D370249B324C001F55A6 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				C3C9D375249B324C001F55A6 /* PBXTargetDependency */,
 			);
-			name = "Birdie-MVC-FinalTests";
+			name = "Birdie_MVC-FinalTests";
 			productName = "Birdie-FinalTests";
-			productReference = C3C9D373249B324C001F55A6 /* Birdie-MVC-FinalTests.xctest */;
+			productReference = C3C9D373249B324C001F55A6 /* Birdie_MVC-FinalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie-MVC" */;
+			buildConfigurationList = C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie_MVC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3C9D359249B324B001F55A6 /* Birdie-MVC-Final */,
-				C3C9D372249B324C001F55A6 /* Birdie-MVC-FinalTests */,
+				C3C9D359249B324B001F55A6 /* Birdie_MVC-Final */,
+				C3C9D372249B324C001F55A6 /* Birdie_MVC-FinalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,7 +283,7 @@
 /* Begin PBXTargetDependency section */
 		C3C9D375249B324C001F55A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3C9D359249B324B001F55A6 /* Birdie-MVC-Final */;
+			target = C3C9D359249B324B001F55A6 /* Birdie_MVC-Final */;
 			targetProxy = C3C9D374249B324C001F55A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -434,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Birdie;
-				PRODUCT_NAME = "Birdie-MVC";
+				PRODUCT_NAME = Birdie_MVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,7 +452,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Birdie;
-				PRODUCT_NAME = "Birdie-MVC";
+				PRODUCT_NAME = Birdie_MVC;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,7 +476,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birdie-MVC-Final.app/Birdie-MVC-Final";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birdie_MVC-Final.app/Birdie_MVC-Final";
 			};
 			name = Debug;
 		};
@@ -498,14 +498,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birdie-MVC-Final.app/Birdie-MVC-Final";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Birdie_MVC-Final.app/Birdie_MVC-Final";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie-MVC" */ = {
+		C3C9D355249B324B001F55A6 /* Build configuration list for PBXProject "Birdie_MVC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3C9D385249B324C001F55A6 /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3C9D387249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-MVC-Final" */ = {
+		C3C9D387249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie_MVC-Final" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3C9D388249B324C001F55A6 /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3C9D38A249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie-MVC-FinalTests" */ = {
+		C3C9D38A249B324C001F55A6 /* Build configuration list for PBXNativeTarget "Birdie_MVC-FinalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3C9D38B249B324C001F55A6 /* Debug */,

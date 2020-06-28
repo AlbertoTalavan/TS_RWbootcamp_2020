@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3C9D359249B324B001F55A6"
                BuildableName = "Birdie-MVC.app"
-               BlueprintName = "Birdie-MVC-Final"
-               ReferencedContainer = "container:Birdie-MVC.xcodeproj">
+               BlueprintName = "Birdie_MVC-Final"
+               ReferencedContainer = "container:Birdie_MVC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3C9D372249B324C001F55A6"
-               BuildableName = "Birdie-MVC-FinalTests.xctest"
-               BlueprintName = "Birdie-MVC-FinalTests"
-               ReferencedContainer = "container:Birdie-MVC.xcodeproj">
+               BuildableName = "Birdie_MVC-FinalTests.xctest"
+               BlueprintName = "Birdie_MVC-FinalTests"
+               ReferencedContainer = "container:Birdie_MVC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,8 +56,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3C9D359249B324B001F55A6"
             BuildableName = "Birdie-MVC.app"
-            BlueprintName = "Birdie-MVC-Final"
-            ReferencedContainer = "container:Birdie-MVC.xcodeproj">
+            BlueprintName = "Birdie_MVC-Final"
+            ReferencedContainer = "container:Birdie_MVC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -73,8 +73,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C3C9D359249B324B001F55A6"
             BuildableName = "Birdie-MVC.app"
-            BlueprintName = "Birdie-MVC-Final"
-            ReferencedContainer = "container:Birdie-MVC.xcodeproj">
+            BlueprintName = "Birdie_MVC-Final"
+            ReferencedContainer = "container:Birdie_MVC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
