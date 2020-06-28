@@ -23,8 +23,8 @@ class ViewController: UIViewController {
       
       setUpTableView()
       
-      tableview.estimatedRowHeight = 300
-      tableview.rowHeight = UITableView.automaticDimension
+//      tableview.estimatedRowHeight = 300
+//      tableview.rowHeight = UITableView.automaticDimension
       
    }
    
@@ -51,28 +51,33 @@ class ViewController: UIViewController {
       if image != nil {
          cell.multimedia.image = image
          cell.multimedia.isHidden = false
-         cellHeight = getCellHeight(for: cell, at: indexPath)
+         //cellHeight = getCellHeight(for: cell, at: indexPath)
          
       } else {
          cell.multimedia.isHidden = true
-         cellHeight = getCellHeight(for: cell, at: indexPath) //- CGFloat(100)
+         //cellHeight = getCellHeight(for: cell, at: indexPath) //- CGFloat(100)
          
          
       }
 
    }
    
+   /*
    func getCellHeight(for cell: CustomCell, at indexPath: IndexPath) -> CGFloat {
-      let totalVpadding = CGFloat(40)  //real acumulated = 32
+//      let totalVpadding = CGFloat(40)  //real acumulated = 32
       
       if MediaPostsHandler.shared.mediaPosts[indexPath.row] is ImagePost {
-         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + CGFloat(30)
+//         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + CGFloat(30)
+         return 60
+         
       } else {
-         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + (cell.imageView?.frame.height)! + totalVpadding
+//         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + (cell.imageView?.frame.height)! + totalVpadding
+         return 180
       }
       
 //      return userNameLabel.frame.height + timeStampLabel.frame.height + textBodyLabel.frame.height + multimedia.frame.height + totalVpadding
    }
+   */
    
    
    //MARK: - IBActions
@@ -147,15 +152,13 @@ extension ViewController: UITableViewDataSource {
    
    /*
    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
-      if let cellHeight = cellHeight {
-         return cellHeight
-      }else{
+      if MediaPostsHandler.shared.mediaPosts[indexPath.row] is ImagePost {
          return 100
+      } else {
+         return 280
       }
    }
-   */
-   
+ */
    
 }
 
