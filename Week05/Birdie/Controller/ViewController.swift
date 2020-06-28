@@ -12,20 +12,17 @@ class ViewController: UIViewController {
    
    @IBOutlet weak var tableview: UITableView!
    
-   var cellHeight: CGFloat?
+
    
 
    
-   
    override func viewDidLoad() {
       super.viewDidLoad()
+      
       MediaPostsHandler.shared.getPosts() 
-      
+
       setUpTableView()
-      
-//      tableview.estimatedRowHeight = 300
-//      tableview.rowHeight = UITableView.automaticDimension
-      
+
    }
    
    
@@ -41,7 +38,11 @@ class ViewController: UIViewController {
       if MediaPostsHandler.shared.mediaPosts[indexPath.row].userName == "Homer Simpson" {
          cell.badgeImage.image = UIImage(named: "Homer")
          cell.badgeImage.layer.cornerRadius = cell.badgeImage.frame.size.width / 2
+      } else {
+         cell.badgeImage.image = UIImage(named: "mascot_swift-badge")
       }
+      
+      let constraint = cell.contentView.constraints[8]
       
       //Common to any cell
       cell.userNameLabel.text = MediaPostsHandler.shared.mediaPosts[indexPath.row].userName
@@ -50,35 +51,21 @@ class ViewController: UIViewController {
       
       if image != nil {
          cell.multimedia.image = image
+         //if cell.contentView.constraints[8] != constraint { cell.contentView.addConstraint(constraint)}
          cell.multimedia.isHidden = false
-         //cellHeight = getCellHeight(for: cell, at: indexPath)
+         // Maybe Add a UIImageView programatically? and the add needed constraints
+
          
       } else {
          cell.multimedia.isHidden = true
-         //cellHeight = getCellHeight(for: cell, at: indexPath) //- CGFloat(100)
-         
-         
+         //cell.contentView.removeConstraint(cell.contentView.constraints[8])
+//         cell.contentView.willRemoveSubview(cell.multimedia)
+//         cell.multimedia.removeFromSuperview()
       }
 
    }
    
-   /*
-   func getCellHeight(for cell: CustomCell, at indexPath: IndexPath) -> CGFloat {
-//      let totalVpadding = CGFloat(40)  //real acumulated = 32
-      
-      if MediaPostsHandler.shared.mediaPosts[indexPath.row] is ImagePost {
-//         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + CGFloat(30)
-         return 60
-         
-      } else {
-//         return cell.userNameLabel.frame.height + cell.timeStampLabel.frame.height + cell.textBodyLabel.frame.height + (cell.imageView?.frame.height)! + totalVpadding
-         return 180
-      }
-      
-//      return userNameLabel.frame.height + timeStampLabel.frame.height + textBodyLabel.frame.height + multimedia.frame.height + totalVpadding
-   }
-   */
-   
+
    
    //MARK: - IBActions
    @IBAction func didPressCreateTextPostButton(_ sender: Any) {
@@ -100,8 +87,15 @@ class ViewController: UIViewController {
       let okAction = UIAlertAction(title: "Send", style: .default){ action in
          textToPost.text = alert.textFields?[1].text
          userName.text = alert.textFields?[0].text
-         //if textToPost.text?.count == 0 { return }
-         if userName.text == "" { userName.text = "Homer Simpson"}
+         
+         //Easter egg
+         if userName.text == "" && textToPost.text?.count == 0 {
+            userName.text = "Homer Simpson"
+            textToPost.text = "Ouch!"
+         }else if userName.text == "" {
+            userName.text = "Me"
+         }
+         
          post = TextPost(textBody: textToPost.text, userName: userName.text ?? "Hommer Simpson", timestamp: Date() )
          MediaPostsHandler.shared.addTextPost(textPost: post!)
          self.tableview.reloadData()
@@ -145,20 +139,8 @@ extension ViewController: UITableViewDataSource {
          configureCell(for: cell, at: indexPath, with: nil)
       }
       
-      
-
       return cell
    }
-   
-   /*
-   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      if MediaPostsHandler.shared.mediaPosts[indexPath.row] is ImagePost {
-         return 100
-      } else {
-         return 280
-      }
-   }
- */
    
 }
 
