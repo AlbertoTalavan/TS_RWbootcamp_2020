@@ -75,7 +75,7 @@
 		C3C9D351249B324B001F55A6 = {
 			isa = PBXGroup;
 			children = (
-				C3C9D35C249B324B001F55A6 /* Birdie */,
+				C3C9D35C249B324B001F55A6 /* Birdie_MVC */,
 				C3C9D376249B324C001F55A6 /* Birdie-FinalTests */,
 				C3C9D35B249B324B001F55A6 /* Products */,
 			);
@@ -90,7 +90,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C3C9D35C249B324B001F55A6 /* Birdie */ = {
+		C3C9D35C249B324B001F55A6 /* Birdie_MVC */ = {
 			isa = PBXGroup;
 			children = (
 				C3C9D390249B325C001F55A6 /* AppDelegate */,
@@ -101,7 +101,7 @@
 				C3C9D369249B324C001F55A6 /* Assets.xcassets */,
 				C3C9D36E249B324C001F55A6 /* Info.plist */,
 			);
-			path = Birdie;
+			path = Birdie_MVC;
 			sourceTree = "<group>";
 		};
 		C3C9D376249B324C001F55A6 /* Birdie-FinalTests */ = {
