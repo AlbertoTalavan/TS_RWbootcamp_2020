@@ -45,7 +45,7 @@ class AddImagePost: UIViewController {
       postImage.image = nil
       
       //using delegate to dismiss keyboard on pressing "return" key
-         //using textFieldShouldReturn(
+         //using textFieldShouldReturn
       self.nameTextField.delegate = self
       self.messageTextField.delegate = self
       

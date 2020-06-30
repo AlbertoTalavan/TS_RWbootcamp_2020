@@ -97,7 +97,7 @@
 				C3C9D399249B3484001F55A6 /* Controller */,
 				C3C9D398249B3479001F55A6 /* Model */,
 				C3C9D391249B326C001F55A6 /* View */,
-				C3C9D39E249B3C30001F55A6 /* ViewModel */,
+				C3C9D39E249B3C30001F55A6 /* ViewModel NOT USED */,
 				C3C9D369249B324C001F55A6 /* Assets.xcassets */,
 				C3C9D36E249B324C001F55A6 /* Info.plist */,
 			);
@@ -152,12 +152,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C3C9D39E249B3C30001F55A6 /* ViewModel */ = {
+		C3C9D39E249B3C30001F55A6 /* ViewModel NOT USED */ = {
 			isa = PBXGroup;
 			children = (
 				C3C9D39C249B3C29001F55A6 /* MediaPostViewModel.swift */,
 			);
-			path = ViewModel;
+			path = "ViewModel NOT USED";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
    func setUpTableView() {
       // Set delegates, register custom cells, set up datasource, etc.
       tableview.dataSource = self
-      tableview.delegate = self
+      //tableview.delegate = self  //we are NOT using UITableViewDelegate methods in this project
 
    }
    
@@ -69,11 +69,7 @@ class ViewController: UIViewController {
    @IBAction func didPressCreateTextPostButton(_ sender: Any) {
       addTextPost()
    }
-   
-//   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
-//      // not used, used a segue to AddImagePost instead
-//   }
-   
+
    
    //MARK: - Add post
    func addTextPost() {
