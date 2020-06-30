@@ -142,10 +142,6 @@ extension ViewController: UITableViewDataSource {
    
 }
 
-extension ViewController: UITableViewDelegate {
-
-}
-
 extension Date {
     func toString(withFormat format: String = "d MMM, HH:mm") -> String {
         let dateFormatter = DateFormatter()

@@ -34,37 +34,6 @@ class ViewController: UIViewController {
 
    }
    
-   func configureCell(for cell: CustomCell, at indexPath: IndexPath, with image: UIImage?) {
-      //Easter Egg
-      if MediaPostsHandler.shared.mediaPosts[indexPath.row].userName == "Homer Simpson" {
-         cell.badgeImage.image = UIImage(named: "Homer")
-         cell.badgeImage.layer.cornerRadius = cell.badgeImage.frame.size.width / 2
-      } else {
-         cell.badgeImage.image = UIImage(named: "mascot_swift-badge")
-      }
-      
-      let constraint = cell.contentView.constraints[8]
-      
-      //Common to any cell
-      cell.userNameLabel.text = MediaPostsHandler.shared.mediaPosts[indexPath.row].userName
-      cell.timeStampLabel.text = MediaPostsHandler.shared.mediaPosts[indexPath.row].timestamp.toString()
-      cell.textBodyLabel.text = MediaPostsHandler.shared.mediaPosts[indexPath.row].textBody
-      
-      if image != nil {
-         cell.multimedia.image = image
-         //if cell.contentView.constraints[8] != constraint { cell.contentView.addConstraint(constraint)}
-         cell.multimedia.isHidden = false
-         // Maybe Add a UIImageView programatically? and the add needed constraints
-
-         
-      } else {
-         cell.multimedia.isHidden = true
-         //cell.contentView.removeConstraint(cell.contentView.constraints[8])
-//         cell.contentView.willRemoveSubview(cell.multimedia)
-//         cell.multimedia.removeFromSuperview()
-      }
-
-   }
    
 
    
@@ -73,9 +42,6 @@ class ViewController: UIViewController {
       addTextPost()
    }
    
-//   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
-//      // not used, used a segue to AddImagePost instead
-//   }
    
    
    //MARK: - Add post
@@ -131,16 +97,8 @@ extension ViewController: UITableViewDataSource {
    }
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomCell
-      
-      if let imagePost = MediaPostsHandler.shared.mediaPosts[indexPath.row] as? ImagePost {
-         let image = imagePost.image
-         configureCell(for: cell, at: indexPath, with: image)
-      }else {
-         configureCell(for: cell, at: indexPath, with: nil)
-      }
-      
-      return cell
+
+      return MediaPostsViewModel.shared.setUpTableViewCell(for: MediaPostsHandler.shared.mediaPosts[indexPath.row] as! MediaPost, in: tableView)
    }
    
 }
