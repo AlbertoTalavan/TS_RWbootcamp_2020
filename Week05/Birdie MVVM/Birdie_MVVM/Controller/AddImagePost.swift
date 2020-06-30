@@ -17,6 +17,23 @@ extension AddImagePost: UIImagePickerControllerDelegate & UINavigationController
    }
 }
 
+extension AddImagePost: UITextFieldDelegate {
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == nameTextField {
+         messageTextField.becomeFirstResponder()
+      }
+      textField.resignFirstResponder()
+      return true
+   }
+   
+   
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      super.touchesBegan(touches, with: event)
+      
+      view.endEditing(true)
+   }
+}
+
 class AddImagePost: UIViewController {
 
    @IBOutlet weak var nameTextField: UITextField!
@@ -37,20 +54,6 @@ class AddImagePost: UIViewController {
       messageTextField.returnKeyType = UIReturnKeyType.done
     }
    
-   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-      if textField == nameTextField {
-         messageTextField.becomeFirstResponder()
-      }
-      textField.resignFirstResponder()
-      return true
-   }
-   
-   
-   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-      super.touchesBegan(touches, with: event)
-      
-      view.endEditing(true)
-   }
    
    //MARK: - Actions
    @IBAction func pickImage(_ sender: Any) {
@@ -71,9 +74,15 @@ class AddImagePost: UIViewController {
    
    
    @IBAction func send(_ sender: Any) {
-      if nameTextField.text == "" { nameTextField.text = "Homer Simpson"}
+     if nameTextField.text == "" && messageTextField.text?.count == 0 {
+        nameTextField.text = "Homer Simpson"
+        messageTextField.text = "Ouch!"
+     } else if nameTextField.text == "" {
+        nameTextField.text = "Me" 
+     }
+     
       if postImage.image == nil {
-         if messageTextField.text?.count == 0 { messageTextField.text = "Ouch!" }
+        
          MediaPostsHandler.shared.addTextPost(textPost: TextPost(textBody: messageTextField.text, userName: nameTextField.text!, timestamp: Date()))
       }else {
          MediaPostsHandler.shared.addImagePost(imagePost: ImagePost(textBody: messageTextField.text, userName: nameTextField.text!, timestamp: Date(), image: postImage.image!))

@@ -82,11 +82,9 @@ class AddImagePost: UIViewController {
          messageTextField.text = "Ouch!"
       } else if nameTextField.text == "" {
          nameTextField.text = "Me"
-         
       }
       
       if postImage.image == nil {
-         //if messageTextField.text?.count == 0 { messageTextField.text = "Ouch!" }
          MediaPostsHandler.shared.addTextPost(textPost: TextPost(textBody: messageTextField.text, userName: nameTextField.text!, timestamp: Date()))
       }else {
          MediaPostsHandler.shared.addImagePost(imagePost: ImagePost(textBody: messageTextField.text, userName: nameTextField.text!, timestamp: Date(), image: postImage.image!))
