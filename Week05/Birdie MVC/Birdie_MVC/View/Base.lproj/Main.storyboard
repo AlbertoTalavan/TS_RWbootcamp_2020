@@ -126,7 +126,6 @@
                                         <rect key="frame" x="270.5" y="0.0" width="143.5" height="30"/>
                                         <state key="normal" title="Create Image Post"/>
                                         <connections>
-                                            <action selector="didPressCreateImagePostButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SN4-yB-2UV"/>
                                             <segue destination="Xwe-LN-auF" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="yPg-1T-0M9"/>
                                         </connections>
                                     </button>
@@ -215,12 +214,12 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-wt-RC1">
                                                         <rect key="frame" x="0.0" y="0.0" width="163" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your message here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-bk-oZj">
                                                         <rect key="frame" x="0.0" y="42" width="163" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>

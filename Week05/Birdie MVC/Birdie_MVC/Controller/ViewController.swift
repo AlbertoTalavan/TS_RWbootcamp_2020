@@ -18,7 +18,7 @@ class ViewController: UIViewController {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
+   
       MediaPostsHandler.shared.getPosts() 
 
       setUpTableView()
@@ -46,7 +46,6 @@ class ViewController: UIViewController {
          cell.badgeImage.image = UIImage(named: "mascot_swift-badge")
       }
       
-      let constraint = cell.contentView.constraints[8]
       
       //Common to any cell
       cell.userNameLabel.text = MediaPostsHandler.shared.mediaPosts[indexPath.row].userName
@@ -55,16 +54,11 @@ class ViewController: UIViewController {
       
       if image != nil {
          cell.multimedia.image = image
-         //if cell.contentView.constraints[8] != constraint { cell.contentView.addConstraint(constraint)}
          cell.multimedia.isHidden = false
-         // Maybe Add a UIImageView programatically? and the add needed constraints
-
-         
+  
       } else {
          cell.multimedia.isHidden = true
-         //cell.contentView.removeConstraint(cell.contentView.constraints[8])
-//         cell.contentView.willRemoveSubview(cell.multimedia)
-//         cell.multimedia.removeFromSuperview()
+
       }
 
    }
@@ -76,9 +70,9 @@ class ViewController: UIViewController {
       addTextPost()
    }
    
-   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
-      
-   }
+//   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
+//      // not used, used a segue to AddImagePost instead
+//   }
    
    
    //MARK: - Add post

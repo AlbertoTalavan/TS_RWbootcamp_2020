@@ -12,9 +12,6 @@ class ViewController: UIViewController {
    
    @IBOutlet weak var tableview: UITableView!
    
-
-   
-
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -76,9 +73,9 @@ class ViewController: UIViewController {
       addTextPost()
    }
    
-   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
-      
-   }
+//   @IBAction func didPressCreateImagePostButton(_ sender: Any) {
+//      // not used, used a segue to AddImagePost instead
+//   }
    
    
    //MARK: - Add post
@@ -152,14 +149,6 @@ extension ViewController: UITableViewDelegate {
 
 }
 
-extension Date {
-    func toString(withFormat format: String = "d MMM, HH:mm") -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        let str = dateFormatter.string(from: self)
-        return str
-    }
-}
 
 
 

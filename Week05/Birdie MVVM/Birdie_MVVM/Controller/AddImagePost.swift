@@ -26,12 +26,33 @@ class AddImagePost: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       postImage.image = nil
-        // Do any additional setup after loading the view.
+      
+      //using delegate to dismiss keyboard on pressing "return" key
+         //using textFieldShouldReturn(
+      self.nameTextField.delegate = self
+      self.messageTextField.delegate = self
+      
+      //changing the return keyboard key  name
+      nameTextField.returnKeyType = UIReturnKeyType.continue
+      messageTextField.returnKeyType = UIReturnKeyType.done
     }
    
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      if textField == nameTextField {
+         messageTextField.becomeFirstResponder()
+      }
+      textField.resignFirstResponder()
+      return true
+   }
+   
+   
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      super.touchesBegan(touches, with: event)
+      
+      view.endEditing(true)
+   }
    
    //MARK: - Actions
-   
    @IBAction func pickImage(_ sender: Any) {
       let picker = UIImagePickerController()
       picker.delegate = self
