@@ -19,7 +19,6 @@ class CustomCell: UITableViewCell {
    @IBOutlet weak var textBodyLabel: UILabel!
    
    
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

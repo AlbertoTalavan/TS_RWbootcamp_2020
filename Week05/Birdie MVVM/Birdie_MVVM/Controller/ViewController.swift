@@ -12,11 +12,10 @@ class ViewController: UIViewController {
    
    @IBOutlet weak var tableview: UITableView!
    
-   
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      MediaPostsHandler.shared.getPosts() 
+      MediaPostsHandler.shared.getPosts()
 
       setUpTableView()
 
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
    func setUpTableView() {
       // Set delegates, register custom cells, set up datasource, etc.
       tableview.dataSource = self
-      tableview.delegate = self
+      //tableview.delegate = self  // we do not needed the tableViewDelegate Methods in this project
 
    }
    
@@ -44,7 +43,7 @@ class ViewController: UIViewController {
    
    
    
-   //MARK: - Add post
+   //MARK: - Add post (Alert View)
    func addTextPost() {
       let alert = UIAlertController(title: "Type", message: "Write your post into the box", preferredStyle: .alert)
       let textToPost = UITextField()
@@ -98,14 +97,12 @@ extension ViewController: UITableViewDataSource {
    
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-      return MediaPostsViewModel.shared.setUpTableViewCell(for: MediaPostsHandler.shared.mediaPosts[indexPath.row] as! MediaPost, in: tableView)
+      return MediaPostsViewModel.shared.setUpTableViewCell(for: MediaPostsHandler.shared.mediaPosts[indexPath.row] , in: tableView)
    }
    
 }
 
-extension ViewController: UITableViewDelegate {
 
-}
 
 
 
