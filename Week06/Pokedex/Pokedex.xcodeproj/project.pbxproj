@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		185CB1F823C78CE6009F7571 /* Pokedex-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex-starter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1F823C78CE6009F7571 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		185CB1EF23C78CE6009F7571 = {
 			isa = PBXGroup;
 			children = (
-				185CB1FA23C78CE6009F7571 /* Pokedex-starter */,
+				185CB1FA23C78CE6009F7571 /* Pokedex */,
 				185CB1F923C78CE6009F7571 /* Products */,
 			);
 			indentWidth = 2;
@@ -58,12 +58,12 @@
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185CB1F823C78CE6009F7571 /* Pokedex-starter.app */,
+				185CB1F823C78CE6009F7571 /* Pokedex.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		185CB1FA23C78CE6009F7571 /* Pokedex-starter */ = {
+		185CB1FA23C78CE6009F7571 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
@@ -74,7 +74,7 @@
 				185CB20923C78CE8009F7571 /* Info.plist */,
 				A125200724AAAB64008F7E2E /* Resources */,
 			);
-			path = Pokedex-starter;
+			path = Pokedex;
 			sourceTree = "<group>";
 		};
 		A125200724AAAB64008F7E2E /* Resources */ = {
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		185CB1F723C78CE6009F7571 /* Pokedex-starter */ = {
+		185CB1F723C78CE6009F7571 /* Pokedex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex-starter" */;
+			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex" */;
 			buildPhases = (
 				181FE31E248EA70400A180EA /* ShellScript */,
 				185CB1F423C78CE6009F7571 /* Sources */,
@@ -105,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = Pokedex-starter;
-			productName = Pokedex-starter;
-			productReference = 185CB1F823C78CE6009F7571 /* Pokedex-starter.app */;
+			name = Pokedex;
+			productName = "Pokedex-starter";
+			productReference = 185CB1F823C78CE6009F7571 /* Pokedex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex-starter" */;
+			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185CB1F723C78CE6009F7571 /* Pokedex-starter */,
+				185CB1F723C78CE6009F7571 /* Pokedex */,
 			);
 		};
 /* End PBXProject section */
@@ -323,14 +323,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Pokedex-starter/Info.plist;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
+				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Pokedex-starter;
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,14 +346,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Pokedex-starter/Info.plist;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = Q9J8U8DMSX;
+				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Pokedex-starter;
+				MARKETING_VERSION = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.Pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,7 +368,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex-starter" */ = {
+		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20A23C78CE8009F7571 /* Debug */,
@@ -365,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex-starter" */ = {
+		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20D23C78CE8009F7571 /* Debug */,
