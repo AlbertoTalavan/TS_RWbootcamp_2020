@@ -4,7 +4,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CompactViewController: UIViewController {
 
   
   @IBOutlet weak var collectionView: UICollectionView!

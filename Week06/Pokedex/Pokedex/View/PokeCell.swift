@@ -6,9 +6,7 @@
 import UIKit
 
 class PokeCell: UICollectionViewCell {
-    
   @IBOutlet weak var pokeImage: UIImageView!
-  
   @IBOutlet weak var pokeNameLabel: UILabel!
   
 }

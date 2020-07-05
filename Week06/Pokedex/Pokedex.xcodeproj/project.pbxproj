@@ -18,8 +18,14 @@
 		A125200B24AAAB71008F7E2E /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125200924AAAB71008F7E2E /* csv.swift */; };
 		A125200D24AAABA0008F7E2E /* PokemonGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A125200C24AAABA0008F7E2E /* PokemonGenerator.swift */; };
 		BA12F0E424B1000D0024C2A1 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0E324B1000D0024C2A1 /* PokeCell.swift */; };
-		BA12F0E724B1030D0024C2A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0E624B1030D0024C2A1 /* ViewController.swift */; };
+		BA12F0E724B1030D0024C2A1 /* CompactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0E624B1030D0024C2A1 /* CompactViewController.swift */; };
 		BA12F0EA24B1056F0024C2A1 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0E924B1056F0024C2A1 /* Pokemon.swift */; };
+		BA12F0EE24B11AE60024C2A1 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0ED24B11AE60024C2A1 /* DataSource.swift */; };
+		BA12F0F024B122E80024C2A1 /* PokeCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA12F0EF24B122E80024C2A1 /* PokeCollectionViewDelegate.swift */; };
+		BA95693424B238AB00694FBA /* LargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95693324B238AB00694FBA /* LargeViewController.swift */; };
+		BA95693624B23A1E00694FBA /* PokeLargeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95693524B23A1E00694FBA /* PokeLargeCell.swift */; };
+		BA95693824B249F600694FBA /* WhereAmI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA95693724B249F600694FBA /* WhereAmI.swift */; };
+		BAE08F1524B261B10039FCD0 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE08F1424B261B10039FCD0 /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +42,14 @@
 		A125200924AAAB71008F7E2E /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		A125200C24AAABA0008F7E2E /* PokemonGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGenerator.swift; sourceTree = "<group>"; };
 		BA12F0E324B1000D0024C2A1 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
-		BA12F0E624B1030D0024C2A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA12F0E624B1030D0024C2A1 /* CompactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactViewController.swift; sourceTree = "<group>"; };
 		BA12F0E924B1056F0024C2A1 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		BA12F0ED24B11AE60024C2A1 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		BA12F0EF24B122E80024C2A1 /* PokeCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		BA95693324B238AB00694FBA /* LargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeViewController.swift; sourceTree = "<group>"; };
+		BA95693524B23A1E00694FBA /* PokeLargeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeLargeCell.swift; sourceTree = "<group>"; };
+		BA95693724B249F600694FBA /* WhereAmI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmI.swift; sourceTree = "<group>"; };
+		BAE08F1424B261B10039FCD0 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 				185CB20123C78CE6009F7571 /* Main.storyboard */,
 				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
 				BA12F0E324B1000D0024C2A1 /* PokeCell.swift */,
+				BA95693524B23A1E00694FBA /* PokeLargeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,7 +122,12 @@
 			children = (
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
-				BA12F0E624B1030D0024C2A1 /* ViewController.swift */,
+				BA12F0E624B1030D0024C2A1 /* CompactViewController.swift */,
+				BA95693324B238AB00694FBA /* LargeViewController.swift */,
+				BA12F0ED24B11AE60024C2A1 /* DataSource.swift */,
+				BA12F0EF24B122E80024C2A1 /* PokeCollectionViewDelegate.swift */,
+				BA95693724B249F600694FBA /* WhereAmI.swift */,
+				BAE08F1424B261B10039FCD0 /* MyTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,12 +236,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA12F0EA24B1056F0024C2A1 /* Pokemon.swift in Sources */,
-				BA12F0E724B1030D0024C2A1 /* ViewController.swift in Sources */,
+				BA95693824B249F600694FBA /* WhereAmI.swift in Sources */,
+				BA12F0E724B1030D0024C2A1 /* CompactViewController.swift in Sources */,
 				A125200B24AAAB71008F7E2E /* csv.swift in Sources */,
+				BA95693624B23A1E00694FBA /* PokeLargeCell.swift in Sources */,
+				BAE08F1524B261B10039FCD0 /* MyTabBarController.swift in Sources */,
 				A125200D24AAABA0008F7E2E /* PokemonGenerator.swift in Sources */,
+				BA95693424B238AB00694FBA /* LargeViewController.swift in Sources */,
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
+				BA12F0EE24B11AE60024C2A1 /* DataSource.swift in Sources */,
 				BA12F0E424B1000D0024C2A1 /* PokeCell.swift in Sources */,
+				BA12F0F024B122E80024C2A1 /* PokeCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
