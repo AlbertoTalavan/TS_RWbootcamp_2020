@@ -37,7 +37,7 @@ public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
 ```
 ### Goals: 
 ```Swift
-let futureSelf = MyLife.shared
+var futureSelf = MyLife.shared
 
 internal func MyGaols() -> String {
    futureSelf.getMyGoals
