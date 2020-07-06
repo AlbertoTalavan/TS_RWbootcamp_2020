@@ -16,7 +16,7 @@ More info about the steps to resolve it:
 ### Compatibility
 The task consists in finishing a very early state project fixing UI, giving it logic, etc. : 
 
-More info about the inside app code at:  
+More info about this project app at:  
 [Week 04 - Compatibility](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Compatibility_Readme.md "Compatibility")
 
-NT:->  Jay!, I also added some Unit Tests in this project ... please take a look at them and give me some feedback.
+NT:->  This one include Unit Tests.
