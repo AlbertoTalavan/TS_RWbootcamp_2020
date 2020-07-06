@@ -3,11 +3,14 @@
 ## Compatibility Slider: 
 
 | ![user1](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark1.png "User1 playing") | ![result](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/landscapeLight.png "final score") | ![user2](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png "User2 playing") |
-| --- | --- | --- |
+| --- | --- | --- |  
+
+
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
+
 
 The task consists in finishing a partial project (fixing UI, giving it logic, etc.):  
-
-
 
 ### As for the **UI** of the app I did the following updates:
 - I have **created a CompatibilityGame Model** which is the Model of the app.  
