@@ -55,7 +55,7 @@ I love multiple things... some of them are:
   let Programming //(I am passionate about that) 
   var Sports, Rolling_skating, Team_sports //more code here...
   var Anime, Videogames
-  var Sci-fi_movies, TV_wild_life_documentals 
+  var Sci_fi_movies, TV_wild_life_documentals 
   var read_technical_books
   
   //and so much more...  
