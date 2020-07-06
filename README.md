@@ -53,8 +53,7 @@ internal func MyGaols() -> String {
          I love the most! (create apps to solve common life problems).  
    """)
 }
-```
-<p></p>  
+```  
 
 ### Hoobies / Interests:  
 
