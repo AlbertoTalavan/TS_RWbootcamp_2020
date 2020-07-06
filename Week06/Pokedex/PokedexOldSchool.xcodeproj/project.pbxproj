@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		185CB1F823C78CE6009F7571 /* Pokedex OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokedexOldSchool OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185CB1F823C78CE6009F7571 /* Pokedex OS.app */,
+				185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		185CB1F723C78CE6009F7571 /* Pokedex */ = {
+		185CB1F723C78CE6009F7571 /* PokedexOldSchool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex" */;
+			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "PokedexOldSchool" */;
 			buildPhases = (
 				181FE31E248EA70400A180EA /* ShellScript */,
 				185CB1F423C78CE6009F7571 /* Sources */,
@@ -156,9 +156,9 @@
 			);
 			dependencies = (
 			);
-			name = Pokedex;
+			name = PokedexOldSchool;
 			productName = "Pokedex-starter";
-			productReference = 185CB1F823C78CE6009F7571 /* Pokedex OS.app */;
+			productReference = 185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex" */;
+			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "PokedexOldSchool" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -189,7 +189,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185CB1F723C78CE6009F7571 /* Pokedex */,
+				185CB1F723C78CE6009F7571 /* PokedexOldSchool */,
 			);
 		};
 /* End PBXProject section */
@@ -395,7 +395,7 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
-				PRODUCT_NAME = "Pokedex OS";
+				PRODUCT_NAME = "PokedexOldSchool OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,7 +418,7 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
-				PRODUCT_NAME = "Pokedex OS";
+				PRODUCT_NAME = "PokedexOldSchool OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,7 +428,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Pokedex" */ = {
+		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "PokedexOldSchool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20A23C78CE8009F7571 /* Debug */,
@@ -437,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Pokedex" */ = {
+		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "PokedexOldSchool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20D23C78CE8009F7571 /* Debug */,
