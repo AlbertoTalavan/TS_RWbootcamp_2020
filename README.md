@@ -55,7 +55,7 @@ internal func MyGaols() -> String {
 }
 ```  
 
-### Hoobies / Interests:  
+### Hobbies / Interests:  
 
 ```Swift
  /// variables can change in a future version of the app...
