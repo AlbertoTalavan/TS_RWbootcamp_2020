@@ -41,7 +41,7 @@ public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
 """
 }
 ```  
-<br></br>
+
 ### Goals: 
 ```Swift
 var futureSelf = MyLife.shared
