@@ -9,11 +9,9 @@
 | iPhone in Light mode | iPhone in Dark mode |
 
 
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
-
-|![iOS 13.0](https://img.shields.io/badge/iOS-13.0-orange)|
-| ------------------------------------------------------- |
-|![swift 5](https://img.shields.io/badge/Swift-5-red)|
 
 **Previous considerations**  
 I used the AutoLayout and the StoryBoard as required for this assignment. It is optimized for and iPhone SE screen size but 
