@@ -12,11 +12,12 @@ class Alberto: Talaván.
 ```Swift
 struct WhereAmI: CLLocationManagerDelegate {
  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { 
-      locations.last ; #warning("""
-      
+ 
+      var currentLocation = locations.last
+      #warning("""
                       Madrid - SPAIN 🇪🇸
                    
-                                """)
+               """)
    }
 }
  ```
