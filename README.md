@@ -20,7 +20,7 @@ struct WhereAmI: CLLocationManagerDelegate {
    }
 }
  ```
-
+<br></br>
 ### Programming Experience:  
 ```Swift
 public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
@@ -34,7 +34,8 @@ public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
     my code skills to achieve my dream job.
 """
 }
-```
+```  
+<br></br>
 ### Goals: 
 ```Swift
 var futureSelf = MyLife.shared
@@ -47,6 +48,7 @@ internal func MyGaols() -> String {
    """)
 }
 ```
+<br></br>
 ### Hoobies / Interests:  
 
 ```Swift
