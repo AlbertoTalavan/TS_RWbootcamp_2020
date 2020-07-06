@@ -1,14 +1,14 @@
 # Ray Wenderlich Summer Bootcamp 2020.
 
-**Name:**  
+### Name: 
 ```Swift
 class Alberto: Talaván.
 ```
 
-**Discord username:**  
+### Discord username:  
 ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
 
-**Basic Location:**  
+### Basic Location:  
 ```Swift
 struct WhereAmI: CLLocationManagerDelegate {
  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { 
@@ -21,7 +21,7 @@ struct WhereAmI: CLLocationManagerDelegate {
 }
  ```
 
-**Programming Experience:**  
+### Programming Experience:  
 ```Swift
 public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
 """
@@ -35,7 +35,7 @@ public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
 """
 }
 ```
-**Goals:** 
+### Goals: 
 ```Swift
 let futureSelf = MyLife.shared
 
@@ -47,7 +47,7 @@ internal func MyGaols() -> String {
    """)
 }
 ```
-**Hoobies / Interests:**  
+### Hoobies / Interests:  
 I love multiple things... some of them are:
 ```Swift
  - My dog (Hi there I´m León 🐶)
