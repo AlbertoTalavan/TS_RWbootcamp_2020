@@ -14,9 +14,9 @@ This week assignments :
 | ------------------------------------------------- | ------------------------------------------------- |
 
 
-|![iOS 13.0](https://img.shields.io/badge/iOS-13.0-orange)|
-| ------------------------------------------------------- |
-|![swift 5](https://img.shields.io/badge/Swift-5-red)|
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
+
 
 I have used a class (instead of a struct) because of the following reasons:
 - **I want to define the game as a constant:** during the game ALL the properties of the model will change... with a struct It is necessary to declare it (the game) as a variable -> even if I use  let properties in the struct and also  mutating functions to be able to change the value of those properties... I will need to declare the struct as a variable  
