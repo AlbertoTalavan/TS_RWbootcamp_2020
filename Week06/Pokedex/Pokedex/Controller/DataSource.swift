@@ -40,6 +40,8 @@ class DataSource: NSObject, UICollectionViewDataSource{
     cell.pokeImage.image = UIImage(named: String(pokemons[indexPath.item].pokemonID))
     cell.pokeNameLabel.text = pokemons[indexPath.item].pokemonName
     
+    cell.layer.cornerRadius = 10
+    
     return cell
   }
   
@@ -49,6 +51,9 @@ class DataSource: NSObject, UICollectionViewDataSource{
     cell.baseExpLabel.text = String(pokemons[indexPath.item].baseExp)
     cell.heightLabel.text = String(pokemons[indexPath.item].height)
     cell.weightLabel.text = String(pokemons[indexPath.item].weight)
+    
+    cell.layer.cornerRadius = 10
+    
     return cell
   }
 }
