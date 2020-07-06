@@ -19,4 +19,4 @@ The task consists in finishing a very early state project fixing UI, giving it l
 More info about this project app at:  
 [Week 04 - Compatibility](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Compatibility_Readme.md "Compatibility")
 
-NT:->  This one include Unit Tests.
+NT: This one includes Unit Tests.
