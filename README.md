@@ -1,19 +1,16 @@
 # Ray Wenderlich Summer Bootcamp 2020.
 
-<a name = "bio" /> 
-<img align = "right" src="https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png" width="145" height="250">
+**Name:**  
+Alberto Talaván.  
 
-**Name:**  </br>
-Alberto Talaván.</br>  
+**Discord username:**  
+![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
 
-**Discord username:** </br> 
-![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) </br>
+**Basic Location:**  
+Madrid SPAIN 🇪🇸  
 
-**Basic Location:**  </br>
-Madrid SPAIN 🇪🇸  </br>
-
-**Programming Experience:**  </br>
-Along my life I have been working in some different fields (electronics, desktop support, ...), but my background is mostly in networking and security (snoc).</br>
+**Programming Experience:**  
+Along my life I have been working in some different fields (electronics, desktop support, ...), but my background is mostly in networking and security (snoc).
 I have done some programming courses along my life in different languajes but I have never worked as a developer before.
 Since, more or less, the last year I felt I was tired of not doing the thing I love the most and started my process of changing careers and focus on iOS and Swift...and I still loving it... so here I am taking my habilities as far as I can to achieve my dream job.  
 
