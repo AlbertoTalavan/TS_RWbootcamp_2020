@@ -20,6 +20,9 @@ struct WhereAmI: CLLocationManagerDelegate {
    }
 }
  ```
+ **Contact Info:**  
+[![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
+![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin)  
 <br></br>
 ### Programming Experience:  
 ```Swift
@@ -66,8 +69,4 @@ internal func MyGaols() -> String {
   
   //and so much more...  
  ``` 
-  
-**Contact Information:**  
-[![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
-![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin)
-
+ 
