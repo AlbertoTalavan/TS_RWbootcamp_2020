@@ -15,7 +15,7 @@ import CoreLocation ; Madrid SPAIN 🇪🇸
 
 **Programming Experience:**  
 ```Swift
-public func MyExperience (of developer: Jobs, and other: Jobs)->String {
+public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
 """
   Along my life I have been working in some different fields (electronics, desktop support, ...), but my background
     is mostly in networking and security (snoc).
@@ -29,9 +29,10 @@ public func MyExperience (of developer: Jobs, and other: Jobs)->String {
 ```
 **Goals:** 
 ```Swift
-let futureLife = MyLife.shared
+let futureSelf = MyLife.shared
+
 internal func MyGaols() -> String {
-   futureLife.getMyGoals
+   futureSelf.getMyGoals
    #warning("""
       Become a great iOS software engineer, and make a living doing the things I love the most! (create new things and try to solve  
       problems.
