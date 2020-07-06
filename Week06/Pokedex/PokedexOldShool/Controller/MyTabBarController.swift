@@ -1,4 +1,6 @@
-
+///  Created by Alberto Talaván on 6/18/20.
+///  Copyright © 2020 Alberto Talaván. All rights reserved.
+///
 
 import UIKit
 
@@ -15,15 +17,15 @@ class MyTabBarController: UITabBarController, UITabBarControllerDelegate {
   
   override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
     if item.title == "Compact View" {
-      if whereAmI.getPosition() != .compact {
+      if whereAmI.getPosition() != .compactViewController {
         whereAmI.changePosition()
       }
     } else if item.title == "Large View" {
-      if whereAmI.getPosition() != .large {
+      if whereAmI.getPosition() != .largeViewController {
         whereAmI.changePosition()
       }
     }else {
-      if whereAmI.getPosition() != .compact {
+      if whereAmI.getPosition() != .compactViewController {
         whereAmI.changePosition()
       }
     }

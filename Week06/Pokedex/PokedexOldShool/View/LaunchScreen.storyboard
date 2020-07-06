@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RW Bootcamp Summer 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6B-83-Qwa">
-                                <rect key="frame" x="32.5" y="16" width="310" height="33"/>
+                                <rect key="frame" x="37" y="16" width="301.5" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="pyh-Re-JoV"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Alberto Talaván " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-jE-XvK">
-                                <rect key="frame" x="68" y="618" width="239.5" height="33"/>
+                                <rect key="frame" x="85.5" y="618" width="204.5" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="BN8-9Q-Fg2"/>
                                 </constraints>

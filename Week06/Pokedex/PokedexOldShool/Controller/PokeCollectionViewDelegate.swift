@@ -20,12 +20,11 @@ class PokeCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let maxWidth = UIScreen.main.bounds.width
     let totalSpacing: CGFloat
-    //let totalSpacing = interItemSpacing * numberOfItemPerRow + leftInset + rightInset
     
-    if whereAmI.getPosition() == .compact {
+    if whereAmI.getPosition() == .compactViewController {
       leftInset = CGFloat(10)
       rightInset = CGFloat(10)
-    } else if whereAmI.getPosition() == .large {
+    } else if whereAmI.getPosition() == .largeViewController {
       leftInset = CGFloat(50)
       rightInset = CGFloat(50)
     }else {
@@ -36,31 +35,13 @@ class PokeCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
     totalSpacing = interItemSpacing * numberOfItemPerRow + leftInset + rightInset
     
     let itemWidth = (maxWidth - totalSpacing)/numberOfItemPerRow
-    //print("item size :\(itemWidth)")
-        
+   
     return CGSize(width: itemWidth, height: itemWidth)
-    
-    
-//    let itemSize: CGFloat?
-//    let maxHeight = UIScreen.main.bounds.height
-//    if UIDevice.current.orientation.isPortrait {
-//         itemSize = (maxWidth - totalSpacing)/numberOfItemPerRow
-//       }else if UIDevice.current.orientation.isLandscape {
-//         itemSize = (maxHeight - totalSpacing)/numberOfItemPerRow
-//       } else {
-//         itemSize = (maxWidth - totalSpacing)/numberOfItemPerRow
-//       }
-//
-//    print("item size :\(itemSize)")
-//    return CGSize(width: itemSize!, height: itemSize!)
-    
 
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    
     return interItemSpacing
-  }
- 
-  
-  
+  } 
 }

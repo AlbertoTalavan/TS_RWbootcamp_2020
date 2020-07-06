@@ -19,12 +19,12 @@ class DataSource: NSObject, UICollectionViewDataSource{
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     var myCell: UICollectionViewCell
     
-    if whereAmI.getPosition() == .compact {
+    if whereAmI.getPosition() == .compactViewController {
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCellIdentifier", for: indexPath) as? PokeCell else { fatalError("Cell can not be created")}
       myCell = configurePokeCell(for: cell, at: indexPath)
       return myCell
       
-    } else if  whereAmI.getPosition() == .large {
+    } else if  whereAmI.getPosition() == .largeViewController {
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeLargeCellIdentifier", for: indexPath) as? PokeLargeCell else { fatalError("Large Cell can not be created")}
       myCell = configurePokeLargeCell(for: cell, at: indexPath)
       return myCell

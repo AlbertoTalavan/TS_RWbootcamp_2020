@@ -1,26 +1,28 @@
-
+///  Created by Alberto Talaván on 6/18/20.
+///  Copyright © 2020 Alberto Talaván. All rights reserved.
+///
 
 import UIKit
 
 class WhereAmI {
   
   enum TabBarPosition {
-    case compact,large
+    case compactViewController,largeViewController
   }
   
   public static let shared = WhereAmI()
 
-  private var position: TabBarPosition = .compact
+  private var position: TabBarPosition = .compactViewController
   
   private init() {}
   
   //MARK: - Setter
   func changePosition () {
     switch position {
-      case .compact:
-        position = .large
-      case .large:
-        position = .compact
+      case .compactViewController:
+        position = .largeViewController
+      case .largeViewController:
+        position = .compactViewController
     }
   }
   
