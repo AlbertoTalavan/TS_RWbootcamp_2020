@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		185CB1F823C78CE6009F7571 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1F823C78CE6009F7571 /* Pokedex OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185CB1F823C78CE6009F7571 /* Pokedex.app */,
+				185CB1F823C78CE6009F7571 /* Pokedex OS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			);
 			name = Pokedex;
 			productName = "Pokedex-starter";
-			productReference = 185CB1F823C78CE6009F7571 /* Pokedex.app */;
+			productReference = 185CB1F823C78CE6009F7571 /* Pokedex OS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -394,8 +394,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.Pokedex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
+				PRODUCT_NAME = "Pokedex OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,8 +417,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.Pokedex;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
+				PRODUCT_NAME = "Pokedex OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
