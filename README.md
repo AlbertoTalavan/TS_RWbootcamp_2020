@@ -50,16 +50,15 @@ internal func MyGaols() -> String {
 ### Hoobies / Interests:  
 I love multiple things... some of them are:
 ```Swift
- - My dog (Hi there I´m León 🐶)
- - Programming (I am passionate about that) 
- - Sports 
- - Rolling skating 
- - Anime
- - Videogames 
- - Sci-fi movies 
- - read technical books 
- - TV wild life documentals 
- - and so much more...  
+ /// variables can change in a future version of the app...
+  let My_dog //(Hi there I´m León 🐶)
+  let Programming //(I am passionate about that) 
+  var Sports, Rolling_skating, Team_sports //more code here...
+  var Anime, Videogames
+  var Sci-fi_movies, TV_wild_life_documentals 
+  var read_technical_books
+  
+  //and so much more...  
  ``` 
   
 **Contact Information:**  
