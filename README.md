@@ -1,7 +1,8 @@
 # Ray Wenderlich Summer Bootcamp 2020.
 
 <a name = "bio" /> 
-<img align = "right" src="https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png" width="145" height="250">  
+<img align = "right" src="https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png" width="145" height="250">
+
 **Name:**  </br>
 Alberto Talaván.</br>  
 
