@@ -51,7 +51,7 @@ internal func MyGaols() -> String {
    futureSelf.getMyGoals
    #warning("""
          Become a great iOS developer, and make a living doing the things 
-         I love the most! (create apps to solve common life problems).  
+         I love the most!, i.e. create apps to help solving common life struggles .  
    """)
 }
 ```  
