@@ -30,7 +30,7 @@ The task consists in finishing a partial project (fixing UI, giving it logic, et
 ### Added the Unit Tests for the game model methods
 
 - I have divided the tests in two categories:
-  - **Black-box tests:**: where only the exposed api methods are tested, and  
-  - **White-box tests:**  where I have test the private methods.
+  - **Black-box tests:**: where only the exposed api methods have been tested.
+  - **White-box tests:**  where I have tested the private ones.
 
 
