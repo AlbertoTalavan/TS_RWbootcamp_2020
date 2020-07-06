@@ -37,12 +37,9 @@ If I would used a struct:
 | iPhone in Light mode | iPhone in Dark mode |  
 
 
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
-![AppIcon](/Week02/Assets-Gifs/RGBullsEye.png) 
-
-|![iOS 13.0](https://img.shields.io/badge/iOS-13-orange)|
-| ------------------------------------------------------- |
-|![swift 5](https://img.shields.io/badge/Swift-5-red)|  
 
 
 As requested, and in order to test it, I have used the same model I did in the previous exercise  (BullsEyeMVC)
@@ -63,10 +60,9 @@ I have made some minor changes to the exercise proposed in the assignment:
 | ![AppIcon](/Week02/Assets-Gifs/RevBullsEye.png) | ![gif](/Week02/Assets-Gifs/RevBullsEye.gif) |
 | ------------------------------------------- | ----------------------------------------------------- | 
 
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
-|![iOS 13.0](https://img.shields.io/badge/iOS-13-orange)|
-| ------------------------------------------------------- |
-|![swift 5](https://img.shields.io/badge/Swift-5-red)|
 
 **The goal here is continue testing the model we did in Bull´s Eye MVC.**  
 
