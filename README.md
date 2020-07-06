@@ -5,10 +5,13 @@
 Alberto Talaván.  
 
 **Discord username:**  
-TS: Alberto Talavan.  
+[![discord](https://img.shields.io/badge/-@TS: Alberto Talavan-00ACEE.svg?style=social&logo=discord)]  
+
 
 **Basic Location:**  
 Madrid SPAIN 🇪🇸  
+[![location](https://img.shields.io/badge/Location-Madrid (🇪🇸Spain)-blue.svg?longCache=true&style=flat)]  
+
 
 **Programming Experience:**  
 Along my life I have been working in some different fields (electronics, desktop support, ...), but my background is mostly in networking and security (snoc).
