@@ -29,7 +29,7 @@ struct WhereAmI: CLLocationManagerDelegate {
 
 ### Programming Experience:  
 ```Swift
-public func MyExperience (as developer: Jobs, and other: Jobs) -> String {
+public func MyJobExperience (as developer: [Job], and other: [Job]) -> String {
 """
   Along my life I have been working in some different fields (electronics, desktop support, ...), but my background
     is mostly in networking and security (snoc).
