@@ -9,8 +9,12 @@ class Alberto: Talaván.
 ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
 
 **Basic Location:**  
-```Swift 
-import CoreLocation ; Madrid SPAIN 🇪🇸 
+```Swift
+struct WhereAmI: CLLocationManagerDelegate {
+ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { 
+      locations.last ; #warning(" Madrid - SPAIN 🇪🇸")
+   }
+}
  ```
 
 **Programming Experience:**  
@@ -34,8 +38,8 @@ let futureSelf = MyLife.shared
 internal func MyGaols() -> String {
    futureSelf.getMyGoals
    #warning("""
-      Become a great iOS software engineer, and make a living doing the things I love the most! (create new things and try to solve  
-      problems.
+         Become a great iOS developer, and make a living doing the things 
+         I love the most! (create apps to solve common life problems).  
    """)
 }
 ```
