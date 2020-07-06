@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PokedexOldSchool OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1F823C78CE6009F7571 /* Pokedex OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex OS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		185CB1EF23C78CE6009F7571 = {
 			isa = PBXGroup;
 			children = (
-				185CB1FA23C78CE6009F7571 /* Pokedex */,
+				185CB1FA23C78CE6009F7571 /* PokedexOldShool */,
 				185CB1F923C78CE6009F7571 /* Products */,
 			);
 			indentWidth = 2;
@@ -76,12 +76,12 @@
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */,
+				185CB1F823C78CE6009F7571 /* Pokedex OS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		185CB1FA23C78CE6009F7571 /* Pokedex */ = {
+		185CB1FA23C78CE6009F7571 /* PokedexOldShool */ = {
 			isa = PBXGroup;
 			children = (
 				BA12F0E824B1055B0024C2A1 /* Model */,
@@ -91,7 +91,7 @@
 				185CB20923C78CE8009F7571 /* Info.plist */,
 				A125200724AAAB64008F7E2E /* Resources */,
 			);
-			path = Pokedex;
+			path = PokedexOldShool;
 			sourceTree = "<group>";
 		};
 		A125200724AAAB64008F7E2E /* Resources */ = {
@@ -158,7 +158,7 @@
 			);
 			name = PokedexOldSchool;
 			productName = "Pokedex-starter";
-			productReference = 185CB1F823C78CE6009F7571 /* PokedexOldSchool OS.app */;
+			productReference = 185CB1F823C78CE6009F7571 /* Pokedex OS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -387,7 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PokedexOldShool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,7 +395,7 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
-				PRODUCT_NAME = "PokedexOldSchool OS";
+				PRODUCT_NAME = "Pokedex OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -410,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				INFOPLIST_FILE = "$(SRCROOT)/Pokedex/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/PokedexOldShool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +418,7 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertoTalavan.PokedexOS;
-				PRODUCT_NAME = "PokedexOldSchool OS";
+				PRODUCT_NAME = "Pokedex OS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

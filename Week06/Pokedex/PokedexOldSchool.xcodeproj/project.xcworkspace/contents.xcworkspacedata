@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/albertotalavan/Developer/Bootcamp_RW_git/TS_RWBootcamp_2020/Week06/Pokedex/PokedexOldSchool.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
