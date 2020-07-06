@@ -4,7 +4,8 @@
 **Name:**  
 Alberto Talaván.  
 
-**Discord username:**    
+**Discord username:**  
+  
 ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
 
 **Basic Location:**  
@@ -33,6 +34,7 @@ I love multiple things... some of them are:
 
 
 **Contact Information:**  
+
 [![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
 ![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin)
 ![mail](https://img.shields.io/badge/-albertotalavan@gmail.com-00ACEE.svg?style=social&logo=gmail)
