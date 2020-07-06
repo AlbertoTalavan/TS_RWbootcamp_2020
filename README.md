@@ -48,9 +48,13 @@ internal func MyGaols() -> String {
 }
 ```
 ### Hoobies / Interests:  
-I love multiple things... some of them are:
+
 ```Swift
  /// variables can change in a future version of the app...
+ 
+  #warning("""
+    I love multiple things... some of them are:
+           """)
   let My_dog //(Hi there I´m León 🐶)
   let Programming //(I am passionate about that) 
   var Sports, Rolling_skating, Team_sports //more code here...
