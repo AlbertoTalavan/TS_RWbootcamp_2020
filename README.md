@@ -4,14 +4,11 @@
 **Name:**  
 Alberto Talaván.  
 
-**Discord username:**  
-[![discord](https://img.shields.io/badge/-@TS: Alberto Talavan-00ACEE.svg?style=social&logo=discord)]  
-
+**Discord username:**    
+![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
 
 **Basic Location:**  
 Madrid SPAIN 🇪🇸  
-[![location](https://img.shields.io/badge/Location-Madrid (🇪🇸Spain)-blue.svg?longCache=true&style=flat)]  
-
 
 **Programming Experience:**  
 Along my life I have been working in some different fields (electronics, desktop support, ...), but my background is mostly in networking and security (snoc).
@@ -22,16 +19,23 @@ Since, more or less, the last year I felt I was tired of not doing the thing I l
 Become a great iOS software engineer, and make a living doing the things I love the most! (create new things and try to solve problems).  
 
 **Hoobies / Interests:**  
-I love multiple things... some of them are: 
-- Programming (I am passionate about that), my dog (Hi there I´m León 🐶),
-- Sports, 
-- rolling skating, 
-- anime, 
-- videogames, 
-- Action Sci-fi movies, 
-- read technical books, 
-- TV wild life documentals, 
-- and so much more...  
+I love multiple things... some of them are:  
+ - My dog (Hi there I´m León 🐶)
+ - Programming (I am passionate about that) 
+ - Sports 
+ - Rolling skating 
+ - Anime
+ - Videogames 
+ - Sci-fi movies 
+ - read technical books 
+ - TV wild life documentals 
+ - and so much more...  
+
+
+**Contact Information:**  
+[![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
+![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin)
+![mail](https://img.shields.io/badge/-albertotalavan@gmail.com-00ACEE.svg?style=social&logo=gmail)
   
  
 
