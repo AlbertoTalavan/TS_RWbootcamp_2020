@@ -1,13 +1,12 @@
 ///  Created by Alberto Talaván on 05/07/20
 ///  Copyright © 2020 Alberto Talaván. All rights reserved.
 ///
+
 import UIKit
 
 class WhereAmI {
   
-  enum TabBarPosition {
-    case compactViewController,largeViewController
-  }
+  
   
   public static let shared = WhereAmI()
 
