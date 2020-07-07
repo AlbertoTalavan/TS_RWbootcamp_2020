@@ -7,7 +7,9 @@ This week homework consists in create our own pokedex using a started project:
 - it is mandatory 3 columns of cards in portrait and landscape (whatever the screensize is) using the first tab bar item
 - for the second tab bar item we just have to show 1 card in portrait mode
 
->ToDo in the near future: do it using diffable data source and compositional layout
+>ToDo in the near future:
+> - Refactoring code
+> - do the same project using diffable data source and compositional layout
 
 
 ```Swift
