@@ -50,8 +50,8 @@ var futureSelf = MyLife.shared
 internal func MyGaols() -> String {
    futureSelf.getMyGoals
    #warning("""
-         Become a great iOS developer, and make a living doing the things 
-         I love the most!, i.e. create apps to help solving common life struggles .  
+         Become a great iOS Architect, and make a living doing the things 
+         I love the most!, i.e. create apps to help solving common life struggles.  
    """)
 }
 ```  
