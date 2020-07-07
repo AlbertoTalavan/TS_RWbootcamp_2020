@@ -59,7 +59,7 @@ internal func MyGaols() -> String {
 ### Hobbies / Interests:  
 
 ```Swift
- /// variables can change in a future version of the app...
+ /// variables can change in a future version...
  
   #warning("""
     I love multiple things... some of them are:
