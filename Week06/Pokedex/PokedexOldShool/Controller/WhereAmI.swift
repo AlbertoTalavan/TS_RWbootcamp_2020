@@ -1,7 +1,6 @@
-///  Created by Alberto Talaván on 6/18/20.
+///  Created by Alberto Talaván on 05/07/20
 ///  Copyright © 2020 Alberto Talaván. All rights reserved.
 ///
-
 import UIKit
 
 class WhereAmI {
