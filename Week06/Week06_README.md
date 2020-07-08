@@ -6,7 +6,7 @@
 | --- | --- | --- |  
 
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
-[![iOS](https://img.shields.io/badge/iOS-13.2+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)  
+![iOS](https://img.shields.io/badge/iOS-13.2+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)
 
 This week homework consists in create our own pokedex using a started project:
 - it is mandatory 3 columns of cards in portrait and landscape (whatever the screensize is) using the first tab bar item
