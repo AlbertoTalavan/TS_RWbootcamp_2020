@@ -3,9 +3,9 @@
 
 ```Swift
 if #available(iOS13, *) {
-  print("    ")
+  print("  SwiftUI  let´s go!!! 🎉🥳🎉  ")
 } else {
-  fatalError("😓 mmm meh!  ")
+  fatalError("  😓 mmm meh!  ")
 }
 ```
 
