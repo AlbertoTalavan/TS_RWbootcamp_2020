@@ -18,4 +18,5 @@ class LargeViewController: UIViewController {
     collectionView.dataSource = pokemons
     collectionView.delegate = delegate
   }
+  
 }
