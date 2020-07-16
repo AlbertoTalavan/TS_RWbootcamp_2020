@@ -1,5 +1,8 @@
 # Week 07 (Monday 6 July to Sunday 12 July)
 
+Link to the group project:
+[groupHW](https://github.com/AlbertoTalavan/RWBootcampHWTeamMaitriAlberto)
+
 
 ```Swift
 if #available(iOS13, *) {
