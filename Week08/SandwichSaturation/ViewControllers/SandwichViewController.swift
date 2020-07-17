@@ -13,6 +13,7 @@ protocol SandwichDataSource {
 }
 
 class SandwichViewController: UITableViewController, SandwichDataSource {
+  let defaults = UserDefaults.standard //used to store the last search´s amount of sauce
   let searchController = UISearchController(searchResultsController: nil)
   var sandwiches = [SandwichData]()
   var filteredSandwiches = [SandwichData]()
@@ -21,6 +22,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     super.init(coder: coder)
     
     loadSandwiches()
+    
   }
   
   override func viewDidLoad() {
@@ -36,29 +38,56 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     navigationItem.searchController = searchController
     definesPresentationContext = true
     searchController.searchBar.scopeButtonTitles = SauceAmount.allCases.map { $0.rawValue }
+      //recovering last selection stored in UserDefaults
+      searchController.searchBar.selectedScopeButtonIndex = defaults.integer(forKey: "SelectedScope")
     searchController.searchBar.delegate = self
+
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
   }
   
+  func loadSandwichesJSON() {
+    guard let jsonPath = Bundle.main.url(forResource: "sandwiches", withExtension: "json") else {
+      print("###-json sandwiches file not found")
+      return
+    }
+    
+    do {
+      let decoder = JSONDecoder()
+      let rawData = try Data(contentsOf: jsonPath)
+      sandwiches = try decoder.decode([SandwichData].self, from: rawData)
+      print("###- Sandwiches loaded successfully!")
+      
+    } catch {
+      print("###-Serialization error loading data: \(error)")
+    }  
+  }
+  
   func loadSandwiches() {
-    let sandwichArray = [SandwichData(name: "Bagel Toast", sauceAmount: .none, imageName: "sandwich1"),
-                         SandwichData(name: "Bologna", sauceAmount: .none, imageName: "sandwich2"),
-                         SandwichData(name: "Breakfast Roll", sauceAmount: .none, imageName: "sandwich3"),
-                         SandwichData(name: "Club", sauceAmount: .none, imageName: "sandwich4"),
-                         SandwichData(name: "Sub", sauceAmount: .none, imageName: "sandwich5"),
-                         SandwichData(name: "Steak", sauceAmount: .tooMuch, imageName: "sandwich6"),
-                         SandwichData(name: "Dunno", sauceAmount: .tooMuch, imageName: "sandwich7"),
-                         SandwichData(name: "Torta", sauceAmount: .tooMuch, imageName: "sandwich8"),
-                         SandwichData(name: "Ham", sauceAmount: .tooMuch, imageName: "sandwich9"),
-                         SandwichData(name: "Lettuce", sauceAmount: .tooMuch, imageName: "sandwich10")]
-    sandwiches.append(contentsOf: sandwichArray)
+//    let sandwichArray = [SandwichData(name: "Bagel Toast", sauceAmount: .none, imageName: "sandwich1"),
+//                         SandwichData(name: "Bologna", sauceAmount: .none, imageName: "sandwich2"),
+//                         SandwichData(name: "Breakfast Roll", sauceAmount: .none, imageName: "sandwich3"),
+//                         SandwichData(name: "Club", sauceAmount: .none, imageName: "sandwich4"),
+//                         SandwichData(name: "Sub", sauceAmount: .none, imageName: "sandwich5"),
+//                         SandwichData(name: "Steak", sauceAmount: .tooMuch, imageName: "sandwich6"),
+//                         SandwichData(name: "Dunno", sauceAmount: .tooMuch, imageName: "sandwich7"),
+//                         SandwichData(name: "Torta", sauceAmount: .tooMuch, imageName: "sandwich8"),
+//                         SandwichData(name: "Ham", sauceAmount: .tooMuch, imageName: "sandwich9"),
+//                         SandwichData(name: "Lettuce", sauceAmount: .tooMuch, imageName: "sandwich10")]
+//    sandwiches.append(contentsOf: sandwichArray)
+    
+    loadSandwichesJSON()
+    
+    //if firstRun load sandwiches from Json file
+    //else load sandwiches from coreData
+    
   }
 
   func saveSandwich(_ sandwich: SandwichData) {
     sandwiches.append(sandwich)
+    //save sandwich to core data
     tableView.reloadData()
   }
 
@@ -126,17 +155,22 @@ extension SandwichViewController: UISearchResultsUpdating {
     let searchBar = searchController.searchBar
     let sauceAmount = SauceAmount(rawValue:
       searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex])
-
     filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
   }
 }
 
 // MARK: - UISearchBarDelegate
 extension SandwichViewController: UISearchBarDelegate {
+  
+  
   func searchBar(_ searchBar: UISearchBar,
       selectedScopeButtonIndexDidChange selectedScope: Int) {
     let sauceAmount = SauceAmount(rawValue:
       searchBar.scopeButtonTitles![selectedScope])
+    
+    //saving the selectedScope into UserDefaults
+    defaults.set(selectedScope, forKey: "SelectedScope")
+    
     filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
   }
 }
