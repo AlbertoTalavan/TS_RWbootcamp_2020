@@ -1,10 +1,8 @@
-//
-//  SandwichCell.swift
-//  SandwichSaturation
-//
-//  Created by Jeff Rames on 7/3/20.
-//  Copyright © 2020 Jeff Rames. All rights reserved.
-//
+///
+///  Created by Jeff Rames on 7/3/20.
+///
+///  Copyright © 2020 Alberto Talaván. All rights reserved.
+///
 
 import UIKit
 

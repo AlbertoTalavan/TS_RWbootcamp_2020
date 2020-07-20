@@ -1,10 +1,8 @@
-//
-//  SandwichViewController.swift
-//  SandwichSaturation
-//
-//  Created by Jeff Rames on 7/3/20.
-//  Copyright © 2020 Jeff Rames. All rights reserved.
-//
+///
+///  Created by Jeff Rames on 20/7/20
+///  Modified by Alberto Talaván
+///  Copyright © 2020 Alberto Talaván. All rights reserved.
+///
 
 import UIKit
 import CoreData
@@ -14,8 +12,9 @@ protocol SandwichDataSource {
 }
 
 class SandwichViewController: UITableViewController, SandwichDataSource {
-  let defaults = UserDefaults.standard //used to store the last search´s amount of sauce
-  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //CoreData
+  let defaults = UserDefaults.standard
+  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  
   
   let searchController = UISearchController(searchResultsController: nil)
   
@@ -25,12 +24,12 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   required init?(coder: NSCoder) {
     super.init(coder: coder)
     
-    loadSandwiches()
-    
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    loadSandwiches()
         
     let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddView(_:)))
     navigationItem.rightBarButtonItem = addButton
@@ -108,17 +107,6 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   }
   
   func filterContentForSearchText(_ searchText: String, sauceAmount: SauceAmount? = nil) {
-//    filteredSandwiches = sandwiches.filter { (sandwich: Sandwich) -> Bool in
-//     //let doesSauceAmountMatch = sauceAmount == .any || sandwich.sauceAmount == sauceAmount
-//
-//      let doesSauceAmountMatch = sauceAmount == .any || sandwich.sandwichToSauce.sauceAmount == sauceAmount
-//      if isSearchBarEmpty {
-//        return doesSauceAmountMatch
-//      } else {
-//        return doesSauceAmountMatch && sandwich.name.lowercased()
-//          .contains(searchText.lowercased())
-//      }
-//    }
   
     let request: NSFetchRequest<Sandwich> = Sandwich.fetchRequest()
     let namePredicate = NSPredicate(format: "name CONTAINS [cd]%@", searchController.searchBar.text!)
@@ -254,20 +242,20 @@ extension SandwichViewController {
     } catch {
       print("###-Serialization error loading data: \(error)")
     }
-    
-    for sandwichJson in 0..<sandwichesJSON.count {
+
+    sandwichesJSON.forEach {
       let sandwich = Sandwich(context: context)
       let sauceAmount = SauceAmountCD(context: context)
+      sandwich.name = $0.name
+      sandwich.imageName = $0.imageName
       
-      sandwich.name = sandwichesJSON[sandwichJson].name
-      sandwich.imageName = sandwichesJSON[sandwichJson].imageName
+      sauceAmount.sauceAmountString = $0.sauceAmount.rawValue
       
-      sauceAmount.sauceAmountString = sandwichesJSON[sandwichJson].sauceAmount.rawValue
-
       //giving value to the relationship between Sandwich and SauceAmountCD
       sandwich.sandwichToSauce = sauceAmount
       
       sandwiches.append(sandwich)
+      
     }
     //now we have to save the predefined sandwiches array into Core Data
     do{
@@ -278,46 +266,15 @@ extension SandwichViewController {
     
     //And finally we have to set the user default alreadyRun to true
     defaults.set(true, forKey: "AlreadyRun")
+    
+    let alert = UIAlertController (title: "Wellcome", message: """
+This great app allows you to save your favorite  Sandwiches-Sauce combinations!
+ There are some of them as example but you will be able to:
+  - create new ones using the button for that purpose,
+  - delete the ones you like swiping left
+""", preferredStyle: .alert)
+    let action = UIAlertAction(title: "Awesome 🤤", style: .default)
+    alert.addAction(action)
+    present(alert,animated: true)
   }
 }
-
-//MARK: - Testing CoreData content
-extension SandwichViewController {
-  func whatHaveCoreDataInside() {
-    /*
-     let context = persistentContainer.viewContext
-     let fetchRequest = NSFetchRequest<CDUser>(entityName: "CDUser")
-     let predicate = NSPredicate(format: "id = %@ && currentUserId = %@", id, userId)
-     fetchRequest.predicate = predicate
-     
-     do {
-     let user = try context.fetch(fetchRequest)
-     if let user = user.first {
-     // update if already exists
-     user.id = id
-     user.firstName = firstName
-     user.lastName = lastName
-     user.profilePhotoUrl = profilePhotoUrl
-     
-     saveContext()
-     return user
-     } else {
-     // else create it
-     let context = persistentContainer.viewContext
-     let user = CDUser(context: context)
-     user.id = id
-     user.firstName = firstName
-     user.lastName = lastName
-     user.profilePhotoUrl = profilePhotoUrl
-     
-     saveContext()
-     return user
-     }
-     } catch {
-     print("Unable to save user entity.")
-     return nil
-     }
-     */
-  }
-}
-
