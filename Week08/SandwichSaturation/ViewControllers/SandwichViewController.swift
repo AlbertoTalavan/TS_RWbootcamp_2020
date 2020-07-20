@@ -18,8 +18,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //CoreData
   
   let searchController = UISearchController(searchResultsController: nil)
-//  var sandwiches = [SandwichData]()         //without CoreData
-//  var filteredSandwiches = [SandwichData]() //without CoreData
+  
   var sandwiches = [Sandwich]()
   var filteredSandwiches = [Sandwich]()
 
@@ -53,51 +52,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     super.viewWillAppear(animated)
   }
   
-  func copyJsonToCoreData() {
-      var sandwichesJSON = [SandwichData]()
-    
-      //we take the Json file with the array of predefined sandwiches
-      guard let jsonPath = Bundle.main.url(forResource: "sandwiches", withExtension: "json") else {
-        print("###-json sandwiches file not found")
-        return
-      }
-      
-      do {
-        let decoder = JSONDecoder()
-        let rawData = try Data(contentsOf: jsonPath)
-        sandwichesJSON = try decoder.decode([SandwichData].self, from: rawData)
-        print("###- Sandwiches loaded successfully!")
-        
-      } catch {
-        print("###-Serialization error loading data: \(error)")
-      }
-      
-    for sandwichJson in 0..<sandwichesJSON.count {
-//      let sandwich = Sandwich(entity: Sandwich.entity(), insertInto: context); #warning("This part was the key")
-      let sandwich = Sandwich(context: context)
-      let sauceAmount = SauceAmountCD(context: context)
-      
-      sandwich.name = sandwichesJSON[sandwichJson].name
-      sandwich.imageName = sandwichesJSON[sandwichJson].imageName
-      
-      sauceAmount.sauceAmountString = sandwichesJSON[sandwichJson].sauceAmount.rawValue
-      
-      //giving value to the relationship between Sandwich and SauceAmountCD
-      sandwich.sandwichToSauce = sauceAmount
-      
-      sandwiches.append(sandwich)
-    }
-      //now we have to save the predefined sandwiches array into Core Data
-      do{
-        try context.save()
-      } catch let error as NSError {
-        print("Error saving data: \(error), \(error.userInfo)")
-      }
 
-      //And finally we have to set the user default alreadyRun to true
-      defaults.set(true, forKey: "AlreadyRun")
-  }
-  
   func loadSandwiches() {
     let alreadyRun: Bool
     alreadyRun = defaults.bool(forKey: "AlreadyRun") // if doesn´t exit => alreadyRun = false
@@ -115,7 +70,6 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
       print("Error fetching data from context. \(error), \(error.userInfo)")
     }
 
-    
     
   }
 
@@ -153,19 +107,46 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     return searchController.searchBar.text?.isEmpty ?? true
   }
   
-  func filterContentForSearchText(_ searchText: String,
-                                  sauceAmount: SauceAmount? = nil) {
-    filteredSandwiches = sandwiches.filter { (sandwich: Sandwich) -> Bool in
-      let doesSauceAmountMatch = sauceAmount == .any // || sandwich.sauceAmount == sauceAmount
-
+  func filterContentForSearchText(_ searchText: String, sauceAmount: SauceAmount? = nil) {
+//    filteredSandwiches = sandwiches.filter { (sandwich: Sandwich) -> Bool in
+//     //let doesSauceAmountMatch = sauceAmount == .any || sandwich.sauceAmount == sauceAmount
+//
+//      let doesSauceAmountMatch = sauceAmount == .any || sandwich.sandwichToSauce.sauceAmount == sauceAmount
+//      if isSearchBarEmpty {
+//        return doesSauceAmountMatch
+//      } else {
+//        return doesSauceAmountMatch && sandwich.name.lowercased()
+//          .contains(searchText.lowercased())
+//      }
+//    }
+  
+    let request: NSFetchRequest<Sandwich> = Sandwich.fetchRequest()
+    let namePredicate = NSPredicate(format: "name CONTAINS [cd]%@", searchController.searchBar.text!)
+    let saucePredicate = NSPredicate(format: "sandwichToSauce.sauceAmountString = %@", sauceAmount!.rawValue)
+    var predicate = NSCompoundPredicate()//type: .and, subpredicates: [namePredicate])//, saucePredicate])
+    
+    if sauceAmount == .any {
+      predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate])
+    } else {
       if isSearchBarEmpty {
-        return doesSauceAmountMatch
+        predicate = NSCompoundPredicate(type: .and, subpredicates: [saucePredicate])
       } else {
-        return doesSauceAmountMatch && sandwich.name.lowercased()
-          .contains(searchText.lowercased())
+        predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate, saucePredicate])
       }
     }
-    
+
+    request.predicate = predicate
+    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+    request.sortDescriptors=[sortDescriptor]
+
+
+    do {
+      //try to retrieve data with CoreData from Sandwich Entity
+      filteredSandwiches = try context.fetch(request)
+    } catch let error as NSError{
+      print("Error fetching data from context. \(error), \(error.userInfo)")
+    }
+
     tableView.reloadData()
   }
   
@@ -199,6 +180,30 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     
     return cell
   }
+  
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let deleteSandwich = UIContextualAction(style: .destructive, title: "delete"){
+      (contextualAction, view, actionPerformed:(Bool) -> Void) in
+        actionPerformed(true)
+        self.context.delete(self.sandwiches[indexPath.row]) // first: deleting in the context
+        self.sandwiches.remove(at: indexPath.row) //second: deleting in the array
+
+        do {
+          try self.context.save()  // third: saving context
+        } catch {
+          print("Unable to delete data: \(error)")
+        }
+        
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)  //fourth: updating the TableView
+
+   }
+   deleteSandwich.title = "delete Sandwich" //due to the cell is to small, the title is not displayed
+   deleteSandwich.image = UIImage(systemName: "trash")
+   tableView.deselectRow(at: indexPath, animated: true)
+    
+   return UISwipeActionsConfiguration(actions: [deleteSandwich])
+  }
+  
 }
 
 
@@ -227,6 +232,53 @@ extension SandwichViewController: UISearchBarDelegate {
     filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
   }
   
+}
+
+// MARK: - Copying Json data file into Core Data
+extension SandwichViewController {
+  func copyJsonToCoreData() {
+    var sandwichesJSON = [SandwichData]()
+    
+    //we take the Json file with the array of predefined sandwiches
+    guard let jsonPath = Bundle.main.url(forResource: "sandwiches", withExtension: "json") else {
+      print("###-json sandwiches file not found")
+      return
+    }
+    
+    do {
+      let decoder = JSONDecoder()
+      let rawData = try Data(contentsOf: jsonPath)
+      sandwichesJSON = try decoder.decode([SandwichData].self, from: rawData)
+      print("###- Sandwiches loaded successfully!")
+      
+    } catch {
+      print("###-Serialization error loading data: \(error)")
+    }
+    
+    for sandwichJson in 0..<sandwichesJSON.count {
+      let sandwich = Sandwich(context: context)
+      let sauceAmount = SauceAmountCD(context: context)
+      
+      sandwich.name = sandwichesJSON[sandwichJson].name
+      sandwich.imageName = sandwichesJSON[sandwichJson].imageName
+      
+      sauceAmount.sauceAmountString = sandwichesJSON[sandwichJson].sauceAmount.rawValue
+
+      //giving value to the relationship between Sandwich and SauceAmountCD
+      sandwich.sandwichToSauce = sauceAmount
+      
+      sandwiches.append(sandwich)
+    }
+    //now we have to save the predefined sandwiches array into Core Data
+    do{
+      try context.save()
+    } catch let error as NSError {
+      print("Error saving data: \(error), \(error.userInfo)")
+    }
+    
+    //And finally we have to set the user default alreadyRun to true
+    defaults.set(true, forKey: "AlreadyRun")
+  }
 }
 
 //MARK: - Testing CoreData content

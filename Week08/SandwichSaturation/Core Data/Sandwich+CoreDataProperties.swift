@@ -2,7 +2,7 @@
 //  Sandwich+CoreDataProperties.swift
 //  SandwichSaturation
 //
-//  Created by Alberto Talaván on 19/07/2020.
+//  Created by Alberto Talaván on 20/07/2020.
 //  Copyright © 2020 Jeff Rames. All rights reserved.
 //
 //
