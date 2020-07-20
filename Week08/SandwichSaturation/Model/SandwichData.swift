@@ -8,6 +8,12 @@
 
 import Foundation
 
+struct SandwichData: Decodable {
+  let name: String
+  let sauceAmount: SauceAmount
+  let imageName: String
+}
+
 enum SauceAmount: Decodable {
   case any
   case none
@@ -25,12 +31,7 @@ enum SauceAmount: Decodable {
   }
 }
 
-struct SandwichData: Decodable {
-  let name: String
-  let sauceAmount: SauceAmount
-  let imageName: String
-}
-
+//MARK: - SauceAmount Extensions
 extension SauceAmount: CaseIterable { }
 
 extension SauceAmount: RawRepresentable {

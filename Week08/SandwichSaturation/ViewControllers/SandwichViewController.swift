@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol SandwichDataSource {
   func saveSandwich(_: SandwichData)
@@ -14,9 +15,13 @@ protocol SandwichDataSource {
 
 class SandwichViewController: UITableViewController, SandwichDataSource {
   let defaults = UserDefaults.standard //used to store the last search´s amount of sauce
+  let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //CoreData
+  
   let searchController = UISearchController(searchResultsController: nil)
-  var sandwiches = [SandwichData]()
-  var filteredSandwiches = [SandwichData]()
+//  var sandwiches = [SandwichData]()         //without CoreData
+//  var filteredSandwiches = [SandwichData]() //without CoreData
+  var sandwiches = [Sandwich]()
+  var filteredSandwiches = [Sandwich]()
 
   required init?(coder: NSCoder) {
     super.init(coder: coder)
@@ -48,46 +53,93 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     super.viewWillAppear(animated)
   }
   
-  func loadSandwichesJSON() {
-    guard let jsonPath = Bundle.main.url(forResource: "sandwiches", withExtension: "json") else {
-      print("###-json sandwiches file not found")
-      return
-    }
+  func copyJsonToCoreData() {
+      var sandwichesJSON = [SandwichData]()
     
-    do {
-      let decoder = JSONDecoder()
-      let rawData = try Data(contentsOf: jsonPath)
-      sandwiches = try decoder.decode([SandwichData].self, from: rawData)
-      print("###- Sandwiches loaded successfully!")
+      //we take the Json file with the array of predefined sandwiches
+      guard let jsonPath = Bundle.main.url(forResource: "sandwiches", withExtension: "json") else {
+        print("###-json sandwiches file not found")
+        return
+      }
       
-    } catch {
-      print("###-Serialization error loading data: \(error)")
-    }  
+      do {
+        let decoder = JSONDecoder()
+        let rawData = try Data(contentsOf: jsonPath)
+        sandwichesJSON = try decoder.decode([SandwichData].self, from: rawData)
+        print("###- Sandwiches loaded successfully!")
+        
+      } catch {
+        print("###-Serialization error loading data: \(error)")
+      }
+      
+    for sandwichJson in 0..<sandwichesJSON.count {
+//      let sandwich = Sandwich(entity: Sandwich.entity(), insertInto: context); #warning("This part was the key")
+      let sandwich = Sandwich(context: context)
+      let sauceAmount = SauceAmountCD(context: context)
+      
+      sandwich.name = sandwichesJSON[sandwichJson].name
+      sandwich.imageName = sandwichesJSON[sandwichJson].imageName
+      
+      sauceAmount.sauceAmountString = sandwichesJSON[sandwichJson].sauceAmount.rawValue
+      
+      //giving value to the relationship between Sandwich and SauceAmountCD
+      sandwich.sandwichToSauce = sauceAmount
+      
+      sandwiches.append(sandwich)
+    }
+      //now we have to save the predefined sandwiches array into Core Data
+      do{
+        try context.save()
+      } catch let error as NSError {
+        print("Error saving data: \(error), \(error.userInfo)")
+      }
+
+      //And finally we have to set the user default alreadyRun to true
+      defaults.set(true, forKey: "AlreadyRun")
   }
   
   func loadSandwiches() {
-//    let sandwichArray = [SandwichData(name: "Bagel Toast", sauceAmount: .none, imageName: "sandwich1"),
-//                         SandwichData(name: "Bologna", sauceAmount: .none, imageName: "sandwich2"),
-//                         SandwichData(name: "Breakfast Roll", sauceAmount: .none, imageName: "sandwich3"),
-//                         SandwichData(name: "Club", sauceAmount: .none, imageName: "sandwich4"),
-//                         SandwichData(name: "Sub", sauceAmount: .none, imageName: "sandwich5"),
-//                         SandwichData(name: "Steak", sauceAmount: .tooMuch, imageName: "sandwich6"),
-//                         SandwichData(name: "Dunno", sauceAmount: .tooMuch, imageName: "sandwich7"),
-//                         SandwichData(name: "Torta", sauceAmount: .tooMuch, imageName: "sandwich8"),
-//                         SandwichData(name: "Ham", sauceAmount: .tooMuch, imageName: "sandwich9"),
-//                         SandwichData(name: "Lettuce", sauceAmount: .tooMuch, imageName: "sandwich10")]
-//    sandwiches.append(contentsOf: sandwichArray)
+    let alreadyRun: Bool
+    alreadyRun = defaults.bool(forKey: "AlreadyRun") // if doesn´t exit => alreadyRun = false
     
-    loadSandwichesJSON()
+    if !alreadyRun {
+      copyJsonToCoreData()
+    }
     
-    //if firstRun load sandwiches from Json file
-    //else load sandwiches from coreData
+    let request: NSFetchRequest<Sandwich> = Sandwich.fetchRequest()
+    
+    do {
+      //try to retrieve data with CoreData from Sandwich Entity
+      sandwiches = try context.fetch(request)
+    } catch let error as NSError{
+      print("Error fetching data from context. \(error), \(error.userInfo)")
+    }
+
+    
     
   }
 
   func saveSandwich(_ sandwich: SandwichData) {
-    sandwiches.append(sandwich)
+    //I can make the transformation SandwichData -> Sandwich here or
+    //use Sandwich directly in AddSandwichViewController
+    let sandwichCD = Sandwich(context: context)
+    let sauceAmount = SauceAmountCD(context: context)
+    
+    sandwichCD.name = sandwich.name
+    sandwichCD.imageName = sandwich.imageName
+    sauceAmount.sauceAmountString = sandwich.sauceAmount.rawValue
+    sandwichCD.sandwichToSauce = sauceAmount
+    
+    //add new sandwich
+    sandwiches.append(sandwichCD)
+    
     //save sandwich to core data
+    do{
+     try context.save()
+    } catch let error as NSError {
+      print("Error saving data: \(error), \(error.userInfo)")
+    }
+    
     tableView.reloadData()
   }
 
@@ -103,13 +155,13 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   
   func filterContentForSearchText(_ searchText: String,
                                   sauceAmount: SauceAmount? = nil) {
-    filteredSandwiches = sandwiches.filter { (sandwhich: SandwichData) -> Bool in
-      let doesSauceAmountMatch = sauceAmount == .any || sandwhich.sauceAmount == sauceAmount
+    filteredSandwiches = sandwiches.filter { (sandwich: Sandwich) -> Bool in
+      let doesSauceAmountMatch = sauceAmount == .any // || sandwich.sauceAmount == sauceAmount
 
       if isSearchBarEmpty {
         return doesSauceAmountMatch
       } else {
-        return doesSauceAmountMatch && sandwhich.name.lowercased()
+        return doesSauceAmountMatch && sandwich.name.lowercased()
           .contains(searchText.lowercased())
       }
     }
@@ -143,11 +195,13 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
 
     cell.thumbnail.image = UIImage.init(imageLiteralResourceName: sandwich.imageName)
     cell.nameLabel.text = sandwich.name
-    cell.sauceLabel.text = sandwich.sauceAmount.description
-
+    cell.sauceLabel.text = sandwich.sandwichToSauce.sauceAmountString
+    
     return cell
   }
 }
+
+
 
 // MARK: - UISearchResultsUpdating
 extension SandwichViewController: UISearchResultsUpdating {
@@ -161,8 +215,7 @@ extension SandwichViewController: UISearchResultsUpdating {
 
 // MARK: - UISearchBarDelegate
 extension SandwichViewController: UISearchBarDelegate {
-  
-  
+
   func searchBar(_ searchBar: UISearchBar,
       selectedScopeButtonIndexDidChange selectedScope: Int) {
     let sauceAmount = SauceAmount(rawValue:
@@ -172,6 +225,47 @@ extension SandwichViewController: UISearchBarDelegate {
     defaults.set(selectedScope, forKey: "SelectedScope")
     
     filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
+  }
+  
+}
+
+//MARK: - Testing CoreData content
+extension SandwichViewController {
+  func whatHaveCoreDataInside() {
+    /*
+     let context = persistentContainer.viewContext
+     let fetchRequest = NSFetchRequest<CDUser>(entityName: "CDUser")
+     let predicate = NSPredicate(format: "id = %@ && currentUserId = %@", id, userId)
+     fetchRequest.predicate = predicate
+     
+     do {
+     let user = try context.fetch(fetchRequest)
+     if let user = user.first {
+     // update if already exists
+     user.id = id
+     user.firstName = firstName
+     user.lastName = lastName
+     user.profilePhotoUrl = profilePhotoUrl
+     
+     saveContext()
+     return user
+     } else {
+     // else create it
+     let context = persistentContainer.viewContext
+     let user = CDUser(context: context)
+     user.id = id
+     user.firstName = firstName
+     user.lastName = lastName
+     user.profilePhotoUrl = profilePhotoUrl
+     
+     saveContext()
+     return user
+     }
+     } catch {
+     print("Unable to save user entity.")
+     return nil
+     }
+     */
   }
 }
 
