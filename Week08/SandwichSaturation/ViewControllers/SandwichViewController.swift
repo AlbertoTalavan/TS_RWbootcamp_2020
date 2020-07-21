@@ -73,8 +73,6 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   }
 
   func saveSandwich(_ sandwich: SandwichData) {
-    //I can make the transformation SandwichData -> Sandwich here or
-    //use Sandwich directly in AddSandwichViewController
     let sandwichCD = Sandwich(context: context)
     let sauceAmount = SauceAmountCD(context: context)
     
@@ -264,16 +262,35 @@ extension SandwichViewController {
       print("Error saving data: \(error), \(error.userInfo)")
     }
     
-    //And finally we have to set the user default alreadyRun to true
+    //set the user default alreadyRun to true
     defaults.set(true, forKey: "AlreadyRun")
     
-    let alert = UIAlertController (title: "Wellcome", message: """
-This great app allows you to save your favorite  Sandwiches-Sauce combinations!
- There are some of them as example but you will be able to:
-  - create new ones using the button for that purpose,
-  - delete the ones you like swiping left
-""", preferredStyle: .alert)
+    //and finally show the Wellcome View message
+    wellcomeMessage()
+    
+  }
+  
+  func wellcomeMessage() {
+    let  paragraphStyle = NSMutableParagraphStyle()
+    paragraphStyle.alignment = .left
+    
+    let alertMessage = NSMutableAttributedString (string: """
+This great app allows you to
+save your favorite  Sandwich
+and Sauce combinations!
+
+There are some of them
+included as example, but
+you will be able to:
+- create new ones clicking
+  the + button (upper right),
+- delete the ones you do
+  not like just swiping left.
+""", attributes: [NSAttributedString.Key.paragraphStyle : paragraphStyle])
+    
+    let alert = UIAlertController (title: "Wellcome", message: nil, preferredStyle: .alert)
     let action = UIAlertAction(title: "Awesome 🤤", style: .default)
+    alert.setValue(alertMessage, forKey: "attributedMessage")
     alert.addAction(action)
     present(alert,animated: true)
   }

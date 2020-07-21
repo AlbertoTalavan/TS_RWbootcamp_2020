@@ -6,7 +6,7 @@
 import UIKit
 
 class AddSandwichViewController: UIViewController {
-  
+
   @IBOutlet weak var nameField: UITextField!
   @IBOutlet weak var imageView: UIImageView!
   let imageName: String
