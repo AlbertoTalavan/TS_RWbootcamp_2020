@@ -107,22 +107,16 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
   func filterContentForSearchText(_ searchText: String, sauceAmount: SauceAmount? = nil) {
   
     let request: NSFetchRequest<Sandwich> = Sandwich.fetchRequest()
+    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
     let namePredicate = NSPredicate(format: "name CONTAINS [cd]%@", searchController.searchBar.text!)
     let saucePredicate = NSPredicate(format: "sandwichToSauce.sauceAmountString = %@", sauceAmount!.rawValue)
-    var predicate = NSCompoundPredicate()//type: .and, subpredicates: [namePredicate])//, saucePredicate])
-    
-    if sauceAmount == .any {
-      predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate])
-    } else {
-      if isSearchBarEmpty {
-        predicate = NSCompoundPredicate(type: .and, subpredicates: [saucePredicate])
-      } else {
-        predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate, saucePredicate])
-      }
-    }
+    var predicate = NSCompoundPredicate()
+
+    sauceAmount == .any ? (predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate])) :
+      (isSearchBarEmpty ? (predicate = NSCompoundPredicate(type: .and, subpredicates: [saucePredicate])) :
+                         (predicate = NSCompoundPredicate(type: .and, subpredicates: [namePredicate, saucePredicate])))
 
     request.predicate = predicate
-    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
     request.sortDescriptors=[sortDescriptor]
 
 
@@ -156,9 +150,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "sandwichCell", for: indexPath) as? SandwichCell
       else { return UITableViewCell() }
     
-    let sandwich = isFiltering ?
-      filteredSandwiches[indexPath.row] :
-      sandwiches[indexPath.row]
+    let sandwich = isFiltering ? filteredSandwiches[indexPath.row] :sandwiches[indexPath.row]
 
     cell.thumbnail.image = UIImage.init(imageLiteralResourceName: sandwich.imageName)
     cell.nameLabel.text = sandwich.name
@@ -190,6 +182,37 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
    return UISwipeActionsConfiguration(actions: [deleteSandwich])
   }
   
+  override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+    // TODO: - NOT USING THIS METHOD. KEPT HERE AS REFERENCE OR FUTURE EXPANSION
+    
+//    let sandwich = isFiltering ? filteredSandwiches[indexPath.row] : sandwiches[indexPath.row]
+    
+    return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
+      
+      let oneStar = UIAction(title: "★☆☆☆☆", image: UIImage(systemName: "1.circle")) { action in
+//        self.editSandwich(sandwich, rating: 1.0)
+      }
+      
+      let twoStars = UIAction(title: "★★☆☆☆", image: UIImage(systemName: "2.circle")) { action in
+//        self.editSandwich(sandwich, rating: 2.0)
+      }
+      
+      let threeStars = UIAction(title: "★★★☆☆", image: UIImage(systemName: "3.circle")) { action in
+//        self.editSandwich(sandwich, rating: 3.0)
+      }
+      
+      let fourStars = UIAction(title: "★★★★☆", image: UIImage(systemName: "4.circle")) { action in
+//        self.editSandwich(sandwich, rating: 4.0)
+      }
+      
+      let fiveStars = UIAction(title: "★★★★★", image: UIImage(systemName: "5.circle")) { action in
+//        self.editSandwich(sandwich, rating: 5.0)
+      }
+      return UIMenu(title: "Rating", children: [fiveStars, fourStars, threeStars, twoStars, oneStar])
+    }
+  }
+  
+  
 }
 
 
@@ -207,16 +230,18 @@ extension SandwichViewController: UISearchResultsUpdating {
 // MARK: - UISearchBarDelegate
 extension SandwichViewController: UISearchBarDelegate {
 
-  func searchBar(_ searchBar: UISearchBar,
-      selectedScopeButtonIndexDidChange selectedScope: Int) {
-    let sauceAmount = SauceAmount(rawValue:
-      searchBar.scopeButtonTitles![selectedScope])
+  func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    let sauceAmount = SauceAmount(rawValue: searchBar.scopeButtonTitles![selectedScope])
     
     //saving the selectedScope into UserDefaults
     defaults.set(selectedScope, forKey: "SelectedScope")
     
     filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
   }
+  
+}
+
+func s (){
   
 }
 
