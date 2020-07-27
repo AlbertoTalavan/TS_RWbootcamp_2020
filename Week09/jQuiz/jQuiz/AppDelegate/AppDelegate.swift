@@ -1,10 +1,8 @@
-//
-//  AppDelegate.swift
-//  jQuiz
-//
-//  Created by Jay Strawn on 7/17/20.
-//  Copyright © 2020 Jay Strawn. All rights reserved.
-//
+///  jQuiz
+///
+///  Created by Alberto Talaván on 26/07/2020.
+///  Copyright © 2020 Alberto Talaván. All rights reserved.
+///
 
 import UIKit
 import CoreData
