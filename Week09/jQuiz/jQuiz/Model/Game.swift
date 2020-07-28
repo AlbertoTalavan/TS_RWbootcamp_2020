@@ -32,8 +32,9 @@ final class Game {
   }
   
   func checkAnswer(for indexPath: Int) -> (Bool) {
+    let randomPoints = Int.random(in: 100...1000) //for questions whose value (points) = nil
     if indexPath == winnerIndex {
-      addPoints(add: clues[winnerIndex!].value ?? 100)
+      addPoints(add: clues[winnerIndex!].points ?? randomPoints)
       return true
     } else {
       return false
@@ -47,8 +48,9 @@ final class Game {
   func getWinnerQuestion() -> String? {
     winnerIndex = getWinnerIndex()
     let winnerClue = clues[winnerIndex!]
-        print("Winner Question: \(winnerClue.question)")
-        print("Winner Answer: \(winnerClue.answer)")
+    print("Winner Question: \(String(describing: winnerClue.question))")
+    print("Winner Answer: \(String(describing: winnerClue.answer))")
+    print("winner points: \(String(describing: winnerClue.points))")
     return winnerClue.question
   }
 
@@ -90,7 +92,7 @@ final class Game {
   }
   
   func getCategoryTitle() -> String {
-    return category!.title
+    return category!.title ?? "No categorized question"
   }
 
   func getScore() -> Int {

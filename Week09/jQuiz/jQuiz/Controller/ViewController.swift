@@ -38,9 +38,10 @@ class ViewController: UIViewController {
       soundButton.setImage(UIImage(systemName: "speaker.slash"), for: .normal)
     } else {
       soundButton.setImage(UIImage(systemName: "speaker"), for: .normal)
+      SoundManager.shared.playSound()
     }
     
-    SoundManager.shared.playSound()
+    
     
   }
   
@@ -48,8 +49,12 @@ class ViewController: UIViewController {
     SoundManager.shared.toggleSoundPreference()
     if SoundManager.shared.isSoundEnabled == false {
       soundButton.setImage(UIImage(systemName: "speaker.slash"), for: .normal)
+      SoundManager.shared.stopSound()
+      print("isSoundEnabled = false -> \(SoundManager.shared.isSoundEnabled)")
     } else {
       soundButton.setImage(UIImage(systemName: "speaker"), for: .normal)
+      SoundManager.shared.playSound()
+      print("isSoundEnabled = true -> \(SoundManager.shared.isSoundEnabled)")
     }
   }
   
@@ -72,10 +77,10 @@ class ViewController: UIViewController {
     networking.getRandomCategory(completion: { category in
       guard let category = category else { return }
       self.game.setCategory(category)
-      print("Category ID: \(category.id)")
-      print("Category cluesCount: \(category.cluesCount)")
+      print("Category ID: \(String(describing: category.id))")
+      print("Category cluesCount: \(String(describing: category.cluesCount))")
       
-      self.networking.getAllCluesByCategory(categoryId: category.id, completion: { clues in
+      self.networking.getAllCluesByCategory(categoryId: category.id ?? (Int.random(in: 1...15000)), completion: { clues in
         guard let clues = clues else {return}
         self.game.setInitialClueList(clues)
         completion(true)
