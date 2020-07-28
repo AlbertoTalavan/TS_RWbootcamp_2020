@@ -58,7 +58,8 @@ final class Game {
   //MARK: - getters
   func getClueList() -> [String] {
     //improvement -> do all this process in the networking call or in the viewController getClues()
-    #warning("Can be questions/answers repeated inside the same Category and with different Clue.id")
+    
+// TODO: Can be questions/answers repeated inside the same Category and with different Clue.id
     //example: category = 16744
     // clue positions: 9 and 6, 8 and 3, 2 and 7, 1 and 5, 0 and 4 are the same
     

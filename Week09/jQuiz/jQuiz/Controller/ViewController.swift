@@ -18,6 +18,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
   
   let networking = Networking.sharedInstance
+  private var imageLogo: UIImage?
   var categoryTitle: String?
   var clueAnswers: [String] = []
   var game = Game()
@@ -25,8 +26,12 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     //initializeing UI
     restartUI()
+    
+    //getting image logo
+    getImageLogo()
     
     //tableView
     tableView.delegate = self
@@ -50,11 +55,11 @@ class ViewController: UIViewController {
     if SoundManager.shared.isSoundEnabled == false {
       soundButton.setImage(UIImage(systemName: "speaker.slash"), for: .normal)
       SoundManager.shared.stopSound()
-      print("isSoundEnabled = false -> \(SoundManager.shared.isSoundEnabled)")
+      print("isSoundEnabled = false -> \(String(describing: SoundManager.shared.isSoundEnabled))")
     } else {
       soundButton.setImage(UIImage(systemName: "speaker"), for: .normal)
       SoundManager.shared.playSound()
-      print("isSoundEnabled = true -> \(SoundManager.shared.isSoundEnabled)")
+      print("isSoundEnabled = true -> \(String(describing: SoundManager.shared.isSoundEnabled))")
     }
   }
   
@@ -120,6 +125,27 @@ class ViewController: UIViewController {
     categoryLabel.text = ""
     clueLabel.text = ""
     scoreLabel.text = ""
+  }
+  
+  #warning("Jay I don´t know why this is not working the download and later change the image logo ... ")
+  func getImageLogo() {
+    downloadImageLogo(completion: { downloadCompleted in
+      if downloadCompleted {
+        print("image downloaded")
+        
+        DispatchQueue.main.async {
+          self.logoImageView.image = self.imageLogo
+        }
+      }
+    })
+  }
+  
+  func downloadImageLogo(completion: (Bool) -> Void) {
+    networking.downloadJeopardyLogo(completion: { image in
+      guard let image = image else { return }
+      self.imageLogo = image
+    })
+
   }
 
   
