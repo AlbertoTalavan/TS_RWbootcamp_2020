@@ -7,6 +7,8 @@
 ///
 
 import Foundation
+import UIKit
+
 
 final class Game {
   private var category: Category?
@@ -14,6 +16,7 @@ final class Game {
   private var clues = [Clue]()
   private var winnerIndex: Int?
   private var score: Int = 0
+  private var imageLogo: UIImage?
 
   
   //MARK: - Game methods
@@ -51,17 +54,22 @@ final class Game {
     print("Winner Question: \(String(describing: winnerClue.question))")
     print("Winner Answer: \(String(describing: winnerClue.answer))")
     print("winner points: \(String(describing: winnerClue.points))")
+    print()
     return winnerClue.question
   }
 
   
   //MARK: - getters
+  func getImageLogo() -> UIImage {
+    imageLogo!
+  }
+  
   func getClueList() -> [String] {
     //improvement -> do all this process in the networking call or in the viewController getClues()
     
-// TODO: Can be questions/answers repeated inside the same Category and with different Clue.id
+ #warning("Can be questions/answers repeated inside the same Category and with different Clue.id")
     //example: category = 16744
-    // clue positions: 9 and 6, 8 and 3, 2 and 7, 1 and 5, 0 and 4 are the same
+    // clue positions: 0 and 4, 1 and 5, 2 and 7, 3 and 8, 6 and 9 are the same
     
     //final version
     var cluesString = [String]()
@@ -102,6 +110,10 @@ final class Game {
   
   
   //MARK: - setters
+  func setImageLogo(_ image: UIImage) {
+    self.imageLogo = image
+  }
+  
   func setInitialClueList(_ clues: [Clue]) {
     initialClueList = clues
   }

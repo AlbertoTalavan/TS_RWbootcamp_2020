@@ -18,7 +18,6 @@ class ViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
   
   let networking = Networking.sharedInstance
-  private var imageLogo: UIImage?
   var categoryTitle: String?
   var clueAnswers: [String] = []
   var game = Game()
@@ -29,9 +28,7 @@ class ViewController: UIViewController {
     
     //initializeing UI
     restartUI()
-    
-    //getting image logo
-    getImageLogo()
+
     
     //tableView
     tableView.delegate = self
@@ -45,9 +42,7 @@ class ViewController: UIViewController {
       soundButton.setImage(UIImage(systemName: "speaker"), for: .normal)
       SoundManager.shared.playSound()
     }
-    
-    
-    
+
   }
   
   @IBAction func didPressVolumeButton(_ sender: Any) {
@@ -67,7 +62,7 @@ class ViewController: UIViewController {
   private func downloadClues(){
     getClues { downloadCompleted in
       if downloadCompleted {
-        print("Download completed")
+        print("  CluesDownload completed")
         
         DispatchQueue.main.async {
           self.categoryTitle = self.game.getCategoryTitle() //clues Category
@@ -94,6 +89,33 @@ class ViewController: UIViewController {
     
   }
   
+  //-------------------------------------------------------------------
+  #warning("Jay I don´t know why this is not working the download and later change the image logo ... ")
+  //because download is working
+  
+  func downloadImageLogo() {
+    getImageLogo { downloadCompleted in
+      if downloadCompleted {
+        print("  ViewController -> imageLogo downloaded")
+        
+        DispatchQueue.main.async {
+          self.logoImageView.image = self.game.getImageLogo()
+        }
+      }
+    }
+  }
+  
+  
+  func getImageLogo(completion: @escaping (Bool) -> Void) {
+    networking.downloadJeopardyLogo(completion: { image in
+      guard let image = image else { return }
+      self.game.setImageLogo(image)
+    })
+    
+  }
+  
+  //-------------------------------------------------------------------
+  
   
   //MARK: - new rounds and restarting game setting up
   private func setUpForNewRound() {
@@ -112,6 +134,7 @@ class ViewController: UIViewController {
   }
   
   
+  
   //MARK: - setting up the User Interface
   private func setUpUI() {
     categoryLabel.text = categoryTitle
@@ -122,32 +145,17 @@ class ViewController: UIViewController {
   }
   
   private func initialUISetUp() {
+    logoImageView.image = UIImage(named:"JeopardyLogoB&W")
+    
+    //getting image logo from internet
+    downloadImageLogo()
+    
     categoryLabel.text = ""
     clueLabel.text = ""
     scoreLabel.text = ""
   }
   
-  #warning("Jay I don´t know why this is not working the download and later change the image logo ... ")
-  func getImageLogo() {
-    downloadImageLogo(completion: { downloadCompleted in
-      if downloadCompleted {
-        print("image downloaded")
-        
-        DispatchQueue.main.async {
-          self.logoImageView.image = self.imageLogo
-        }
-      }
-    })
-  }
   
-  func downloadImageLogo(completion: (Bool) -> Void) {
-    networking.downloadJeopardyLogo(completion: { image in
-      guard let image = image else { return }
-      self.imageLogo = image
-    })
-
-  }
-
   
   //MARK: - values for alert view
   private func valuesForAlertView(isItRight right: Bool) -> (String, String) {

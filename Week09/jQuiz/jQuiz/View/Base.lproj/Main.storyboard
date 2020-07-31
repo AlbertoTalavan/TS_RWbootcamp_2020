@@ -31,7 +31,7 @@
                                     <action selector="didPressVolumeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVX-pa-Evl"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JeopardyLogoB&amp;W" translatesAutoresizingMaskIntoConstraints="NO" id="pK8-df-Hfb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pK8-df-Hfb">
                                 <rect key="frame" x="0.0" y="44" width="414" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="iG1-WY-OuC"/>
@@ -92,7 +92,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="JeopardyLogoB&amp;W" width="1600" height="900"/>
         <image name="speaker" catalog="system" width="128" height="121"/>
     </resources>
 </document>

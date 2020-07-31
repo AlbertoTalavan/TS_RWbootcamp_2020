@@ -17,10 +17,11 @@ class Networking {
   private let baseURL = "http://www.jservice.io"
   private let randomClueURLExtension = "/api/random" //same response as "/api/random/?count=1"
   private let cluesForCategoryURLExtension = "/api/clues/?category="
-  private let imageUrlString = "https://cdn1.edgedatg.com/aws/v2/abc/ABCUpdates/blog/2900129/8484c3386d4378d7c 826e3f3690b481b/1600x900-Q90_8484c3386d4378d7c826e3f3690b481b.jpg​"
+//  private let imageUrlString = "https://cdn1.edgedatg.com/aws/v2/abc/ABCUpdates/blog/2900129/8484c3386d4378d7c 826e3f3690b481b/1600x900-Q90_8484c3386d4378d7c826e3f3690b481b.jpg​" //not working at this moment
+  private let imageUrlString = "https://vignette.wikia.nocookie.net/jeopardyhistory/images/7/7a/Jeopardy_Season_36_%282019-2020%29_title_card.jpg"
   private var category: Category?
   private var clues = [Clue]()
-  private var image: UIImage?
+  private var imageLogo: UIImage?
   
   private init() {
     self.url = URL(string: baseURL)
@@ -51,6 +52,9 @@ class Networking {
       } catch {
         print("Error decoding json data: \(error)")
       }
+      
+    case .image:
+      let image = UIImage(data: data)
     }
     return listOfClues as AnyObject
   }
@@ -81,6 +85,7 @@ class Networking {
     task.resume()
   }
   
+
   func getAllCluesByCategory(categoryId: Int, completion: @escaping ([Clue]?) -> Void) {
     let urlString = baseURL + cluesForCategoryURLExtension + String(categoryId)
     
@@ -107,30 +112,29 @@ class Networking {
     
   }
   
+  
   func downloadJeopardyLogo(completion: @escaping (UIImage?) -> Void) {
-    
     guard let url = URL(string: imageUrlString) else { return }
     
-    let task = self.session.downloadTask(with: url) { data, response, error in
+    let task = self.session.dataTask(with: url) { data, response, error in
       
-      if let _ = error { print("Some error happened, please verify your connection and try again later")}
+      if let _ = error { print("LogoImage -> Some error happened, please verify your connection and try again later")}
        
       guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode) else {
-        print ("Invalid response from the server, please try again later")
+        print ("  LogoImage -> Invalid response from the server, please try again later")
         return
       }
       
+      print("## -- LogoImage -> response: \(response.statusCode)")
+      
       guard let data = data  else {
-          print("Invalid data received from the server")
+          print("LogoImage -> Invalid data received from the server")
           return
       }
       
-      do {
-        try self.image = UIImage(data: Data(contentsOf: data))
-      } catch {
-        print("error creating the image from data: \(error)")
-      }
-      completion(self.image)
+      self.imageLogo = (self.decodeData(type: .image, data: data) as? UIImage)
+          print("## -- Networking -> imageLogo download and creation: completed")
+      completion(self.imageLogo)
     }
     task.resume()
   }
@@ -140,7 +144,7 @@ class Networking {
 
 extension Networking {
   enum taskType {
-    case category, clues
+    case category, clues, image
   }
 }
 
