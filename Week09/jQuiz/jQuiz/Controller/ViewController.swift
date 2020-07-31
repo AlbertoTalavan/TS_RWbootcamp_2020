@@ -89,8 +89,9 @@ class ViewController: UIViewController {
     
   }
   
+  //TODO: Fix the image logo bug --------------------------------------
   //-------------------------------------------------------------------
-  #warning("Jay I don´t know why this is not working the download and later change the image logo ... ")
+  #warning("Jay I don´t know why this isn't working. Image download seems to work... but never refreshes the UI ... ")
   //because download is working
   
   func downloadImageLogo() {
@@ -113,7 +114,7 @@ class ViewController: UIViewController {
     })
     
   }
-  
+  //-------------------------------------------------------------------
   //-------------------------------------------------------------------
   
   

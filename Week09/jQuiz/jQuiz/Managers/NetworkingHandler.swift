@@ -133,7 +133,7 @@ class Networking {
       }
       
       self.imageLogo = (self.decodeData(type: .image, data: data) as? UIImage)
-          print("## -- Networking -> imageLogo download and creation: completed")
+        print("## -- Networking -> imageLogo download and creation: completed")
       completion(self.imageLogo)
     }
     task.resume()
