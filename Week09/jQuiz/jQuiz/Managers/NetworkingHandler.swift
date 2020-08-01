@@ -17,8 +17,8 @@ class Networking {
   private let baseURL = "http://www.jservice.io"
   private let randomClueURLExtension = "/api/random" //same response as "/api/random/?count=1"
   private let cluesForCategoryURLExtension = "/api/clues/?category="
-//  private let imageUrlString = "https://cdn1.edgedatg.com/aws/v2/abc/ABCUpdates/blog/2900129/8484c3386d4378d7c 826e3f3690b481b/1600x900-Q90_8484c3386d4378d7c826e3f3690b481b.jpg​" //not working at this moment
   private let imageUrlString = "https://vignette.wikia.nocookie.net/jeopardyhistory/images/7/7a/Jeopardy_Season_36_%282019-2020%29_title_card.jpg"
+  //Original link "https://cdn1.edgedatg.com/aws/v2/abc/ABCUpdates/blog/2900129/8484c3386d4378d7c 826e3f3690b481b/1600x900-Q90_8484c3386d4378d7c826e3f3690b481b.jpg​" //not working at this moment
   private var category: Category?
   private var clues = [Clue]()
   private var imageLogo: UIImage?
