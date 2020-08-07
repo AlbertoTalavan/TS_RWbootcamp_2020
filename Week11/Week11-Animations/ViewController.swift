@@ -15,9 +15,12 @@ class ViewController: UIViewController {
   @IBOutlet weak var squareSizeButton: UIButton!
   @IBOutlet weak var squareTranslationButton: UIButton!
   
+  @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var gokuImage: UIImageView!
+  
   private var menuIsOpen = false
-  @IBOutlet private var colorLeadingConstraint: NSLayoutConstraint!
-  @IBOutlet private var translationTrailingConstraint: NSLayoutConstraint!
+  @IBOutlet private var colorTrailingConstraint: NSLayoutConstraint!
+  @IBOutlet private var translationLeadingConstraint: NSLayoutConstraint!
   @IBOutlet private var sizeBottomConstraint: NSLayoutConstraint!
   
   
@@ -29,21 +32,33 @@ class ViewController: UIViewController {
 
   @IBAction func toggleMenu(_ sender: UIButton) {
     menuIsOpen.toggle()
-    colorLeadingConstraint.constant = menuIsOpen ? 68 : 162.5
+    let animatedConstraints: [NSLayoutConstraint] = [
+    colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
     
-    translationTrailingConstraint.constant = menuIsOpen ? 68 : 162.5
+    animatedConstraints.forEach {
+      $0.constant = menuIsOpen ? 44 : -50
+    }
     
-    sizeBottomConstraint.constant = menuIsOpen ? 44 : -50
+    UIView.animate(withDuration: 1/5, delay: 0, options: .curveEaseIn, animations: { self.view.layoutIfNeeded() })
     
   }
+  
+  
   
 
 }
 
 private extension ViewController {
+  func initializeAnimatedConstraints() {
+    colorTrailingConstraint.constant = -50
+    translationLeadingConstraint.constant = -50
+    sizeBottomConstraint.constant = -50
+  }
+  
   func setButtons() {
-    let buttons: [UIButton]
-    buttons = [playButton, squareColourButton, squareSizeButton, squareTranslationButton]
+    initializeAnimatedConstraints()
+    
+    let buttons: [UIButton] = [playButton, squareColourButton, squareSizeButton, squareTranslationButton]
     
     buttons.forEach {
       $0.layer.cornerRadius = $0.frame.width / 2
