@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week11_Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-TC-uun">
+                                <rect key="frame" x="162.5" y="426" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J0Y-UQ-k1Y"/>
+                                    <constraint firstAttribute="width" constant="50" id="KJk-5o-uue"/>
+                                </constraints>
+                                <state key="normal" image="perspective" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCz-Zh-fNf">
+                                <rect key="frame" x="257" y="520" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1jR-2n-SWY"/>
+                                    <constraint firstAttribute="width" constant="50" id="nff-Hw-bDg"/>
+                                </constraints>
+                                <state key="normal" image="arrow.right.arrow.left.square.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-fO-OzJ">
+                                <rect key="frame" x="68" y="520" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KB9-5W-shn"/>
+                                    <constraint firstAttribute="width" constant="50" id="kGq-Qk-Eyc"/>
+                                </constraints>
+                                <state key="normal" image="paintbrush.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5V-II-fTg">
+                                <rect key="frame" x="162.5" y="520" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DEB-eG-0oy"/>
+                                    <constraint firstAttribute="width" constant="50" id="jfd-KQ-kwi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="toggleMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sjY-0X-jcY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P5V-II-fTg" secondAttribute="bottom" constant="97" id="3Ca-x5-utx"/>
+                            <constraint firstItem="P5V-II-fTg" firstAttribute="top" secondItem="R7K-TC-uun" secondAttribute="bottom" constant="44" id="46V-dF-AqP"/>
+                            <constraint firstItem="P5V-II-fTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="84M-TL-sGt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QCz-Zh-fNf" secondAttribute="trailing" constant="68" id="9ek-IH-oYh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ORW-fO-OzJ" secondAttribute="bottom" constant="97" id="FTJ-Sv-BPa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QCz-Zh-fNf" secondAttribute="bottom" constant="97" id="Izw-Bz-B8S"/>
+                            <constraint firstItem="ORW-fO-OzJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="P4I-2o-RhB"/>
+                            <constraint firstItem="R7K-TC-uun" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fP4-V5-O5Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLeadingConstraint" destination="P4I-2o-RhB" id="1hx-Bn-dFW"/>
+                        <outlet property="playButton" destination="P5V-II-fTg" id="1ne-9R-Unw"/>
+                        <outlet property="sizeBottomConstraint" destination="46V-dF-AqP" id="BxY-A0-qAB"/>
+                        <outlet property="squareColourButton" destination="ORW-fO-OzJ" id="Exa-na-vmi"/>
+                        <outlet property="squareSizeButton" destination="R7K-TC-uun" id="HPX-fH-Tdc"/>
+                        <outlet property="squareTranslationButton" destination="QCz-Zh-fNf" id="QGs-Lx-siS"/>
+                        <outlet property="translationTrailingConstraint" destination="9ek-IH-oYh" id="HxK-pV-KrG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-657" y="162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.right.arrow.left.square.fill" catalog="system" width="128" height="114"/>
+        <image name="paintbrush.fill" catalog="system" width="128" height="125"/>
+        <image name="perspective" catalog="system" width="128" height="122"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
 </document>
