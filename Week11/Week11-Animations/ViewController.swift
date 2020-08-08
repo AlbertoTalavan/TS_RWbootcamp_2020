@@ -35,11 +35,11 @@ class ViewController: UIViewController {
   
   private var menuIsOpen = false
   private var notificationIsVisible = false
-  private var gokuHasFliedBefore = false
+  private var gokuHasFlownBefore = false
   private var backgroundHasBeenChanged = false
   private var sizeHasBeenChanged = false
   
-//  private let animator = UIViewPropertyAnimator(duration: 1, curve: .linear)
+  private let animator = UIViewPropertyAnimator(duration: 0.4, curve: .linear)
   
   
   override func viewDidLoad() {
@@ -57,15 +57,20 @@ class ViewController: UIViewController {
 //MARK: - Buttons Actions
   @IBAction func toggleMenu(_ sender: UIButton) {
     menuIsOpen.toggle()
-    
+
     let animatedConstraints: [NSLayoutConstraint] = [
     colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
-    
+
     animatedConstraints.forEach {
       $0.constant = menuIsOpen ? 44 : -50
     }
-    
+
     UIView.animate(withDuration: 1/5, delay: 0, options: .curveEaseIn, animations: { self.view.layoutIfNeeded() })
+
+    if !menuIsOpen {
+      animator.startAnimation()
+    }
+    
     
   }
   
@@ -73,13 +78,23 @@ class ViewController: UIViewController {
     notificationAnimation()
     //changing colour animation
     if !backgroundHasBeenChanged {
-      UIView.animate(withDuration: 1, animations: {
-        self.containerView.backgroundColor = .systemOrange
-      })
+      animator.addAnimations {
+        UIView.animate(withDuration: 1, animations: {
+          self.containerView.backgroundColor = .systemOrange
+        })
+      }
+//      UIView.animate(withDuration: 1, animations: {
+//        self.containerView.backgroundColor = .systemOrange
+//      })
     } else {
-      UIView.animate(withDuration: 1, animations: {
-        self.containerView.backgroundColor = .systemTeal
-      })
+      animator.addAnimations {
+        UIView.animate(withDuration: 1, animations: {
+          self.containerView.backgroundColor = .systemTeal
+        })
+      }
+//      UIView.animate(withDuration: 1, animations: {
+//        self.containerView.backgroundColor = .systemTeal
+//      })
     }
     backgroundHasBeenChanged.toggle()
     
@@ -87,16 +102,22 @@ class ViewController: UIViewController {
   
   @IBAction func changeSize(_ sender: UIButton) {
     notificationAnimation()
-    //changing image´s size animation
     
+    //changing image´s size animation
     if !sizeHasBeenChanged {
-      UIView.animate(withDuration: 1/5, animations: {
-        self.gokuImage.transform = .init(scaleX: 1.7, y: 1.7)
-      })
+      animator.addAnimations {
+        UIView.animate(withDuration: 1/5, animations: {
+          self.gokuImage.transform = .init(scaleX: 1.4, y: 1.4)
+        })
+      }
+
     } else {
-      UIView.animate(withDuration: 1/5, animations: {
-        self.gokuImage.transform = .init(scaleX: 1, y: 1)
-      })
+      animator.addAnimations {
+        UIView.animate(withDuration: 1/5, animations: {
+          self.gokuImage.transform = .init(scaleX: 1, y: 1)
+        })
+      }
+
     }
     sizeHasBeenChanged.toggle()
   }
@@ -105,27 +126,33 @@ class ViewController: UIViewController {
     notificationAnimation()
     
     //moving image animation
-    if !gokuHasFliedBefore {
-      gokuImage.image = UIImage(named: "goku")
+    if !gokuHasFlownBefore {
+      animator.addAnimations {
+        self.gokuImage.image = UIImage(named: "goku")
+        UIView.animate(withDuration: 0.4) {
+          self.gokuImage.transform = .init(translationX: 187, y: 0)
+        }
+      }
 
-      UIView.animate(withDuration: 0.4) {
-        self.gokuImage.transform = .init(translationX: 187, y: 0)
-      }
     } else {
-      gokuImage.image = UIImage(named: "gokuLeading")
-      UIView.animate(withDuration: 0.4) {
-        self.gokuImage.transform = .init(translationX: 0, y: 0)
+      animator.addAnimations {
+        self.gokuImage.image = UIImage(named: "gokuLeading")
+        UIView.animate(withDuration: 0.4) {
+          self.gokuImage.transform = .init(translationX: 0, y: 0)
+        }
       }
+
     }
-    gokuHasFliedBefore.toggle()
+    gokuHasFlownBefore.toggle()
   }
   
+  //MARK: - Animations
   private func notificationAnimation() {
     if !notificationIsVisible {
       notificationIsVisible = true
       notificationTopConstraint.constant = 20
       
-      UIView.animate(withDuration: 1/4, delay: 0, options: .curveEaseIn, animations: {
+      UIView.animate(withDuration: 1/6, delay: 0, options: .curveEaseIn, animations: {
             self.notificationView.alpha = 1
             self.view.layoutIfNeeded()
           }
@@ -133,7 +160,7 @@ class ViewController: UIViewController {
       
       notificationTopConstraint.constant = -85
       
-      UIView.animate(withDuration: 1/5, delay: 1.5, options: .curveEaseIn, animations: {
+      UIView.animate(withDuration: 1/8, delay: 0.4, options: .curveEaseIn, animations: {
             self.notificationView.alpha = 0
             self.view.layoutIfNeeded() }, completion: {_ in
             self.notificationIsVisible = false
@@ -142,7 +169,15 @@ class ViewController: UIViewController {
     }
   }
   
-  
+  private func animateMenu() {
+    let animatedConstraints: [NSLayoutConstraint] = [
+      colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
+    
+    animatedConstraints.forEach {
+      $0.constant = menuIsOpen ? 44 : -50
+    }
+    UIView.animate(withDuration: 1/5, delay: 0, options: .curveEaseIn, animations: { self.view.layoutIfNeeded() })
+  }
 }
 
 private extension ViewController {
