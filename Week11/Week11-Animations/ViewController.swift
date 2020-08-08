@@ -31,6 +31,8 @@ class ViewController: UIViewController {
   
   //Canvas animated constraints
   @IBOutlet private var gokuLeadingConstraint: NSLayoutConstraint!
+  @IBOutlet private var gokuHeightConstraint: NSLayoutConstraint!
+  @IBOutlet private var gokuWidthConstraint: NSLayoutConstraint!
   
   
   private var menuIsOpen = false
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
   private var gokuHasFlownBefore = false
   private var backgroundHasBeenChanged = false
   private var sizeHasBeenChanged = false
+  private var firstTime = true
   
   private let animator = UIViewPropertyAnimator(duration: 0.4, curve: .linear)
   
@@ -56,10 +59,21 @@ class ViewController: UIViewController {
   
 //MARK: - Buttons Actions
   @IBAction func toggleMenu(_ sender: UIButton) {
-    menuIsOpen.toggle()
-
     let animatedConstraints: [NSLayoutConstraint] = [
-    colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
+      colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
+    
+    if firstTime {
+      playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+      firstTime.toggle()
+    }
+
+    menuIsOpen.toggle()
+    
+    if menuIsOpen {
+      playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
+    } else {
+      playButton.setImage(UIImage(systemName: "light.max"), for: .normal)
+    }
 
     animatedConstraints.forEach {
       $0.constant = menuIsOpen ? 44 : -50
@@ -70,8 +84,6 @@ class ViewController: UIViewController {
     if !menuIsOpen {
       animator.startAnimation()
     }
-    
-    
   }
   
   @IBAction func changeColour(_ sender: UIButton) {
@@ -101,28 +113,32 @@ class ViewController: UIViewController {
   }
   
   @IBAction func changeSize(_ sender: UIButton) {
+    let initialHeight: CGFloat = 128.0
+    let initialWidth: CGFloat = 140.0
+    let scaleFactor: (x: CGFloat, y: CGFloat) = (1.4, 1.4)
+    
     notificationAnimation()
     
-    //changing image´s size animation
-    if !sizeHasBeenChanged {
-      animator.addAnimations {
-        UIView.animate(withDuration: 1/5, animations: {
-          self.gokuImage.transform = .init(scaleX: 1.4, y: 1.4)
-        })
-      }
-
-    } else {
-      animator.addAnimations {
-        UIView.animate(withDuration: 1/5, animations: {
-          self.gokuImage.transform = .init(scaleX: 1, y: 1)
-        })
-      }
-
-    }
     sizeHasBeenChanged.toggle()
+    
+    animator.addAnimations {
+      self.gokuHeightConstraint.constant = self.sizeHasBeenChanged ? initialHeight * scaleFactor.x : initialHeight
+      self.gokuWidthConstraint.constant = self.sizeHasBeenChanged ? initialWidth * scaleFactor.y : initialWidth
+      
+      
+      UIView.animate(withDuration: 1/5, delay: 0, options: .curveEaseIn, animations: { self.view.layoutIfNeeded() })
+    }
+
   }
   
   @IBAction func moveImage(_ sender: UIButton) {
+    var maxX = UIScreen.main.bounds.maxX
+    if !sizeHasBeenChanged {
+      maxX += gokuImage.frame.maxX / 2
+    } else {
+      maxX = UIScreen.main.bounds.maxX
+    }
+    
     notificationAnimation()
     
     //moving image animation
@@ -130,7 +146,7 @@ class ViewController: UIViewController {
       animator.addAnimations {
         self.gokuImage.image = UIImage(named: "goku")
         UIView.animate(withDuration: 0.4) {
-          self.gokuImage.transform = .init(translationX: 187, y: 0)
+          self.gokuImage.transform = .init(translationX: maxX/2, y: 0)
         }
       }
 
@@ -169,7 +185,7 @@ class ViewController: UIViewController {
     }
   }
   
-  private func animateMenu() {
+  private func menuOnOffAnimation() {
     let animatedConstraints: [NSLayoutConstraint] = [
       colorTrailingConstraint, translationLeadingConstraint, sizeBottomConstraint]
     
@@ -180,6 +196,9 @@ class ViewController: UIViewController {
   }
 }
 
+
+
+//MARK: - Extensions
 private extension ViewController {
   private func initializeAnimatedConstraints() {
     notificationTopConstraint.constant = -85
@@ -213,7 +232,6 @@ private extension ViewController {
     notificationView.backgroundColor = .systemGray
   }
   
-  
-  
 }
+
 
