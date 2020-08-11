@@ -2,7 +2,7 @@
 
 ## 🎉 Capstone project 🎉
 
-This week there is no homework or assignments ... is all about our **bootcamp graduation Capstone project**.
+This week there is no homework nor assignments ... is all about our **bootcamp graduation Capstone project**.
 
 It is supposed to be a MVP, so it´s ok if not all functionality is working... because we have **one week** to make it.
 
