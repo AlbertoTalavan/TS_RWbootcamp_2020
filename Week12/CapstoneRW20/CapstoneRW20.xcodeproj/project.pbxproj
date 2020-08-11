@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BAB647D324E30C850086A14E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647D224E30C850086A14E /* AppDelegate.swift */; };
-		BAB647D524E30C850086A14E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647D424E30C850086A14E /* SceneDelegate.swift */; };
-		BAB647D824E30C850086A14E /* CapstoneRW20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB647D624E30C850086A14E /* CapstoneRW20.xcdatamodeld */; };
-		BAB647DA24E30C850086A14E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647D924E30C850086A14E /* ContentView.swift */; };
-		BAB647DC24E30C870086A14E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB647DB24E30C870086A14E /* Assets.xcassets */; };
-		BAB647DF24E30C870086A14E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB647DE24E30C870086A14E /* Preview Assets.xcassets */; };
-		BAB647E224E30C870086A14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB647E024E30C870086A14E /* LaunchScreen.storyboard */; };
+		BAB647F624E3211F0086A14E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647F524E3211F0086A14E /* AppDelegate.swift */; };
+		BAB647F824E3211F0086A14E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647F724E3211F0086A14E /* SceneDelegate.swift */; };
+		BAB647FA24E3211F0086A14E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB647F924E3211F0086A14E /* ViewController.swift */; };
+		BAB647FD24E3211F0086A14E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB647FB24E3211F0086A14E /* Main.storyboard */; };
+		BAB6480024E3211F0086A14E /* CapstoneRW20.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB647FE24E3211F0086A14E /* CapstoneRW20.xcdatamodeld */; };
+		BAB6480224E321210086A14E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB6480124E321210086A14E /* Assets.xcassets */; };
+		BAB6480524E321210086A14E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB6480324E321210086A14E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BAB647CF24E30C850086A14E /* CapstoneRW20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapstoneRW20.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAB647D224E30C850086A14E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAB647D424E30C850086A14E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BAB647D724E30C850086A14E /* CapstoneRW20.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CapstoneRW20.xcdatamodel; sourceTree = "<group>"; };
-		BAB647D924E30C850086A14E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BAB647DB24E30C870086A14E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAB647DE24E30C870086A14E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BAB647E124E30C870086A14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BAB647E324E30C870086A14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB647F224E3211F0086A14E /* CapstoneRW20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapstoneRW20.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB647F524E3211F0086A14E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAB647F724E3211F0086A14E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BAB647F924E3211F0086A14E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAB647FC24E3211F0086A14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAB647FF24E3211F0086A14E /* CapstoneRW20.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CapstoneRW20.xcdatamodel; sourceTree = "<group>"; };
+		BAB6480124E321210086A14E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAB6480424E321210086A14E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAB6480624E321210086A14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BAB647CC24E30C850086A14E /* Frameworks */ = {
+		BAB647EF24E3211F0086A14E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,55 +39,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BAB647C624E30C850086A14E = {
+		BAB647E924E3211F0086A14E = {
 			isa = PBXGroup;
 			children = (
-				BAB647D124E30C850086A14E /* CapstoneRW20 */,
-				BAB647D024E30C850086A14E /* Products */,
+				BAB647F424E3211F0086A14E /* CapstoneRW20 */,
+				BAB647F324E3211F0086A14E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BAB647D024E30C850086A14E /* Products */ = {
+		BAB647F324E3211F0086A14E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BAB647CF24E30C850086A14E /* CapstoneRW20.app */,
+				BAB647F224E3211F0086A14E /* CapstoneRW20.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BAB647D124E30C850086A14E /* CapstoneRW20 */ = {
+		BAB647F424E3211F0086A14E /* CapstoneRW20 */ = {
 			isa = PBXGroup;
 			children = (
-				BAB647D224E30C850086A14E /* AppDelegate.swift */,
-				BAB647D424E30C850086A14E /* SceneDelegate.swift */,
-				BAB647D924E30C850086A14E /* ContentView.swift */,
-				BAB647DB24E30C870086A14E /* Assets.xcassets */,
-				BAB647E024E30C870086A14E /* LaunchScreen.storyboard */,
-				BAB647E324E30C870086A14E /* Info.plist */,
-				BAB647D624E30C850086A14E /* CapstoneRW20.xcdatamodeld */,
-				BAB647DD24E30C870086A14E /* Preview Content */,
+				BAB647F524E3211F0086A14E /* AppDelegate.swift */,
+				BAB647F724E3211F0086A14E /* SceneDelegate.swift */,
+				BAB647F924E3211F0086A14E /* ViewController.swift */,
+				BAB647FB24E3211F0086A14E /* Main.storyboard */,
+				BAB6480124E321210086A14E /* Assets.xcassets */,
+				BAB6480324E321210086A14E /* LaunchScreen.storyboard */,
+				BAB6480624E321210086A14E /* Info.plist */,
+				BAB647FE24E3211F0086A14E /* CapstoneRW20.xcdatamodeld */,
 			);
 			path = CapstoneRW20;
-			sourceTree = "<group>";
-		};
-		BAB647DD24E30C870086A14E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BAB647DE24E30C870086A14E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BAB647CE24E30C850086A14E /* CapstoneRW20 */ = {
+		BAB647F124E3211F0086A14E /* CapstoneRW20 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAB647E624E30C870086A14E /* Build configuration list for PBXNativeTarget "CapstoneRW20" */;
+			buildConfigurationList = BAB6480924E321210086A14E /* Build configuration list for PBXNativeTarget "CapstoneRW20" */;
 			buildPhases = (
-				BAB647CB24E30C850086A14E /* Sources */,
-				BAB647CC24E30C850086A14E /* Frameworks */,
-				BAB647CD24E30C850086A14E /* Resources */,
+				BAB647EE24E3211F0086A14E /* Sources */,
+				BAB647EF24E3211F0086A14E /* Frameworks */,
+				BAB647F024E3211F0086A14E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -95,25 +87,25 @@
 			);
 			name = CapstoneRW20;
 			productName = CapstoneRW20;
-			productReference = BAB647CF24E30C850086A14E /* CapstoneRW20.app */;
+			productReference = BAB647F224E3211F0086A14E /* CapstoneRW20.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BAB647C724E30C850086A14E /* Project object */ = {
+		BAB647EA24E3211F0086A14E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Alberto Talavan";
 				TargetAttributes = {
-					BAB647CE24E30C850086A14E = {
+					BAB647F124E3211F0086A14E = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
-			buildConfigurationList = BAB647CA24E30C850086A14E /* Build configuration list for PBXProject "CapstoneRW20" */;
+			buildConfigurationList = BAB647ED24E3211F0086A14E /* Build configuration list for PBXProject "CapstoneRW20" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,48 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = BAB647C624E30C850086A14E;
-			productRefGroup = BAB647D024E30C850086A14E /* Products */;
+			mainGroup = BAB647E924E3211F0086A14E;
+			productRefGroup = BAB647F324E3211F0086A14E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAB647CE24E30C850086A14E /* CapstoneRW20 */,
+				BAB647F124E3211F0086A14E /* CapstoneRW20 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BAB647CD24E30C850086A14E /* Resources */ = {
+		BAB647F024E3211F0086A14E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAB647E224E30C870086A14E /* LaunchScreen.storyboard in Resources */,
-				BAB647DF24E30C870086A14E /* Preview Assets.xcassets in Resources */,
-				BAB647DC24E30C870086A14E /* Assets.xcassets in Resources */,
+				BAB6480524E321210086A14E /* LaunchScreen.storyboard in Resources */,
+				BAB6480224E321210086A14E /* Assets.xcassets in Resources */,
+				BAB647FD24E3211F0086A14E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BAB647CB24E30C850086A14E /* Sources */ = {
+		BAB647EE24E3211F0086A14E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAB647D824E30C850086A14E /* CapstoneRW20.xcdatamodeld in Sources */,
-				BAB647D324E30C850086A14E /* AppDelegate.swift in Sources */,
-				BAB647DA24E30C850086A14E /* ContentView.swift in Sources */,
-				BAB647D524E30C850086A14E /* SceneDelegate.swift in Sources */,
+				BAB647FA24E3211F0086A14E /* ViewController.swift in Sources */,
+				BAB6480024E3211F0086A14E /* CapstoneRW20.xcdatamodeld in Sources */,
+				BAB647F624E3211F0086A14E /* AppDelegate.swift in Sources */,
+				BAB647F824E3211F0086A14E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BAB647E024E30C870086A14E /* LaunchScreen.storyboard */ = {
+		BAB647FB24E3211F0086A14E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BAB647E124E30C870086A14E /* Base */,
+				BAB647FC24E3211F0086A14E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAB6480324E321210086A14E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB6480424E321210086A14E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BAB647E424E30C870086A14E /* Debug */ = {
+		BAB6480724E321210086A14E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		BAB647E524E30C870086A14E /* Release */ = {
+		BAB6480824E321210086A14E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,14 +284,12 @@
 			};
 			name = Release;
 		};
-		BAB647E724E30C870086A14E /* Debug */ = {
+		BAB6480A24E321210086A14E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CapstoneRW20/Preview Content\"";
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CapstoneRW20/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,14 +302,12 @@
 			};
 			name = Debug;
 		};
-		BAB647E824E30C870086A14E /* Release */ = {
+		BAB6480B24E321210086A14E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"CapstoneRW20/Preview Content\"";
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CapstoneRW20/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,20 +323,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BAB647CA24E30C850086A14E /* Build configuration list for PBXProject "CapstoneRW20" */ = {
+		BAB647ED24E3211F0086A14E /* Build configuration list for PBXProject "CapstoneRW20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAB647E424E30C870086A14E /* Debug */,
-				BAB647E524E30C870086A14E /* Release */,
+				BAB6480724E321210086A14E /* Debug */,
+				BAB6480824E321210086A14E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAB647E624E30C870086A14E /* Build configuration list for PBXNativeTarget "CapstoneRW20" */ = {
+		BAB6480924E321210086A14E /* Build configuration list for PBXNativeTarget "CapstoneRW20" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BAB647E724E30C870086A14E /* Debug */,
-				BAB647E824E30C870086A14E /* Release */,
+				BAB6480A24E321210086A14E /* Debug */,
+				BAB6480B24E321210086A14E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -348,17 +344,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BAB647D624E30C850086A14E /* CapstoneRW20.xcdatamodeld */ = {
+		BAB647FE24E3211F0086A14E /* CapstoneRW20.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BAB647D724E30C850086A14E /* CapstoneRW20.xcdatamodel */,
+				BAB647FF24E3211F0086A14E /* CapstoneRW20.xcdatamodel */,
 			);
-			currentVersion = BAB647D724E30C850086A14E /* CapstoneRW20.xcdatamodel */;
+			currentVersion = BAB647FF24E3211F0086A14E /* CapstoneRW20.xcdatamodel */;
 			path = CapstoneRW20.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = BAB647C724E30C850086A14E /* Project object */;
+	rootObject = BAB647EA24E3211F0086A14E /* Project object */;
 }
