@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BA807FB024DDE62D00EC4077 /* Week11-Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week11-Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA807FB024DDE62D00EC4077 /* FlyMator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyMator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA807FB324DDE62D00EC4077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA807FB524DDE62D00EC4077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA807FB724DDE62D00EC4077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		BA807FB124DDE62D00EC4077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA807FB024DDE62D00EC4077 /* Week11-Animations.app */,
+				BA807FB024DDE62D00EC4077 /* FlyMator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +60,8 @@
 				BA807FB524DDE62D00EC4077 /* SceneDelegate.swift */,
 				BA807FB724DDE62D00EC4077 /* ViewController.swift */,
 				BA807FB924DDE62D00EC4077 /* Main.storyboard */,
-				BA807FBC24DDE62F00EC4077 /* Assets.xcassets */,
 				BA807FBE24DDE62F00EC4077 /* LaunchScreen.storyboard */,
+				BA807FBC24DDE62F00EC4077 /* Assets.xcassets */,
 				BA807FC124DDE62F00EC4077 /* Info.plist */,
 			);
 			path = "Week11-Animations";
@@ -84,7 +84,7 @@
 			);
 			name = "Week11-Animations";
 			productName = "Week11-Animations";
-			productReference = BA807FB024DDE62D00EC4077 /* Week11-Animations.app */;
+			productReference = BA807FB024DDE62D00EC4077 /* FlyMator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -287,13 +287,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Week11-Animations/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.albertotalavan.Week11-Animations";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.Flymator;
+				PRODUCT_NAME = FlyMator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,13 +306,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9J8U8DMSX;
 				INFOPLIST_FILE = "Week11-Animations/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.albertotalavan.Week11-Animations";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.albertotalavan.Flymator;
+				PRODUCT_NAME = FlyMator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
