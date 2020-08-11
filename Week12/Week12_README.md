@@ -4,9 +4,14 @@
 
 This week there is no homework nor assignments ... is all about our **bootcamp graduation Capstone project**.
 
-It is supposed to be a MVP, so it´s ok if not all functionality is working... because we have **one week** to make it.
+It is supposed to be a MVP, so it´s ok if not all functionality is working... because we have **one week** to make it.  
 
-So wait for it with ❤️
+We can create whatever the project we want, it can be: a project that will get to the App Store when completed, something just for
+fun, something to experiment with new things... It is up to us! 🥳.
+
+So wait for it with ❤️.
+
+
 
 For sure it will be made using:
 
