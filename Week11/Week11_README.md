@@ -7,4 +7,7 @@ here is the gif 🥳
 | ![gif](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week11/Assets/AppPresentation.gif "gif") |
 | --- |
 
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
+
  
