@@ -15,14 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="9tm-RM-rIN">
-                                <rect key="frame" x="67.5" y="90" width="240" height="240"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Ati-Ix-bsH"/>
-                                    <constraint firstAttribute="width" constant="240" id="MEM-cO-Deh"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5k-yT-5Wi">
                                 <rect key="frame" x="116" y="579" width="143" height="36"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,8 +27,8 @@
                                     <action selector="logInto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azH-pi-lJV"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-wt-MPR" userLabel="Main Stack View">
-                                <rect key="frame" x="67.5" y="394" width="240" height="148"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-wt-MPR" userLabel="Main Stack View">
+                                <rect key="frame" x="67.5" y="254" width="240" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kzB-Q2-vcE" userLabel="User Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="66"/>
@@ -50,7 +42,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sW2-TO-IfW">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please fill in with your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sW2-TO-IfW">
                                                 <rect key="frame" x="0.0" y="32" width="240" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="epS-nt-ewB"/>
@@ -72,7 +64,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-gJ-ezn">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please type here your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3d-gJ-ezn">
                                                 <rect key="frame" x="0.0" y="32" width="240" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="J7b-Pz-Di7"/>
@@ -89,9 +81,6 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X5k-yT-5Wi" secondAttribute="bottom" constant="52" id="Ch2-xG-LeC"/>
                             <constraint firstItem="X5k-yT-5Wi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dcs-pL-aS4"/>
-                            <constraint firstItem="9tm-RM-rIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohd-H5-T2H"/>
-                            <constraint firstItem="aPb-wt-MPR" firstAttribute="top" secondItem="9tm-RM-rIN" secondAttribute="bottom" constant="64" id="r6h-LW-fxk"/>
-                            <constraint firstItem="9tm-RM-rIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="re8-EO-LJb"/>
                             <constraint firstItem="aPb-wt-MPR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x2J-eJ-aJb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -100,7 +89,6 @@
                     <connections>
                         <outlet property="emailLabel" destination="dsv-ZH-FlA" id="RLI-b4-PDj"/>
                         <outlet property="emailTF" destination="sW2-TO-IfW" id="OG6-8n-SF4"/>
-                        <outlet property="imageLogo" destination="9tm-RM-rIN" id="Aky-9Z-8C6"/>
                         <outlet property="loginButton" destination="X5k-yT-5Wi" id="JB8-MT-vmR"/>
                         <outlet property="passwordLabel" destination="bZ1-PG-RKZ" id="UJj-QR-ymO"/>
                         <outlet property="passwordTF" destination="H3d-gJ-ezn" id="25y-Q5-a2F"/>
@@ -254,10 +242,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Login"/>
-                                        <connections>
-                                            <action selector="login:" destination="44V-aU-ZhY" eventType="touchUpInside" id="LcG-hX-PLs"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="C8O-80-fWF"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDt-Le-OZH">
                                         <rect key="frame" x="0.0" y="58" width="143" height="36"/>
@@ -267,10 +251,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Sign Up"/>
-                                        <connections>
-                                            <action selector="signIn:" destination="44V-aU-ZhY" eventType="touchUpInside" id="w9Q-rO-JGA"/>
-                                            <segue destination="HEX-vC-sli" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Tde-Rb-8Mi"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -306,7 +286,4 @@
             <point key="canvasLocation" x="1002.8985507246377" y="142.63392857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo-placeholder" width="100" height="100"/>
-    </resources>
 </document>

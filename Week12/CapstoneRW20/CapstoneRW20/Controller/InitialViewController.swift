@@ -16,17 +16,7 @@ class InitialViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-  
-  @IBAction func login(_ sender: Any) {
-//    let login = LoginViewController() as UIViewController
-//    present(login, animated: true)
-  }
-  
-  @IBAction func signIn(_ sender: Any) {
-//    let signUp = LoginViewController() as UIViewController
-//    present(signUp, animated: true)
-  }
-  
+
   
 
     /*

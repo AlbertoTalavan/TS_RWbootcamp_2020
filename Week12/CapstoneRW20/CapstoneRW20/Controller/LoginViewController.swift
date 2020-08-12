@@ -14,7 +14,6 @@ import FirebaseFirestore
 
 class LoginViewController: UIViewController {
   //outlets
-  @IBOutlet weak var imageLogo: UIImageView!
   
   @IBOutlet weak var emailLabel: UILabel!
   @IBOutlet weak var emailTF: UITextField!
