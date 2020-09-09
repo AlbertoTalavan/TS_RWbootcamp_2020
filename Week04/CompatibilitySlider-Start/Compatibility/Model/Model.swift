@@ -126,14 +126,26 @@ class CompatibilityGame {
 ///  NOT be shipped to production.
 
    extension CompatibilityGame {
-      //I use strange methods´ names trying to avoid using those ones in production code
-      func assignCSHC(_ password: String) {
+  //I use strange methods´ names trying to avoid using those ones in production code
+    
+      ///assign 5 Items to Compatibility Items Array
+      func assign5ItCIA(_ password: String) {
          if password == "just for testing purposes " {
             compatibilityItems = []
             compatibilityItems = ["Dogs", "Cats", "Beach", "Surf", "Mountain"]
          }
       }
-      
+    
+      /// alternative Testing Reset
+      ///
+      /// This method resets:
+      /// - person1
+      /// - person2
+      /// - currentItemIndex
+      /// - compatibilityItems
+      ///
+      /// And also assign items to the array of compatibility items using :
+      /// - `assign5ItCIA(password)`
       func alternativeTestingReset(_ password: String) {
          if password == "just for testing purposes " {
          resetPerson(who: person1)        //cleaning items
@@ -141,29 +153,37 @@ class CompatibilityGame {
          resetCurrentItemIndex()          //sets current index to Zero
          setTopicsNumber(howMany: 4)      //sets current index to One
          resetCompatibilityItems()        //remove All elements to prevent "index ouf of range"
-         assignCSHC("just for testing purposes ")
+         assign5ItCIA("just for testing purposes ")
          }
       }
       
+    ///set Current Item Index.
       func setCII (_ password: String, _ value: Int) {
          if password == "just for testing purposes " {
          currentItemIndex = value
          }
       }
       
+    /// reset Compatibility Items.
+    ///
+    ///this method uses the black list method `resetCompatibilityItems()`
       func resetCI(_ password: String) {
          if password == "just for testing purposes " {
             resetCompatibilityItems()
          }
       }
       
+    ///set person
       func sp(_ password: String, _ p: Person) {
          if password == "just for testing purposes " {
             resetPerson(who: person1)
             person1 = p
          }
       }
-      
+    
+      /// test Topics Number.
+      ///
+      /// This method returns the value of `howManyTopics`
       func testTN(_ password: String) -> Int? {
          if password == "just for testing purposes " {
             return howManyTopics
