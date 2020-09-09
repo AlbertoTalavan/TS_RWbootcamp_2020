@@ -2,7 +2,5 @@
 
 ### This week is about Networking with URLSession and a little bit about design patterns.
 Lectures:
-- Networking with URLSession
-- Fundamental iOS Design Patterns 
-
-- [ ] work in progress
+- Networking with URLSession,
+- Fundamental iOS Design Patterns.
