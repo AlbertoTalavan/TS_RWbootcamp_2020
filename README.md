@@ -69,7 +69,7 @@ internal func MyGoals() -> String {
   let Programming //(I am passionate about that) 
   var Sports, Rolling_skating, Team_sports //more code here...
   var Anime, Videogames
-  var Sci_fi_movies, TV_wild_life_documentals //sneak_case is not swifty but here it works
+  var Sci_fi_movies, TV_wild_life_documentals //I know... sneak_case is not swifty but here it works
   var newSkill: Knowledge {
    set {
     learnNewSkill(from: .anyTechnicalSource)
