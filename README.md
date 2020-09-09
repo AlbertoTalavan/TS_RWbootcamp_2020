@@ -75,7 +75,7 @@ internal func MyGoals() -> String {
     learnNewSkill(from: .anyTechnicalSource)
    } 
    get {
-    applyNewSkillLearned
+    applyNewSkillLearned()
    }
   }
   
