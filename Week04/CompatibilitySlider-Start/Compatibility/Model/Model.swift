@@ -122,8 +122,8 @@ class CompatibilityGame {
    //MARK: - Only for testing
 
 #if DEBUG
-//  due to #if DEBUG the folowing code will
-//  not be shipped to production
+///  due to #if DEBUG the following code will
+///  NOT be shipped to production.
 
    extension CompatibilityGame {
       //I use strange methods´ names trying to avoid using those ones in production code
