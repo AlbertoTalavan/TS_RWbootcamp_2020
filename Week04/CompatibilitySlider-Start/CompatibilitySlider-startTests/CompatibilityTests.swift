@@ -20,6 +20,8 @@ class CompatibilityTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
       super.setUp()
       sut = CompatibilityGame()
+      continueAfterFailure = false // Ends test method execution as soon as any test fails.
+                                   //Other test methods in the suite may still execute after a test fails.
     }
 
     override func tearDownWithError() throws {
@@ -44,15 +46,15 @@ class CompatibilityTests: XCTestCase {
 
    
 //MARK: - Explanation of the tests splitting in two main groups
-// NT for the following test classification:
-// Now I´m trying to classify the different test looking
-//   at if them test public or private methods.
-//
-// Most of the public methods need to use private
-//   functions, so I create some extra, and just for
-//   debugging, public functions to be able to access
-//   those private properties/methods needed
-//
+/// NT for the following test classification:
+/// Now I´m trying to classify the different test looking
+///   if them tests public or private methods.
+///
+/// Most of the public methods need to use private functions
+///   so I create some extra (just for debugging purposes )
+///   public functions to be able to access those private
+///   properties/methods needed
+
    
 
    

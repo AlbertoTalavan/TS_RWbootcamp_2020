@@ -24,8 +24,7 @@ class ViewController: UIViewController {
    var game: CompatibilityGame?
    
    var currentPerson: Person?
-   
-   
+  
    //MARK: - View Controller Methods
    override func viewDidLoad() {
       super.viewDidLoad()
