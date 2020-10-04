@@ -1,9 +1,16 @@
 **Week 04 (Monday 15 June to Sunday 21 June**  
 
 ## Compatibility Slider: 
-
+<!-- I´m gonna substitute the table with images for a parragraph in html tags to obtain the same result but without the table lines
 | ![user1](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark1.png "User1 playing") | ![result](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/landscapeLight.png "final score") | ![user2](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png "User2 playing") |
 | --- | --- | --- |  
+-->
+
+<p align="left">
+	<img src="../Week04/Assets/portraitDark1.png" height="450"/>
+	<img src="../Week04/Assets/landscapeLight.png" width="450"/>
+	<img src="../Week04/Assets/portraitDark2.png" height="450"/>
+</p>
 
 
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
