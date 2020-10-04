@@ -6,7 +6,7 @@
 | --- | --- | --- |  
 -->
 
-<p align="left">
+<p align="center">
 	<img src="../Week04/Assets/portraitDark1.png" height="450"/>
 	<img src="../Week04/Assets/landscapeLight.png" width="450"/>
 	<img src="../Week04/Assets/portraitDark2.png" height="450"/>
