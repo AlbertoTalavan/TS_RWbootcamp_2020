@@ -8,9 +8,10 @@ PokeDex is a simple app that shows a collection view of different pokemons and t
 | --- | --- | --- |
 -->
 <p alignment = "center">
-	<img src="../Week06/Assets/portrait1.png" height="450"/>
-	<img src="../Week06/Assets/landscape1.png" width="450"/>
-	<img src="../Week06/Assets/portrait2.png" height="450"/>
+	<img src="../Week06/Assets/portrait01.png" height="400"/>
+	<img src="../Week06/Assets/portrait02.png" height="400"/>
+	<img src="../Week06/Assets/portrait03.png" height="400"/>
+	<img src="../Week06/Assets/landscape01.png" width="400"/>	
 </p>
 
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
