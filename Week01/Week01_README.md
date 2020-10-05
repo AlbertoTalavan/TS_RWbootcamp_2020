@@ -11,12 +11,12 @@
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
 [![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
-#### Tech Stack.
+### Tech Stack.
 - Storyboard (and *vary for traits* for orientation changes) 
 - UIKit  
 - WebKit  
 
-#### Final Considerations.
+### Final Considerations.
 I have made some changes to the original assignment (and here is why):  
 - The sliders default position **now is different** depending of the light or dark mode the device is when it runs the
   app. If the **device is in light mode** then the **default value will be black** (rgb:0,0,0 or hsb:0,0,0), and if the
