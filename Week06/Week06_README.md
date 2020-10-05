@@ -1,4 +1,4 @@
-# Week 06 (Monday 29 June to Sunday 5 July)
+# Week 06.
 
 ### PokeDex
 PokeDex is a simple app that shows a collection view of different pokemons and their stats  
