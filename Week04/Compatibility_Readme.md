@@ -1,11 +1,11 @@
-**Week 04 (Monday 15 June to Sunday 21 June**  
+**Week 04.**
 
 ## Compatibility Slider: 
 <!-- I´m gonna substitute the table with images for a parragraph in html tags to obtain the same result but without the table lines
 | ![user1](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark1.png "User1 playing") | ![result](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/landscapeLight.png "final score") | ![user2](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png "User2 playing") |
 | --- | --- | --- |  
 -->
-
+CompatibilitySlider gives you a compatibility percentage between two persons after each one evaluates different topics.  
 <p align="center">
 	<img src="../Week04/Assets/portraitDark1.png" height="450"/>
 	<img src="../Week04/Assets/landscapeLight.png" width="450"/>
@@ -17,11 +17,10 @@
 [![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
 
-The task consists in finishing a partial project (fixing UI, giving it logic, etc.):  
+## Final Considerations.  
 
 ### As for the **UI** of the app I did the following updates:
 - I have **created a CompatibilityGame Model** which is the Model of the app.  
-
 - Control between the Model and the UI is performed by the Controller (our viewController in the app), BUT **I added a `func restart()`method to the Model** just because in my opinion **the model should be able to control** its initial state during the game, I mean **not all the states** but **at least the initial one (the reset())**, performing the default operations to prepare it to be used by the Controller. The controller is who gives the order to reset it (it made a call to reset() using the game object instantiated in it, and takes control of other settings that are being controlled by itself).
 - Added StackViws and constraints to Story Board:
 - A **touch of color was given** to made it a little nicer, and usable, in both **light and dark modes** as well as **land and portrait orientations**.
