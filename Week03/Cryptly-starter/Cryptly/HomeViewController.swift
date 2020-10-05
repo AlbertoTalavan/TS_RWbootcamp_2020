@@ -76,16 +76,21 @@ class HomeViewController: UIViewController{
   //MARK: - Setting Up Views
   func applyRoundToWidgetView(whichOne myView: WidgetView){
  
-    //applying round() with different cornerRadius values
-    switch myView {
-    case view1: myView.setCornerRadius(to: 30)
-    case view2, view3: myView.setCornerRadius(to: 10 )
-    case fallingView, risingView:
-      myView.setCornerRadius(to: 35)
-      //myView.clipsToBounds = true
-    default:
-      break
-    }
+//    //applying round() with different cornerRadius values (just to try different ones)
+//    switch myView {
+//    case view1: myView.setCornerRadius(to: 30) //30
+//    case view2, view3: myView.setCornerRadius(to: 10 ) //10
+//    case fallingView, risingView:
+//      myView.setCornerRadius(to: 35) //35
+//      //myView.clipsToBounds = true
+//    default:
+//      break
+//    }
+//    myView.round()
+    
+    //applying round() with SAME cornerRadius values (better UI)
+    let radius: CGFloat = 15
+    myView.setCornerRadius(to: radius)
     myView.round()
     
   }
