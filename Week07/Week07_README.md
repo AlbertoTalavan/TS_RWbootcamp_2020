@@ -25,6 +25,6 @@ BirdUI is a remake of Birdie but this time completely in SwiftUI. Users can add 
 >if #available(iOS13, *) {
 >  print("  SwiftUI  let´s go!!! 🎉🥳🎉  ")
 >} else {
->  fatalError("  😓 mmm meh!  ")
+>  fatalError("  😓 mmm meh!")
 >}
 >```
