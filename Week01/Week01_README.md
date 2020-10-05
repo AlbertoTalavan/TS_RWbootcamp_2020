@@ -1,7 +1,6 @@
 # Week 01.
 
-
-### Color Picker app  
+### Color Picker app.
 
 | ![gif light](/Week01/Assets-Gifs/ColorPicker-light.gif) | ![gif dark](/Week01/Assets-Gifs/ColorPicker-dark.gif) |
 | ------------------------------------------------------- | ----------------------------------------------------- | 
