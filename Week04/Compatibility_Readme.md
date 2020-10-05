@@ -22,6 +22,7 @@ CompatibilitySlider gives you a compatibility percentage between two persons aft
 - Storyboards
 - Autolayout
 - UIKit
+- Unit Tests
 
 ## Final Considerations.  
 
