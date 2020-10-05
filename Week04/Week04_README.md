@@ -1,4 +1,4 @@
-# Week 04 (Monday 15 June to Sunday 21 June)
+# Week 04.
 
 As the explanation of two projects was quite extensive for just one readme file, I have splitted it into two.
 
