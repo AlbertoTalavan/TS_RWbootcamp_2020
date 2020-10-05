@@ -1,8 +1,23 @@
-# WEEK 3  (Monday 8th June to Sunday 14th June)
+# WEEK 03.
 
-## Cryptly app 
+### Cryptly app 
+Criptly is an app that parses all cryptocurrencies from an embedded JSON file, and shows them on a screen simulating widget-like view.  
 
-This week is more about the code than the layout (use of protocols, named types, extensions...)  
+<p align="center"> <!-- using the assets directory -->
+  <img src="/Week03/Assets/pic01.png" height="500"/>
+	<img src="/Week03/Assets/picLight.png" height="500"/> 
+	<img src="/Week03/Assets/picDark.png" height="500"/>
+</p>
+
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+[![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
+
+## Tech Stack
+- Storyboard
+- UIKit
+- Custom Light/Dark themes (
+
+## Final considerations.  
 
 **In order to refactor the setupViews() function:**
 - I have created a final class named **WidgetView** that **inherit from UIView and comforms to Roundable protocol**. This way I am able to apply round squares directly to the widgetViews. It also has a method to set the components that are equal to all Views.
