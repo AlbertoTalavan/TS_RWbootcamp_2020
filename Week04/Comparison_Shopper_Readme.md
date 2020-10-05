@@ -1,8 +1,12 @@
-**Week 04 (Monday 15 June to Sunday 21 June**
+**Week 04.**
  
-## Debugging Comparison Shopper: 
+### Debugging Comparison Shopper: 
 We are given a crashing app and our mission is to solve a pair or three sneaky problems we will face.  
-
+<p align="center"> <!-- using the assets directory -->
+  <img src="/Week04/Assets/pic01Comparison.png" height="500"/>
+	<img src="/Week04/Assets/pic02Comparison.png" height="500"/> 
+	<img src="/Week04/Assets/pic03Comparison.png" height="500"/>
+</p>
 
 - The app does not run. That was produced because of some problems:
   - **house1 was not instantiated**: it was **created as an optional** `var house1: House?` **but never instantiated**,
