@@ -1,8 +1,7 @@
-# WEEK 1 apps (Monday 25 to Thursday 28 of 2020)
+# Week 01.
 
 
-## 01-rgbColorPicker app  
-#### (first assignment to do on our own)
+**Color Picker app**  
 
 | ![gif light](/Week01/Assets-Gifs/ColorPicker-light.gif) | ![gif dark](/Week01/Assets-Gifs/ColorPicker-dark.gif) |
 | ------------------------------------------------------- | ----------------------------------------------------- | 
@@ -12,14 +11,12 @@
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
 [![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
 
+#### Tech Stack.
+- Storyboard (and *vary for traits* for orientation changes) 
+- UIKit  
+- WebKit  
 
-**Previous considerations**  
-I used the AutoLayout and the StoryBoard as required for this assignment. It is optimized for and iPhone SE screen size but 
-it can be run on any iPhone supporting iOS13.  
-
-I could adjust the screen for any screen resolution doing it programatically but I choose do it with StoryBoard just to 
-practice the *AutoLayout* there and the *vary for traits* ...but I will to improve it ^^!
-
+#### Final Considerations.
 I have made some changes to the original assignment (and here is why):  
 - The sliders default position **now is different** depending of the light or dark mode the device is when it runs the
   app. If the **device is in light mode** then the **default value will be black** (rgb:0,0,0 or hsb:0,0,0), and if the
