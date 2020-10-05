@@ -1,11 +1,13 @@
 **Week 04.**
 
-## Compatibility Slider: 
+### Compatibility Slider: 
+CompatibilitySlider gives you a compatibility percentage between two persons after each one evaluates different topics.  
+
 <!-- I´m gonna substitute the table with images for a parragraph in html tags to obtain the same result but without the table lines
 | ![user1](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark1.png "User1 playing") | ![result](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/landscapeLight.png "final score") | ![user2](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04/Assets/portraitDark2.png "User2 playing") |
 | --- | --- | --- |  
 -->
-CompatibilitySlider gives you a compatibility percentage between two persons after each one evaluates different topics.  
+
 <p align="center">
 	<img src="../Week04/Assets/portraitDark1.png" height="450"/>
 	<img src="../Week04/Assets/landscapeLight.png" width="450"/>
