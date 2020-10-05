@@ -10,6 +10,13 @@ BirdUI is a remake of Birdie but this time completely in SwiftUI. Users can add 
 	<img src="/Week07/Assets/pic04.png" height="450"/>
 </p>
 
+## Tech Stack.
+- SwiftUI
+- UIKit
+- MVVM
+
+---
+
 >
 >```Swift
 >if #available(iOS13, *) {
