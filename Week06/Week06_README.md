@@ -28,8 +28,6 @@ PokeDex is a simple app that shows a collection view of different pokemons and t
 - CollectionView (using **flow layout**)
 
 ## Final Considerations.
-I have used **Flow layout**
-
->possible improvements in the future:
-> - do the same project using diffable data source and compositional layout.
+possible improvements in the future:
+- do the same project using diffable data source and compositional layout.
 
