@@ -8,6 +8,7 @@ We are given a crashing app and our mission is to solve a pair or three sneaky p
 	<img src="/Week04/Assets/pic03Comparison.png" height="500"/>
 </p>
 
+## Final considerations.
 - The app does not run. That was produced because of some problems:
   - **house1 was not instantiated**: it was **created as an optional** `var house1: House?` **but never instantiated**,
   - and it was **called** even **before** of **giving it values for its properties*.
