@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CompatibilitySlider-Start
 //
-//  Created by Jay Strawn on 6/16/20.
-//  Copyright © 2020 Jay Strawn. All rights reserved.
+//  Created by Alberto Talaván on 6/16/20.
+//  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
 import UIKit
