@@ -48,7 +48,7 @@ If I would used a struct:
 
 As requested, and in order to test it, I have used the same model I did in the previous exercise  (BullsEyeMVC)
 
-**Final Considerations:**
+**Final Considerations:**  
 I have made some minor changes to the exercise proposed in the assignment:  
 - **Added a hint switch:** and **_I Love this one._** It will be showed if you get less than 95 points in your last 2 attempts to match (your last 2 rounds), and it will fade away after you get a score above it (≥ 95),
 - Due to the previous one I have also **modified the AboutViewController text** adding the info about the "Hint"
