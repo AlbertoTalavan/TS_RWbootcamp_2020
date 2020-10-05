@@ -1,6 +1,6 @@
 # Week 06 (Monday 29 June to Sunday 5 July)
 
-## PokeDex
+### PokeDex
 PokeDex is a simple app that shows a collection view of different pokemons and their stats  
 
 <!-- I´m using html paragraph tag in order to do not show the table lines
@@ -19,11 +19,17 @@ PokeDex is a simple app that shows a collection view of different pokemons and t
 
 ## Considerations.
 - it is mandatory 3 columns of cards in portrait and landscape (whatever the screensize is) using the first tab bar item, and
-- for the second tab bar item we just have to show 1 card in portrait mode
+- for the second tab bar item we just have to show 1 card in portrait mode.
+
+## Tech Stack.
+- Storyboards
+- Autolayout
+- UIKit
+- CollectionView (using **flow layout**)
 
 ## Final Considerations.
 I have used **Flow layout**
 
 >possible improvements in the future:
-> - do the same project using diffable data source and compositional layout
+> - do the same project using diffable data source and compositional layout.
 
