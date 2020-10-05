@@ -1,4 +1,4 @@
-# Week 07 (Monday 6 July to Sunday 12 July)
+# Week 07.
 
 ### BirdUI.
 BirdUI is a remake of Birdie but this time completely in SwiftUI. Users can add new posts, mark as favorite a post and fiilter by words in the upper search bar.
