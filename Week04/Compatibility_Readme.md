@@ -20,7 +20,7 @@ CompatibilitySlider gives you a compatibility percentage between two persons aft
 
 ## Tech Stack.
 - Storyboards
-- AutoLayout
+- Autolayout
 - UIKit
 
 ## Final Considerations.  
