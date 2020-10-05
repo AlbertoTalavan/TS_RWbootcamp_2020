@@ -3,7 +3,7 @@
 //  Compatibility_Slider
 //
 //  Created by Alberto Talaván on 19/06/2020.
-//  Copyright © 2020 Jay Strawn. All rights reserved.
+//  Copyright © 2020 Alberto Talaván. All rights reserved.
 //
 
 import Foundation
