@@ -14,7 +14,7 @@ Criptly is an app that parses all cryptocurrencies from an embedded JSON file, a
 
 ## Tech Stack
 - Storyboard
-- AutoLayout
+- Autolayout
 - UIKit
 - Custom Light/Dark themes (
 
