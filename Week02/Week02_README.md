@@ -1,11 +1,15 @@
-# WEEK 2  (Monday 1st June to Sunday 7th June)
+# Week 02.
 
-This week assignments :
+#### This week assignments:
 - **Bull´s Eye MVC:** this one is mandatory, 
 - **RGB Bull´s Eye:** also mandatory,  
 - **Reversed Bulls Eye:** I know, you are thinking of mandatoriness of this one too...  
                        but....NOPE!!, this is the optional one ...SURPRISE!!!! 
                        Pretty sure you didn´t expect it huh?.
+                       
+#### Tech Stack: 
+- Storyboards
+- UIKit
 ---
 
 ## Bull´s Eye MVC
