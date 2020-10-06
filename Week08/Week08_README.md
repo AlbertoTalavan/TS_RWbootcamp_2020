@@ -12,6 +12,9 @@ Sandwich Saturation is an app that shows a list of sandwiches, their names, imag
   <img src="/Week08/Assets/pic03.png" height="500"/>
 </p> 
 
+[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
+![iOS](https://img.shields.io/badge/iOS-13.2+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)
+
 
 ## Tech Stack.
 - Storyboards
