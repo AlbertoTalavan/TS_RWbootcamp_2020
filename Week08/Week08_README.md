@@ -1,4 +1,4 @@
-# Week 08 (Monday 13 July to Sunday 19 July)
+# Week 08.
 
 ### Sandwich Saturation.
 Sandwich Saturation is an app that shows a list of sandwiches, their names, images, and amount of sauce they have. Our goals are:  
