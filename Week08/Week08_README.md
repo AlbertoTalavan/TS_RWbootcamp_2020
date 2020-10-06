@@ -21,5 +21,5 @@ Sandwich Saturation is an app that shows a list of sandwiches, their names, imag
 - Autolayout
 - UIKit
 - JSON (initial embed file whose purpose is to be a data seed)
-- Core Data (after first launch all data is **updated** (save)**/ read** (write) **to/from Core Data**)  
+- Core Data (after first launch all data is **updated** (write)**/ read** (load) **to/from Core Data**)  
 
