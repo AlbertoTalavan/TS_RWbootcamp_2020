@@ -141,6 +141,9 @@ internal func MyGoals() -> String {
 #### Extra
 [Setting up Core Data with Cloudkit.](https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/setting_up_core_data_with_cloudkit)<br />
 [Navigating de iOS interview.](https://www.raywenderlich.com/10625296-navigating-the-ios-interview)<br />
+#### Extra +
+[SOLID Principles Applied to Swift.](https://marcosantadev.com/solid-principles-applied-swift/)<br />
+[SOLID Design Principles using Swift (easier to understand).](https://medium.com/ios-expert-series-or-interview-series/solid-design-principle-using-swift-34bb1731cfb3)<br />
 #### Homework
 [Week 08 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week08)
 ***
