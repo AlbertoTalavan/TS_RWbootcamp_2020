@@ -88,75 +88,85 @@ internal func MyGoals() -> String {
 
 ### Week 01 
 #### Course
-[Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+[Your first iOS and UIKit app.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
 #### Homework
-[Week 01 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week01)
+[Week 01 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week01)
 ***
 ### Week 02
 #### Course
-[Programming in Swift: Fundamentals](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+[Programming in Swift: Fundamentals.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
 #### Homework
-[Week 02 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week02)
+[Week 02 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week02)
 ***
 ### Week 03
 #### Course
-[Programming in Swift: Functions and Types](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+[Programming in Swift: Functions and Types.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
 #### Homework
-[Week 03 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week03)
+[Week 03 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week03)
 ***
 ### Week 04
 #### Course
-[Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)<br />
-[Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)<br />
-[Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)<br />
+[Beginning iOS Debugging.](https://www.raywenderlich.com/4681-beginning-ios-debugging)<br />
+[Layout in iOS.](https://www.raywenderlich.com/6849561-layout-in-ios)<br />
+[Unit and UI Testing.](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)<br />
+#### Extra
+[Debugging with lldb.](https://medium.com/flawless-app-stories/debugging-swift-code-with-lldb-b30c5cf2fd49)<br />
 #### Homework
-[Week 04 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week04)
+[Week 04 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week04)
 ***
 ### Week 05
 #### Course
-[Beginning Table Views](https://www.raywenderlich.com/5995-beginning-table-views)
+[Beginning Table Views.](https://www.raywenderlich.com/5995-beginning-table-views)
 #### Homework
-[Week 05 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week05)
+[Week 05 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week05)
 ***
 ### Week 06
 #### Course
-[Beginning Collection Views](https://www.raywenderlich.com/5429927-beginning-collection-views)
+[Beginning Collection Views.](https://www.raywenderlich.com/5429927-beginning-collection-views)
 #### Homework
-[Week 06 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week06)
+[Week 06 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week06)
 ***
 ### Week 07
 #### Course
-[Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)<br />
-[Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)<br />
-[SwiftUI](https://www.raywenderlich.com/4001741-swiftui)<br />
+[Your First iOS and SwiftUI app.](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)<br />
+[Your Second iOS and SwiftUI app.](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)<br />
+[SwiftUI.](https://www.raywenderlich.com/4001741-swiftui)<br />
 #### Homework
-[Week 07 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week07)
+[Week 07 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week07)
 ***
 ### Week 08
 #### Course
-[Beginning Core Data](https://www.raywenderlich.com/7104-beginning-core-data)<br />
-[Saving Data in iOS](https://www.raywenderlich.com/5429634-saving-data-in-ios)<br />
+[Beginning Core Data.](https://www.raywenderlich.com/7104-beginning-core-data)<br />
+[Saving Data in iOS.](https://www.raywenderlich.com/5429634-saving-data-in-ios)<br />
+#### Extra
+[Setting up Core Data with Cloudkit.](https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/setting_up_core_data_with_cloudkit)<br />
+[Navigating de iOS interview.](https://www.raywenderlich.com/10625296-navigating-the-ios-interview)<br />
 #### Homework
-[Week 08 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week08)
+[Week 08 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week08)
 ***
 ### Week 09
 #### Course
-[Networking with URLSession](https://www.raywenderlich.com/10376245-networking-with-urlsession)<br />
-[Fundamental iOS Design Patterns](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)<br />
+[Networking with URLSession.](https://www.raywenderlich.com/10376245-networking-with-urlsession)<br />
+[Fundamental iOS Design Patterns.](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)<br />
 #### Homework
-[Week 09 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week09)
+[Week 09 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week09)
 ***
 ### Week 10
 #### Course
-[iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)<br />
-[ARC & Memory Management](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)<br />
+[iOS Concurrency with GCD and Operations.](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)<br />
+[ARC & Memory Management.](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)<br />
+#### Extra
+[Swift´s Closure capturing mechanics (by: John Sundell).](https://www.swiftbysundell.com/articles/swifts-closure-capturing-mechanics/)<br />
 #### Homework
-[Week 10 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week10)
+[Week 10 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week10)
 ***
 ### Week 11
 #### Course
-[Beginning iOS Animations](https://www.raywenderlich.com/10523008-beginning-ios-animations)<br />
-[Xcode Tips & Tricks](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)<br />
+[Beginning iOS Animations.](https://www.raywenderlich.com/10523008-beginning-ios-animations)<br />
+[Xcode Tips & Tricks.](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)<br />
+#### Extra
+[Intermediate iOS Animations.](https://www.raywenderlich.com/4226-intermediate-ios-animations)<br />
+[iOS Views and Animations: Learning by Stealing(PRO).](https://www.raywenderlich.com/267496-ios-views-and-animations-learning-by-stealing)<br />
 #### Homework
-[Week 11 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week11)
+[Week 11 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week11)
 ***
