@@ -4,7 +4,7 @@ JQuiz is an app featuring Jeopardy-like quiz that **fetches data from the [JServ
 The network call returns only 4 clues. The question for the category is closen randomly from the array of those 4 returned clues.  
 The app also allows to **play/pause background music** during the game and the actual user selection setting is persisted between relaunches.
 
-<p align="left"> <!-- using the assets directory -->
+<p align="center"> <!-- using the assets directory -->
 	<img src="/Week09/Assets/pic01.png" height="500"/> 
 	<img src="/Week09/Assets/pic02.png" height="500"/>
 </p>   
