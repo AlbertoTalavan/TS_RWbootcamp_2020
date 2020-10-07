@@ -1,5 +1,6 @@
-# Week 11 (Monday 3 August to Sunday 9 August)
+# Week 11.
 
+### FlyMator.
 This week was about beginning with animations... but is well known that: ___**'one ~~gif~~ image  is worth a thousand words'**___ so
 here is the gif 🥳  
 
@@ -9,5 +10,12 @@ here is the gif 🥳
 
 [![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg?longCache=true&style=flat&logo=swift)](https://www.swift.org)
 [![iOS](https://img.shields.io/badge/iOS-13.0+-lightgrey.svg?longCache=true&?style=plastic&logo=apple)](https://developer.apple.com/ios/)
+
+
+### Tech Stack.
+- Storyboards
+- Autolayout
+- UIKit
+- Animations
 
  
