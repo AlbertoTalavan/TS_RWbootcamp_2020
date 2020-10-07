@@ -1,4 +1,9 @@
-# Week 10 (Monday 27 July to Sunday 2 August)
+# Week 10.
 
-This week is about GCD.
+### Playground with concurrent animations.
+This homework consists in a short playground exercise about **extending UIView to accept a _DispatchGroup_ argument** and show an _Animations Complete!_ message when the animation completes.
+
+## Tech Stack
+- Foundation
+- PlaygroundSupport
 
