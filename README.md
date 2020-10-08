@@ -87,134 +87,136 @@ internal func MyGoals() -> String {
  ## iOS Bootcamp Curriculum
 Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
-### Week 01.
 <details>
 <summary>Week 01. Your First iOS and UIKit app</summary>
 
-- 📚 Course
+- 📚 Video course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
+- 📱 Homework:
     - [Week 01 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
 
 </details>
 
-### Week 02
-<details>
-<summary>Week 02. </summary>
 
-- 📚 Course
-    - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 02. homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+<details>
+<summary>Week 02. Programming in Swift: Fundamentals</summary>
+
+- 📚 Video course:
+    - [Programming in Swift: Fundamentals](https://www.raywenderlich.com/5539282-programming-in-swift-fundamentals)
+- 📱 Homework:
+    - [Week 02. homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week02)
 
 </details>
 
-### Week 03.
-<details>
-<summary>Week 03. </summary>
 
-- 📚 Course
-    - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 03 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+<details>
+<summary>Week 03. Programming in Swift: Functions and Types</summary>
+
+- 📚 Video course:
+    - [Programming in Swift: Functions and Types.](https://www.raywenderlich.com/5429279-programming-in-swift-functions-and-types)
+- 📱 Homework:
+    - [Week 03 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week03)
 
 </details>
 
-### Week 04.
-<details>
-<summary>Week 04. </summary>
 
-- 📚 Course
-    - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 04 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+<details>
+<summary>Week 04. Layout, testing and debugging</summary>
+
+- 📚 Video course:
+    - [Beginning iOS Debugging.](https://www.raywenderlich.com/4681-beginning-ios-debugging)
+    - [Layout in iOS.](https://www.raywenderlich.com/6849561-layout-in-ios)
+- 📚 Article:
+    - [Unit and UI Testing.](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)
+- 📱 Homework:
+    - [Week 04 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week04)
 
 </details>
 
-### Week 05.
-<details>
-<summary>Week 05. </summary>
 
-- 📚 Course
+<details>
+<summary>Week 05. Beginning Table views</summary>
+
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 05 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 05 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week05)
 
 </details>
 
-### Week 06.
+
 <details>
 <summary>Week 06. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 06 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 06 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week06)
 
 </details>
 
-### Week 07.
+
 <details>
 <summary>Week 07. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 07 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 07 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week07)
 
 </details>
 
-### Week 08
+
 <details>
 <summary>Week 08. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 08 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 08 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week08)
 
 </details>
 
-### Week 09.
+
 <details>
 <summary>Week 09. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 09 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 09 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week09)
 
 </details>
 
-### Week 10.
+
 <details>
 <summary>Week 10. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 10 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 10 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week10)
 
 </details>
 
-### Week 11.
+
 <details>
 <summary>Week 11. - Your First iOS and UIKit app</summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 11 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 11 homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week11)
 
 </details>
 
-### Week 12.
+
 <details>
 <summary>Week 12. </summary>
 
-- 📚 Course
+- 📚 Course:
     - [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework
-    - [Week 12. homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01)
+- 📱 Homework:
+    - [Week 12. homework solution](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week12)
 
 </details>
