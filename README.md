@@ -85,12 +85,22 @@ internal func MyGoals() -> String {
  ``` 
  
  ## iOS Bootcamp Curriculum
+Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
 ### Week 01 
 #### Course
 [Your first iOS and UIKit app.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
 #### Homework
 [Week 01 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week01)
+***
+## Alternative to show data
+<details>
+	<summary><b>Week 04. Layout, testing and debugging</b></summary>
+	<p>
+	📚 Video course: <a href="https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app">Your first iOS and UIKit app</a><br/>
+	📱 Assignment: <a href="https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/blob/master/Week01/Week01_README.md">Week 01 homework solution</a>
+</details>  
+
 ***
 ### Week 02
 #### Course
