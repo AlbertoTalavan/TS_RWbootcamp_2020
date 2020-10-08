@@ -1,14 +1,18 @@
 # Ray Wenderlich iOS Summer Bootcamp 2020.
 
-### Name: 
+## 👨‍💻 Who am I.
+
+### _Name_: 
 ```Swift
 class Alberto: Talaván.
 ```
 
-### Discord username:  
-![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord "Alberto T#5557") 
+### _How can you reach me:_ 
+- [![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
+- ![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin) 
+- ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord "Alberto T#5557") 
 
-### Basic Location:  
+### _Basic Location:_  
 ```Swift
 struct WhereAmI: CLLocationManagerDelegate {
  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { 
@@ -21,14 +25,8 @@ struct WhereAmI: CLLocationManagerDelegate {
    }
 }
  ```
----
- **Contact Info:**  
-[![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
-![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin)  
 
----
-
-### Programming Experience:  
+### _Programming Experience:_  
 ```Swift
 public func MyJobExperience (as developer: [Job], and other: [Job]) -> String {
 """
@@ -44,17 +42,8 @@ public func MyJobExperience (as developer: [Job], and other: [Job]) -> String {
 }
 ```  
 
-### Goals: 
-```Swift
-var futureSelf = MyLife.shared
-
-internal func MyGoals() -> String {
-   futureSelf.getMyGoals
-   #warning("""
-         Become a great iOS Architect, and make a living doing it!!
-   """)
-}
-```  
+### _Goals:_ 
+Changing careers from Security ¢ Networking to iOS Development/Architect
 
 ### Hobbies / Interests:  
 
@@ -84,8 +73,8 @@ internal func MyGoals() -> String {
   //and so much more...  
  ``` 
  
- ## iOS Bootcamp Curriculum
-Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
+ ## 👨‍🎓 iOS Bootcamp Curriculum.
+Details about this initiative at  [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
 <details>
 <summary><b>Week 01. Your First iOS and UIKit app.</b></summary>
