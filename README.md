@@ -1,4 +1,4 @@
-# Ray Wenderlich Summer Bootcamp 2020.
+# Ray Wenderlich iOS Summer Bootcamp 2020.
 
 ### Name: 
 ```Swift
@@ -6,7 +6,7 @@ class Alberto: Talaván.
 ```
 
 ### Discord username:  
-![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord) 
+![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord "Alberto T#5557") 
 
 ### Basic Location:  
 ```Swift
