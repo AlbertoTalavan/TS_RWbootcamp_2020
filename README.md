@@ -90,8 +90,8 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 01. Your First iOS and UIKit app.</summary>
 
-- 📚 Video Course:
-    - [Your first iOS and UIKit app.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+- 📚 Lecture:
+    - Video: [Your first iOS and UIKit app.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
 - 📱 Assignment:
     - [Week 01 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week01)
 
@@ -101,7 +101,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 02. Programming in Swift: Fundamentals.</summary>
 
-- 📚 Video Course:
+- 📚 Lecture:
     - [Programming in Swift: Fundamentals.](https://www.raywenderlich.com/5539282-programming-in-swift-fundamentals)
 - 📱 Assignment:
     - [Week 02 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week02)
@@ -112,7 +112,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 03. Programming in Swift: Functions and Types.</summary>
 
-- 📚 Video Course:
+- 📚 Lecture:
     - [Programming in Swift: Functions and Types.](https://www.raywenderlich.com/5429279-programming-in-swift-functions-and-types)
 - 📱 Assignment:
     - [Week 03 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week03)
@@ -123,7 +123,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 04. Layout, Testing and Debugging.</summary>
 
-- 📚 Video Course:
+- 📚 Lectures:
     - [Beginning iOS Debugging.](https://www.raywenderlich.com/4681-beginning-ios-debugging)
     - [Layout in iOS.](https://www.raywenderlich.com/6849561-layout-in-ios)
 - 📚 Article:
@@ -137,7 +137,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 05. Beginning Table Views.</summary>
 
-- 📚 Video Course:
+- 📚 Lecture:
     - [Beginning Table Views.](https://www.raywenderlich.com/5995-beginning-table-views)
 - 📱 Assignment:
     - [Week 05 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week05)
@@ -148,7 +148,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 06. Beginning Collection Views.</summary>
 
-- 📚 Video Course:
+- 📚 Lecture:
     - [Beginning Collection Views.](https://www.raywenderlich.com/5429927-beginning-collection-views)
 - 📱 Assignment:
     - [Week 06 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week06)
@@ -159,7 +159,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 07. SwiftUI.</summary>
 
-- 📚 Video Courses:
+- 📚 Lectures:
     - [Your First iOS and SwiftUI app.](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
     - [Your Second iOS and SwiftUI app.](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)
     - [SwiftUI.](https://www.raywenderlich.com/4001741-swiftui)
@@ -172,14 +172,14 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 08. Data Persistance.</summary>
 
-- 📚 Video Courses:
+- 📚 Lectures:
     - [Beginning Core Data.](https://www.raywenderlich.com/7104-beginning-core-data)
     - [Saving Data in iOS.](https://www.raywenderlich.com/5429634-saving-data-in-ios)
 - 📚 Article (from Apple documentation):
-    - [Setting up Core Data with Cloudkit.](https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/setting_up_core_data_with_cloudkit)
-- 📚 Extra Articles:
-    - [SOLID Principles Applied to Swift.](https://marcosantadev.com/solid-principles-applied-swift/)
-    - [SOLID Design Principles using Swift (easier to understand).](https://medium.com/ios-expert-series-or-interview-series/solid-design-principle-using-swift-34bb1731cfb3)
+    - 📄 Article: [Setting up Core Data with Cloudkit.](https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/setting_up_core_data_with_cloudkit)
+- 📚 Extra Lectures:
+    - 📄 Article: [SOLID Principles Applied to Swift.](https://marcosantadev.com/solid-principles-applied-swift/)
+    - 📄 Article: [SOLID Design Principles using Swift (easier to understand).](https://medium.com/ios-expert-series-or-interview-series/solid-design-principle-using-swift-34bb1731cfb3)
 - 📱 Assignment:
     - [Week 08 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week08)
 
@@ -189,7 +189,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 09. Networking and Design Patterns.</summary>
 
-- 📚 Video Courses:
+- 📚 Lectures:
     - [Networking with URLSession.](https://www.raywenderlich.com/10376245-networking-with-urlsession)
     - [Fundamental iOS Design Patterns.](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)
 - 📱 Assignment:
@@ -201,11 +201,11 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 10. Concurrency and Memory Management.</summary>
 
-- 📚 Video Courses:
+- 📚 Lecture:
     - [iOS Concurrency with GCD and Operations.](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)
     - [ARC & Memory Management.](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)
-- 📚 Extra Article:   
-    - [Swift´s Closure capturing mechanics (by: John Sundell).](https://www.swiftbysundell.com/articles/swifts-closure-capturing-mechanics/)
+- 📚 Extra Lecture:   
+    - 📄 Article: [Swift´s Closure capturing mechanics (by: John Sundell).](https://www.swiftbysundell.com/articles/swifts-closure-capturing-mechanics/)
 - 📱 Assignment:
     - [Week 10 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week10)
 
@@ -215,10 +215,10 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 11. Animations and Xcode Tips & Tricks.</summary>
 
-- 📚 Video Courses:
+- 📚 Lectures:
     - [Beginning iOS Animations.](https://www.raywenderlich.com/10523008-beginning-ios-animations)
     - [Xcode Tips & Tricks.](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)
-- 📚 Extra Video Courses:
+- 📚 Extra Lectures:
     - [Intermediate iOS Animations.](https://www.raywenderlich.com/4226-intermediate-ios-animations)
     - [iOS Views and Animations: Learning by Stealing(PRO).](https://www.raywenderlich.com/267496-ios-views-and-animations-learning-by-stealing)
 - 📱 Assignment:
@@ -226,3 +226,4 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 
 </details>
 
+📝📄
