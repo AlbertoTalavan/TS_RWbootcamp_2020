@@ -90,9 +90,9 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 01. Your First iOS and UIKit app.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Your first iOS and UIKit app.](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 01 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week01)
 
 </details>
@@ -101,9 +101,9 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 02. Programming in Swift: Fundamentals.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Programming in Swift: Fundamentals.](https://www.raywenderlich.com/5539282-programming-in-swift-fundamentals)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 02 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week02)
 
 </details>
@@ -112,9 +112,9 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 03. Programming in Swift: Functions and Types.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Programming in Swift: Functions and Types.](https://www.raywenderlich.com/5429279-programming-in-swift-functions-and-types)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 03 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week03)
 
 </details>
@@ -123,12 +123,12 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 04. Layout, Testing and Debugging.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Beginning iOS Debugging.](https://www.raywenderlich.com/4681-beginning-ios-debugging)
     - [Layout in iOS.](https://www.raywenderlich.com/6849561-layout-in-ios)
 - 📚 Article:
     - [Unit and UI Testing.](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 04 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week04)
 
 </details>
@@ -137,9 +137,9 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 05. Beginning Table Views.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Beginning Table Views.](https://www.raywenderlich.com/5995-beginning-table-views)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 05 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week05)
 
 </details>
@@ -148,9 +148,9 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 06. Beginning Collection Views.</summary>
 
-- 📚 Video course:
+- 📚 Video Course:
     - [Beginning Collection Views.](https://www.raywenderlich.com/5429927-beginning-collection-views)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 06 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week06)
 
 </details>
@@ -159,11 +159,11 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 07. SwiftUI.</summary>
 
-- 📚 Video courses:
+- 📚 Video Courses:
     - [Your First iOS and SwiftUI app.](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
     - [Your Second iOS and SwiftUI app.](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)
     - [SwiftUI.](https://www.raywenderlich.com/4001741-swiftui)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 07 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week07)
 
 </details>
@@ -180,7 +180,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 - 📚 Extra Articles:
     - [SOLID Principles Applied to Swift.](https://marcosantadev.com/solid-principles-applied-swift/)
     - [SOLID Design Principles using Swift (easier to understand).](https://medium.com/ios-expert-series-or-interview-series/solid-design-principle-using-swift-34bb1731cfb3)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 08 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week08)
 
 </details>
@@ -189,10 +189,10 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 <details>
 <summary>Week 09. Networking and Design Patterns.</summary>
 
-- 📚 Video courses:
+- 📚 Video Courses:
     - [Networking with URLSession.](https://www.raywenderlich.com/10376245-networking-with-urlsession)
     - [Fundamental iOS Design Patterns.](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 09 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week09)
 
 </details>
@@ -206,7 +206,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
     - [ARC & Memory Management.](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)
 - 📚 Extra Article:   
     - [Swift´s Closure capturing mechanics (by: John Sundell).](https://www.swiftbysundell.com/articles/swifts-closure-capturing-mechanics/)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 10 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week10)
 
 </details>
@@ -221,7 +221,7 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 - 📚 Extra Video Courses:
     - [Intermediate iOS Animations.](https://www.raywenderlich.com/4226-intermediate-ios-animations)
     - [iOS Views and Animations: Learning by Stealing(PRO).](https://www.raywenderlich.com/267496-ios-views-and-animations-learning-by-stealing)
-- 📱 Homework:
+- 📱 Assignment:
     - [Week 11 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week11)
 
 </details>
