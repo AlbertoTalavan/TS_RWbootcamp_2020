@@ -226,4 +226,3 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 
 </details>
 
-📝  📄  👨‍💻   👨‍💻  🎥 
