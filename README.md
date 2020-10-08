@@ -211,19 +211,6 @@ Details: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/1040873
 
 </details>
 
-<details>
-<summary>Week 10. Concurrency and Memory Management.</summary>
-
-📚 Lecture:<br/>
-    📹 [iOS Concurrency with GCD and Operations.](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)<br/>
-    📹 [ARC & Memory Management.](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)<br/>
-📚 Extra Lecture:<br/>
-    📝 [Swift´s Closure capturing mechanics (by: John Sundell).](https://www.swiftbysundell.com/articles/swifts-closure-capturing-mechanics/)<br/>
-📱 Assignment:<br/>
-    [Week 10 homework solution.](https://github.com/AlbertoTalavan/TS_RWbootcamp_2020/tree/master/Week10)<br/>
-
-</details>
-
 
 <details>
 <summary><b>Week 11. Animations and Xcode Tips & Tricks.</b></summary>
