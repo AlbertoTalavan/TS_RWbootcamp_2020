@@ -13,7 +13,7 @@ Changing careers from Security ¢ Networking to iOS Developer/Architect
 
  
  ## 👨‍🎓 iOS Bootcamp Curriculum.
-All the details at: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
+Complete the details at: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
 <details>
 <summary><b>Week 01. Your First iOS and UIKit app.</b></summary>
