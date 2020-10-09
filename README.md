@@ -11,9 +11,8 @@ Madrid - SPAIN 🇪🇸
 ### _Goals:_ 
 Changing careers from Security ¢ Networking to iOS Developer/Architect
 
----
  
- <H2> 👨‍🎓 iOS Bootcamp Curriculum.</H2>
+ ## 👨‍🎓 iOS Bootcamp Curriculum.
 All the details at: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
 <details>
