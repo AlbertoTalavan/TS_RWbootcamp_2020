@@ -3,28 +3,16 @@
 ## 👨‍💻 Who am I.
 
 ### _Name_: 
-```Swift
-class Alberto: Talaván.
-```
+**Alberto: Talaván.**
+
 
 ### _How can you reach me:_ 
 - [![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
 - ![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin) 
 - ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord "Alberto T#5557") 
 
-### _Basic Location:_  
-```Swift
-struct WhereAmI: CLLocationManagerDelegate {
- func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { 
- 
-      var currentLocation = locations.last
-      #warning("""
-                      Madrid - SPAIN 🇪🇸
-                   
-               """)
-   }
-}
- ```
+### _Current Location:_  
+Madrid - SPAIN 🇪🇸
 
 ### _Programming Experience:_  
 ```Swift
@@ -43,7 +31,7 @@ public func MyJobExperience (as developer: [Job], and other: [Job]) -> String {
 ```  
 
 ### _Goals:_ 
-Changing careers from Security ¢ Networking to iOS Development/Architect
+Changing careers from Security ¢ Networking to iOS Developer/Architect
 
 ### Hobbies / Interests:  
 
@@ -74,7 +62,7 @@ Changing careers from Security ¢ Networking to iOS Development/Architect
  ``` 
  
  ## 👨‍🎓 iOS Bootcamp Curriculum.
-Details about this initiative at  [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
+All the details at: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
 
 <details>
 <summary><b>Week 01. Your First iOS and UIKit app.</b></summary>
