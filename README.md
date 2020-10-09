@@ -5,61 +5,13 @@
 ### _Name_: 
 **Alberto: Talaván.**
 
-
-### _How can you reach me:_ 
-- [![twitter](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=twitter)](https://twitter.com/albertotalavan)
-- ![LinkedIn](https://img.shields.io/badge/-@AlbertoTalavan-00ACEE.svg?style=social&logo=linkedin) 
-- ![discord](https://img.shields.io/badge/-TS:%20Alberto%20Talavan-00ACEE.svg?style=social&logo=discord "Alberto T#5557") 
-
 ### _Current Location:_  
-Madrid - SPAIN 🇪🇸
-
-### _Programming Experience:_  
-```Swift
-public func MyJobExperience (as developer: [Job], and other: [Job]) -> String {
-"""
-  Along my life I have been working in some different IT fields (electronics,
-   desktop support, ...), but my background is mostly in security / networking (SNOC).
-  I have done some programming courses along my life in different languajes but I
-   have never worked as a developer before.
-  Since, more or less, the last year I felt I was tired of not doing the "thing" I love
-   the most and started my process of changing careers and focus on iOS development and
-   Swift... and I still loving it... so here I am pushing my code skills to achieve
-   my dreams.
-"""
-}
-```  
+Madrid - SPAIN 🇪🇸  
 
 ### _Goals:_ 
 Changing careers from Security ¢ Networking to iOS Developer/Architect
 
-### Hobbies / Interests:  
-
-```Swift
- /// variables can change in a future version...
- 
-  #warning("""
-    I love multiple things... some of them are:
-           """)
-           
-  let My_dog //(Hi there I´m León 🐶)
-  let Programming //(I am passionate about that) 
-  var Sports, Rolling_skating, Team_sports //more code here...
-  var Anime, Videogames
-  var Sci_fi_movies, TV_wild_life_documentals //I know... sneak_case is not swifty but here it works
-  var newSkill: Knowledge {
-   set {
-    learnNewSkill(from: .anyTechnicalSource)
-   } 
-   get {
-    applyNewSkillLearned()
-   }
-  }
-  
-  
-  
-  //and so much more...  
- ``` 
+---
  
  ## 👨‍🎓 iOS Bootcamp Curriculum.
 All the details at: [Ray Wenderlich Bootcamp website](https://www.raywenderlich.com/10408731-rw-bootcamp)
