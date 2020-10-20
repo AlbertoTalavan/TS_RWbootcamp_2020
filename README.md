@@ -9,7 +9,7 @@
 Madrid - SPAIN 🇪🇸  
 
 ### _Goals:_ 
-Changing careers from Security ¢ Networking to iOS Developer/Architect
+Changing careers from Security & Networking to iOS Developer/Architect
 
  
  ## 👨‍🎓 iOS Bootcamp Curriculum.
